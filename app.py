@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
 import poplib
-
+import os
 # base64解码
 import base64
 
@@ -38,7 +38,6 @@ def send_mail(text, subject):
 
 
 def receive_mail():  # 此函数读取的最新一封邮件的元信息
-    attachment_dir = "./files"
 
     user_account = 'mail@apricityx.top'
     password = '520520MCt'
@@ -72,7 +71,7 @@ def receive_mail():  # 此函数读取的最新一封邮件的元信息
     # 下面单纯获取最新的一封邮件
     total_mail_numbers = len(msg_list)
     print('邮件列表：', msg_list)
-    rsp, msglines, msgsiz = server.retr(len(msg_list))
+    rsp, msglines, msgsiz = server.retr(len(msg_list))  # 更改括号里面的数字可以更换读取的文件序号
     # print("服务器的响应: {0},\n原始邮件内容： {1},\n该封邮件所占字节大小： {2}".format(rsp, msglines, msgsiz))
 
     msg_content = b'\r\n'.join(msglines).decode('gbk')
@@ -84,10 +83,7 @@ def receive_mail():  # 此函数读取的最新一封邮件的元信息
     # 关闭与服务器的连接，释放资源
 
 
-content_raw = receive_mail()
-
-
-def parser_content(msg):
+def parser_content(msg):  # 此函数实现了获取邮件内容(正文)
     content = msg.get_payload()
 
     # 文本信息
@@ -100,7 +96,36 @@ def parser_content(msg):
     text = content[1].as_string().split('base64')[-1]
     html_content = base64.b64decode(text).decode(content_charset)
 
-    print('文本信息: {0}\n添加了HTML代码的信息: {1}'.format(text_content, html_content))
+    # print('文本信息: {0}\n添加了HTML代码的信息: {1}'.format(text_content, html_content))
+    return text_content
 
 
-parser_content(content_raw)
+def get_attachments(msg):
+    for part in msg.walk():
+        if part.get_content_maintype() == 'multipart':  # 这里是为了跳过附件中的邮件内容
+            print('未找到附件')
+            continue
+        if part.get('Content-Disposition') is None:  # 这里是为了跳过没有附件的内容
+            print('未找到附件')
+            continue
+        filename = part.get_filename()
+        # filename为=?gb18030?B?Myw0sODNrNGnLnR4dA==?=这种形式，需要解码
+        if filename is not None:
+            h = decode_header(filename)
+            filename = h[0][0]
+            code = h[0][1]
+            if code is not None:
+                filename = filename.decode(code)
+        if filename is not None:
+            print('找到附件,文件名为:', filename)
+        # 若不存在目录则创建
+        if not os.path.exists("./files"):
+            os.mkdir("./files")
+        attachment_dir = "./files"
+        if bool(filename):
+            filepath = os.path.join(attachment_dir, filename)
+            with open(filepath, 'wb') as f:
+                f.write(part.get_payload(decode=True))
+
+
+get_attachments(receive_mail())
