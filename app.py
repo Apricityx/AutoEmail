@@ -112,7 +112,19 @@ def receive_mail():  # 此函数读取的最新一封邮件的元信息
             break
         rsp, msglines, msgsiz = server.retr(total_mail_numbers - index)  # 更改括号里面的数字可以更换读取的文件序号
         # print("服务器的响应: {0},\n原始邮件内容： {1},\n该封邮件所占字节大小： {2}".format(rsp, msglines, msgsiz))
-        msg_content = b'\r\n'.join(msglines).decode('gbk')
+        try:
+            msg_content = b'\r\n'.join(msglines).decode('gbk')
+        except UnicodeError:
+            try:
+                print("\033[0;31;1m解码失败，尝试utf-8解码\033[0m")
+                msg_content = b'\r\n'.join(msglines).decode('utf-8')
+            except UnicodeError:
+                try:
+                    print("\033[0;31;1m解码失败，尝试gb18030解码\033[0m")
+                    msg_content = b'\r\n'.join(msglines).decode('gb18030')
+                except UnicodeError:
+                    print("\033[0;31;1m解码失败，尝试iso-8859-1解码\033[0m")
+                    msg_content = b'\r\n'.join(msglines).decode('iso-8859-1')
         msg = Parser().parsestr(text=msg_content)
         msgs.append(msg)
         result, name = get_attachments(msg)
@@ -187,11 +199,6 @@ def get_attachments(msg):  # 实现一个功能：获取邮件附件并返回是
             with open(filepath, 'wb') as f:
                 f.write(part.get_payload(decode=True))
     return [ifOK, filename]
-
-
-def get_email_sender(msg):
-    value = header['From']
-    print('邮件发送者：', value)
 
 
 receive_mail()
