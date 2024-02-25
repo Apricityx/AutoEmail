@@ -1,4 +1,3 @@
-
 <?php
 function get_str_array_list($obj){ //将文本转化为list
     $pattern='/[\x{4e00}-\x{9fa5}]+/u';
@@ -23,7 +22,7 @@ function get_file_array_list($obj_)
 }
 
 //读取文本
-$file='D:\PHP\file\try\text\totalsudents.txt';
+$file='D:\PHP\file\forward part\text\totalsudents.txt';
 $content=file_get_contents($file);
 //调用文本转化为list（字符串）函数
 get_str_array_list($content);
