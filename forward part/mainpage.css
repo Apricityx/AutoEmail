@@ -1,11 +1,26 @@
+/*@font-face {*/
+/*    font-family:font_style01;*/
+/*    src: url("/font_style01.otf") format('otf');*/
+/*    !*format('otf');*!*/
+/*}*/
+
 body{
+    font-family:'font_style01';
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;|
 }
+
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 div{
+    display: inline-block;
     background-color: antiquewhite;
     border: black 1px solid;
     margin: 0 0 0 0;
@@ -16,6 +31,9 @@ div{
     grid-row-start: 1;
     grid-row-end: 2;
     font-size: 2em;
+}
+h1{
+    text-align: center;
 }
 #left{
     grid-column-start: 1;
@@ -29,9 +47,372 @@ div{
     grid-row-start: 2;
     grid-row-end: 3;
 }
-
-.std{
-    height: 20px;
-    width: 20px;
-    border: 1px solid black;
+#std_info{
+    padding: 10px;
 }
+.std{
+    margin: 10px 10px 10px 10px;
+    border: 1px solid black;
+
+}
+h2{
+    font-size: 4em;
+    letter-spacing: 15px;
+    text-align: center;
+    vert-align: middle;
+    font-family: "font_style02", sans-serif;
+}
+
+#div0{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    /*line-height: 200px;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+#div1{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    /*line-height: 200px;*/
+}
+#div2{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div3{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+#div4{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+#div5{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+#div6{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+#div7{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+#div8{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div9{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div10{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div11{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div12{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div13{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div14{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div15{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div16{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div17{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div18{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div19{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div20{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div21{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div22{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div23{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div24{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div25{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div26{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div27{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div28{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div29{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div30{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div31{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div32{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div33{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div34{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div35{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div36{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div37{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div38{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div39{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div40{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div41{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div42{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div43{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div44{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div45{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div46{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div47{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div48{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div49{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div50{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div51{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div52{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div53{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div54{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div55{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+#div56{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+
