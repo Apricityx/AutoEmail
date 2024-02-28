@@ -6,7 +6,7 @@
 
 body{
     font-family:'font_style01';
-    background-color: powderblue;
+    /*background-color: powderblue;*/
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
@@ -21,7 +21,7 @@ body{
 }
 div{
     display: inline-block;
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
     border: black 1px solid;
     margin: 0 0 0 0;
 }
@@ -77,6 +77,37 @@ input{
     box-shadow: #999999 5px 5px 10px;
     user-select: none;
 }
+
+
+
+
+
+.std_text {
+    height:650px;
+    width: 350px;
+    overflow: scroll;
+}
+p{
+    font-size: 2em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -36,6 +36,70 @@
     <div id="search_box">
     <input type="text" name="search" placeholder="搜索学号"><div id="search_">SEARCH</div>
     </div>
+    <div class="std_text">
+        <p>061
+<!--        <div class="image-container">-->
+<!--            <img id="image1" src="image1.jpg">-->
+<!--           <img id="image2" src="image2.jpg" style="display: none;">-->
+<!--        </div> -->
+        </p> <!-- 动态背景、动态字体，可滑动页面-->
+            <p>062</p>
+            <p>064</p>
+            <p>065</p>
+            <p>066</p>
+            <p>067</p>
+            <p>068</p>
+            <p>069</p>
+            <p>070</p>
+            <p>071</p>
+            <p>073</p>
+            <p>075</p>
+            <p>076</p>
+            <p>077</p>
+            <p>078</p>
+            <p>079</p>
+            <p>080</p>
+            <p>081</p>
+            <p>082</p>
+            <p>083</p>
+            <p>084</p>
+            <p>085</p>
+            <p>086</p>
+            <p>087</p>
+            <p>088</p>
+            <p>089</p>
+            <p>090</p>
+            <p>091</p>
+            <p>092</p>
+            <p>093</p>
+            <p>094</p>
+            <p>095</p>
+            <p>096</p>
+            <p>097</p>
+            <p>098</p>
+            <p>099</p>
+            <p>100</p>
+            <p>101</p>
+            <p>102</p>
+            <p>103</p>
+            <p>104</p>
+            <p>105</p>
+            <p>106</p>
+            <p>107</p>
+            <p>108</p>
+            <p>109</p>
+            <p>110</p>
+            <p>111</p>
+            <p>112</p>
+            <p>113</p>
+            <p>114</p>
+            <p>115</p>
+            <p>116</p>
+            <p>117</p>
+            <p>118</p>
+            <p>119</p>
+            <p>120</p>
+    </div>
 </div>
 <div id="std_info">
     <marquee behavior="scroll" direction="left">
@@ -100,7 +164,6 @@
 <div class="std" id="div56"><h2>120</h2></div>
     </marquee>
 </div>
-<!--<div id="footer"></div>-->
 <?php
 function get_str_array_list($obj){ //将文本转化为list
     $pattern='/[\x{4e00}-\x{9fa5}]+/u';
@@ -151,23 +214,23 @@ $var_num=count($var_);
         // 判断A中的第i个元素是否存在于B中
         if (var_.includes(total_s[i])) {
             // 如果存在，我们将div的颜色设置为绿色
-            div.style.backgroundColor = "green";
+            div.style.backgroundColor = "43FA09";
         } else {
             // 如果不存在，我们将div的颜色设置为灰色
             div.style.backgroundColor = "grey";
         }
     }
-
-var students = document.getElementsByClassName('std');
-    for(var i=0;i<students.length;i++){
-        students[i].addEventListener('mouseover',function(e){
-        e.target.style.animationPlayState='paused';
-        });
-        students[i].addEventListener('mouseout',function(e){
-        e.target.style.animationPlayState='running';
-        }
-
-}
+alert("共有"+total_s_num+"名学生，已提交"+var_num+"份作业");
+// var students = document.getElementsByClassName('std');
+//     for(var i=0;i<students.length;i++){
+//         students[i].addEventListener('mouseover',function(e){
+//         e.target.style.animationPlayState='paused';
+//         });
+//         students[i].addEventListener('mouseout',function(e){
+//         e.target.style.animationPlayState='running';
+//         }
+//
+// }
 </script>
 </body>
 </html>
