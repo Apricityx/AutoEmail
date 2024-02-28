@@ -6,10 +6,10 @@
 
 body{
     font-family:'font_style01';
-    background-color: #f0f0f0;
+    background-color: powderblue;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;|
+    grid-template-rows: 1fr 4fr;
 }
 
 
@@ -41,6 +41,55 @@ h1{
     grid-row-start: 2;
     grid-row-end: 3;
 }
+
+
+#search_box{
+    width: 350px;
+    margin: 3px auto;
+    font-family: 'font_style04';
+    font-size: 14px;
+
+}
+input{
+    width: 250px;
+    border: 1px solid #e2e2e2;
+    height: 40px;
+    margin: 0 0 0 0;
+    /*float: left;*/
+    background-image: url(images/search.jpg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position:5px center;
+    box-shadow: #999999 2px 2px 10px;
+}
+#search_{
+    display: inline-block;
+    width: 70px;
+    height: 32px;
+    float: right;
+    margin: 5px 5px 5px 5px;
+    background: black;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    /*line-height: 32px;*/
+    cursor: pointer;
+    box-shadow: #999999 5px 5px 10px;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #content{
     grid-column-start: 2;
     grid-column-end: 3;

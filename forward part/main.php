@@ -17,6 +17,14 @@
             font-family: 'font_style02';
             src: url('font/font_style02.otf');
         }
+        @font-face {
+            font-family: 'font_style03';
+            src: url('font/font_style03.otf');
+        }
+        @font-face {
+            font-family: 'font_style04';
+            src: url('font/font_style04.otf');
+        }
        body{
             font-family: 'font_style01';
         }
@@ -24,7 +32,11 @@
 </head>
 <body>
 <div id="title"><h1>软工3、4班邮件服务平台</h1></div>
-<div id="left">1</div>
+<div id="left">
+    <div id="search_box">
+    <input type="text" name="search" placeholder="搜索学号"><div id="search_">SEARCH</div>
+    </div>
+</div>
 <div id="std_info">
     <marquee behavior="scroll" direction="left">
 <div class="std" id="div0"><h2>061</h2></div>
@@ -146,6 +158,16 @@ $var_num=count($var_);
         }
     }
 
+var students = document.getElementsByClassName('std');
+    for(var i=0;i<students.length;i++){
+        students[i].addEventListener('mouseover',function(e){
+        e.target.style.animationPlayState='paused';
+        });
+        students[i].addEventListener('mouseout',function(e){
+        e.target.style.animationPlayState='running';
+        }
+
+}
 </script>
 </body>
 </html>
