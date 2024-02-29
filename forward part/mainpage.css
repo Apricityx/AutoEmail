@@ -4,8 +4,8 @@
 /*    !*format('otf');*!*/
 /*}*/
 
-body{
-    font-family:'font_style01';
+body {
+    font-family: 'font_style01';
     /*background-color: powderblue;*/
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -19,12 +19,14 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-div{
+
+div {
     display: inline-block;
     /*background-color: antiquewhite;*/
     border: black 1px solid;
     margin: 0 0 0 0;
 }
+
 #title {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -32,10 +34,12 @@ div{
     grid-row-end: 2;
     font-size: 2em;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-#left{
+
+#left {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -43,14 +47,15 @@ h1{
 }
 
 
-#search_box{
+#search_box {
     width: 350px;
     margin: 3px auto;
     font-family: 'font_style04';
     font-size: 14px;
 
 }
-input{
+
+input {
     width: 250px;
     border: 1px solid #e2e2e2;
     height: 40px;
@@ -59,10 +64,11 @@ input{
     background-image: url(images/search.jpg);
     background-repeat: no-repeat;
     background-size: 25px;
-    background-position:5px center;
+    background-position: 5px center;
     box-shadow: #999999 2px 2px 10px;
 }
-#search_{
+
+#search_ {
     display: inline-block;
     width: 70px;
     height: 32px;
@@ -79,15 +85,13 @@ input{
 }
 
 
-
-
-
 #std_text {
-    height:650px;
+    height: 650px;
     width: 350px;
     overflow: scroll;
 }
-p{
+
+p {
     width: 240px;
     display: inline-block;
     font-size: 2em;
@@ -102,48 +106,27 @@ p{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#content{
+#content {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
 }
-#std_info{
+
+#std_info {
     padding: 10px;
 }
-.std{
-    margin: 10px 10px 10px 10px;
-    border: 1px solid black;
 
+.std {
+    margin: 10px 10px 10px 10px;
+    border: 10px solid #90a9cb;
 }
-h2{
+
+.std:hover {
+    background-color: #90a9cb; !important;
+}
+
+h2 {
     font-size: 4em;
     letter-spacing: 15px;
     text-align: center;
@@ -151,7 +134,7 @@ h2{
     font-family: "font_style02", sans-serif;
 }
 
-#div0{
+#div0 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -161,343 +144,399 @@ h2{
     /*justify-content: center;*/
     /*align-items: center;*/
 }
-#div1{
+
+#div1 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
     /*line-height: 200px;*/
 }
-#div2{
+
+#div2 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div3{
+
+#div3 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 
 }
-#div4{
+
+#div4 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 
 }
-#div5{
+
+#div5 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 
 }
-#div6{
+
+#div6 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 
 }
-#div7{
+
+#div7 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 
 }
-#div8{
+
+#div8 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div9{
+
+#div9 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div10{
+
+#div10 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div11{
+
+#div11 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div12{
+
+#div12 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div13{
+
+#div13 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div14{
+
+#div14 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div15{
+
+#div15 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div16{
+
+#div16 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div17{
+
+#div17 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div18{
+
+#div18 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div19{
+
+#div19 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div20{
+
+#div20 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div21{
+
+#div21 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div22{
+
+#div22 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div23{
+
+#div23 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div24{
+
+#div24 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div25{
+
+#div25 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div26{
+
+#div26 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div27{
+
+#div27 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div28{
+
+#div28 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div29{
+
+#div29 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div30{
+
+#div30 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div31{
+
+#div31 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div32{
+
+#div32 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div33{
+
+#div33 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div34{
+
+#div34 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div35{
+
+#div35 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div36{
+
+#div36 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div37{
+
+#div37 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div38{
+
+#div38 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div39{
+
+#div39 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div40{
+
+#div40 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div41{
+
+#div41 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div42{
+
+#div42 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div43{
+
+#div43 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div44{
+
+#div44 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div45{
+
+#div45 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div46{
+
+#div46 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div47{
+
+#div47 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div48{
+
+#div48 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div49{
+
+#div49 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div50{
+
+#div50 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div51{
+
+#div51 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div52{
+
+#div52 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div53{
+
+#div53 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div54{
+
+#div54 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div55{
+
+#div55 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
 }
-#div56{
+
+#div56 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
