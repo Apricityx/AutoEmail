@@ -42,140 +42,18 @@
         <div id="search_">SEARCH</div>
     </div>
     <div id="std_text">
-        <!--        <p>061</p>-->
-        <!--        <div class="image-container">-->
-        <!--            <img id="image_n0" src="pictures/icons8-close-30.png">-->
-        <!--            <img id="image_y0" src="pictures/icons8-done-48.png" style="display: none;">-->
-        <!--        </div> 动态背景、动态字体，可滑动页面-->
-        <!--        <p>062</p>-->
-        <!--        <div class="image-container">-->
-        <!--            <img id="image_n1" src="pictures/icons8-close-30.png">-->
-        <!--            <img id="image_y1" src="pictures/icons8-done-48.png" style="display: none;">-->
-        <!--        </div>-->
-        <!--        <p>064</p>-->
-        <!--        <div class="image-container">-->
-        <!--            <img id="image_n2" src="pictures/icons8-close-30.png">-->
-        <!--            <img id="image_y2" src="pictures/icons8-done-48.png" style="display: none;">-->
-        <!--        </div>-->
-        <!--        <p>065</p>-->
-        <!--        <p>066</p>-->
-        <!--        <p>067</p>-->
-        <!--        <p>068</p>-->
-        <!--        <p>069</p>-->
-        <!--        <p>070</p>-->
-        <!--        <p>071</p>-->
-        <!--        <p>073</p>-->
-        <!--        <p>075</p>-->
-        <!--        <p>076</p>-->
-        <!--        <p>077</p>-->
-        <!--        <p>078</p>-->
-        <!--        <p>079</p>-->
-        <!--        <p>080</p>-->
-        <!--        <p>081</p>-->
-        <!--        <p>082</p>-->
-        <!--        <p>083</p>-->
-        <!--        <p>084</p>-->
-        <!--        <p>085</p>-->
-        <!--        <p>086</p>-->
-        <!--        <p>087</p>-->
-        <!--        <p>088</p>-->
-        <!--        <p>089</p>-->
-        <!--        <p>090</p>-->
-        <!--        <p>091</p>-->
-        <!--        <p>092</p>-->
-        <!--        <p>093</p>-->
-        <!--        <p>094</p>-->
-        <!--        <p>095</p>-->
-        <!--        <p>096</p>-->
-        <!--        <p>097</p>-->
-        <!--        <p>098</p>-->
-        <!--        <p>099</p>-->
-        <!--        <p>100</p>-->
-        <!--        <p>101</p>-->
-        <!--        <p>102</p>-->
-        <!--        <p>103</p>-->
-        <!--        <p>104</p>-->
-        <!--        <p>105</p>-->
-        <!--        <p>106</p>-->
-        <!--        <p>107</p>-->
-        <!--        <p>108</p>-->
-        <!--        <p>109</p>-->
-        <!--        <p>110</p>-->
-        <!--        <p>111</p>-->
-        <!--        <p>112</p>-->
-        <!--        <p>113</p>-->
-        <!--        <p>114</p>-->
-        <!--        <p>115</p>-->
-        <!--        <p>116</p>-->
-        <!--        <p>117</p>-->
-        <!--        <p>118</p>-->
-        <!--        <p>119</p>-->
-        <!--        <p>120</p>-->
+        <!--        放竖着的学生信息-->
+
     </div>
 </div>
+
 <div>
     <marquee behavior="scroll" direction="left" id="std_info">
-        <!--        <div class="std" id="div0"><h2>061</h2></div>-->
-        <!--        <div class="std" id="div1"><h2>062</h2></div>-->
-        <!--        <div class="std" id="div2"><h2>064</h2></div>-->
-        <!--        <div class="std" id="div3"><h2>065</h2></div>-->
-        <!--        <div class="std" id="div4"><h2>066</h2></div>-->
-        <!--        <div class="std" id="div5"><h2>067</h2></div>-->
-        <!--        <div class="std" id="div6"><h2>068</h2></div>-->
-        <!--        <div class="std" id="div7"><h2>069</h2></div>-->
-        <!--        <div class="std" id="div8"><h2>070</h2></div>-->
-        <!--        <div class="std" id="div9"><h2>071</h2></div>-->
-        <!--        <div class="std" id="div10"><h2>073</h2></div>-->
-        <!--        <div class="std" id="div11"><h2>075</h2></div>-->
-        <!--        <div class="std" id="div12"><h2>076</h2></div>-->
-        <!--        <div class="std" id="div13"><h2>077</h2></div>-->
-        <!--        <div class="std" id="div14"><h2>078</h2></div>-->
-        <!--        <div class="std" id="div15"><h2>079</h2></div>-->
-        <!--        <div class="std" id="div16"><h2>080</h2></div>-->
-        <!--        <div class="std" id="div17"><h2>081</h2></div>-->
-        <!--        <div class="std" id="div18"><h2>082</h2></div>-->
-        <!--        </br>-->
-        <!--        <div class="std" id="div19"><h2>083</h2></div>-->
-        <!--        <div class="std" id="div20"><h2>084</h2></div>-->
-        <!--        <div class="std" id="div21"><h2>085</h2></div>-->
-        <!--        <div class="std" id="div22"><h2>086</h2></div>-->
-        <!--        <div class="std" id="div23"><h2>087</h2></div>-->
-        <!--        <div class="std" id="div24"><h2>088</h2></div>-->
-        <!--        <div class="std" id="div25"><h2>089</h2></div>-->
-        <!--        <div class="std" id="div26"><h2>090</h2></div>-->
-        <!--        <div class="std" id="div27"><h2>091</h2></div>-->
-        <!--        <div class="std" id="div28"><h2>092</h2></div>-->
-        <!--        <div class="std" id="div29"><h2>093</h2></div>-->
-        <!--        <div class="std" id="div30"><h2>094</h2></div>-->
-        <!--        <div class="std" id="div31"><h2>095</h2></div>-->
-        <!--        <div class="std" id="div32"><h2>096</h2></div>-->
-        <!--        <div class="std" id="div33"><h2>097</h2></div>-->
-        <!--        <div class="std" id="div34"><h2>098</h2></div>-->
-        <!--        <div class="std" id="div35"><h2>099</h2></div>-->
-        <!--        <div class="std" id="div36"><h2>100</h2></div>-->
-        <!--        <div class="std" id="div37"><h2>101</h2></div>-->
-        <!--        </br>-->
-        <!--        <div class="std" id="div38"><h2>102</h2></div>-->
-        <!--        <div class="std" id="div39"><h2>103</h2></div>-->
-        <!--        <div class="std" id="div40"><h2>104</h2></div>-->
-        <!--        <div class="std" id="div41"><h2>105</h2></div>-->
-        <!--        <div class="std" id="div42"><h2>106</h2></div>-->
-        <!--        <div class="std" id="div43"><h2>107</h2></div>-->
-        <!--        <div class="std" id="div44"><h2>108</h2></div>-->
-        <!--        <div class="std" id="div45"><h2>109</h2></div>-->
-        <!--        <div class="std" id="div46"><h2>110</h2></div>-->
-        <!--        <div class="std" id="div47"><h2>111</h2></div>-->
-        <!--        <div class="std" id="div48"><h2>112</h2></div>-->
-        <!--        <div class="std" id="div49"><h2>113</h2></div>-->
-        <!--        <div class="std" id="div50"><h2>114</h2></div>-->
-        <!--        <div class="std" id="div51"><h2>115</h2></div>-->
-        <!--        <div class="std" id="div52"><h2>116</h2></div>-->
-        <!--        <div class="std" id="div53"><h2>117</h2></div>-->
-        <!--        <div class="std" id="div54"><h2>118</h2></div>-->
-        <!--        <div class="std" id="div55"><h2>119</h2></div>-->
-        <!--        <div class="std" id="div56"><h2>120</h2></div>-->
-        <!--    </marquee>-->
+        <!--        放横着的学生信息-->
+
+    </marquee>
 </div>
+
 <?php
 function get_str_array_list($obj)
 { //将文本转化为list
@@ -214,92 +92,134 @@ get_file_array_list($path);
 $var_ = get_file_array_list($path);
 $var_num = count($var_);
 ?>
+<!--左侧-->
 <script>
-    let blank = [63, 72, 75];
-    for (let j = 0; j < 57; j++) {
-        let style = ' style="width: 240px;display: inline-block;font-size: 2em;text-align: center;"'
-        let id_1 = 'image_n' + j;
-        let id_2 = 'image_y' + j;
-        let x = j + 61;
-        let data = '<p' + style + '> ' + x + '</p> ' + '<div class="image-container"> ' + '<img id="' + id_1 + '" src="pictures/icons8-close-30.png"> ' + '<img id="' + id_2 + '" src="pictures/icons8-done-48.png" style="display: none;"> ' + '</div>';
-        if (x in blank) {
-            continue;//跳过空白
+    std_example = `<div class="student">
+        <div class="std_left">
+        {num}
+        </div>
+    <div>
+        <img src="pictures/{pic}">
+    </div>
+    </div>`
+    // test = std_example.replace('{num}', 2).replace('{pic}', 'WRONG.svg');
+    // 学号从61开始
+    std_right = `<div class="std" id="div{order_num}" style="background-color:{color}"><h2>{std_num}</h2></div>`
+    skip_num = [63, 72, 74];
+
+    name_submitted = <?php echo json_encode($var_); ?>; //已提交的学生
+    name_total = <?php echo json_encode($total_s); ?>;//总学生
+    let counter = 0;
+    let flag_ = 0
+    for (let i = 61; i < 121; i++) {
+        if ((i - 61) % 20 === 0) {
+            if (flag_ === 0) {
+                flag_ = 1;
+            } else {
+                document.getElementById('std_info').innerHTML += '<br>';
+            }
+        }
+        if (skip_num.includes(i)) {
+            document.getElementById('std_info').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');
+            document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'WRONG.svg');
+            counter++;
         } else {
-            document.getElementById('std_text').innerHTML += data;
+            if (name_submitted.includes(name_total[i - 61 - counter])) {
+                document.getElementById('std_info').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '43FA09');
+                document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
+            } else {
+                document.getElementById('std_info').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');
+                document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-close-30.png');
+            }
         }
     }
-    for (let r = 0; r < 57; r++) {
-        let newline = '<br>';
-        let new_line = [19, 37, 56];
-        // let h_t=[0,56];
-        let class_ = 'std';
-        let id = 'div' + r;
-        let bullet_screen = '<marquee behavior="scroll" direction="left">';
-        let bullet_screen_end = '</marquee>';
-        let head = '<marquee behavior="scroll" direction="left">' + '<div class="' + class_ + '"' + ' id="' + id + '<h2>' + (r + 61) + '</h2></div>';
-        let tail = '<div class="' + class_ + '"' + ' id="' + id + '"><h2>' + (r + 61) + '</h2></div>' + bullet_screen_end;
-        let data_ = '<div class="' + class_ + '"' + ' id="' + id + '"><h2>' + (r + 61) + '</h2></div>';
-        let data_t = '<div class="' + class_ + '"' + ' id="' + id + '"><h2>' + (r + 61) + '</h2></div>' + newline;
-        // if (r === 0){
-        //     document.getElementById('std_info').innerHTML += head;
-        //     continue;
-        // }
-        // else if (r in new_line) {
-        //     document.getElementById('std_info').innerHTML += data_t;
-        // } else if (r === 56) {
-        //     document.getElementById('std_info').innerHTML += tail;
-        // } else {
-        //     document.getElementById('std_info').innerHTML += data_;
-        // }
 
+</script>
+<!--右侧-->
+<script>
 
-        if (new_line.includes(r)) {
-            console.log(new_line);
-            document.getElementById('std_info').innerHTML += data_t;
-        } else {
-            document.getElementById('std_info').innerHTML += data_;
-        }
-        // if(r in blank) {
-        //     continue;
-        // }else{
-        //     document.getElementById('std_info').innerHTML+=data_;
-        //     }
-
-
-    }
-    var total_s = <?php echo json_encode($total_s); ?>;
-    var var_ = <?php echo json_encode($var_); ?>;
-    var total_s_num = <?php echo json_encode($total_s_num); ?>;
-    var var_num = <?php echo json_encode($var_num); ?>;
-    // 然后我们遍历数组A
-    for (let i = 0; i < total_s.length; i++) {
-        // 我们获取第i个div元素
-        let div = document.getElementById('div' + i);
-        let image_n = document.getElementById('image_n' + i);
-        let image_y = document.getElementById('image_y' + i);
-        // 判断A中的第i个元素是否存在于B中
-        if (var_.includes(total_s[i])) {
-            // 如果存在，我们将div的颜色设置为绿色
-            div.style.backgroundColor = "43FA09";
-            image_n.style.display = 'none';
-            image_y.style.display = 'inline-block';
-        } else {
-            // 如果不存在，我们将div的颜色设置为灰色
-            div.style.backgroundColor = "grey";
-            image_n.style.display = 'inline-block';
-            image_y.style.display = 'none';
-        }
-    }
-    alert("共有" + total_s_num + "名学生，已提交" + var_num + "份作业");
-    // var students = document.getElementsByClassName('std');
-    //     for(var i=0;i<students.length;i++){
-    //         students[i].addEventListener('mouseover',function(e){
-    //         e.target.style.animationPlayState='paused';
-    //         });
-    //         students[i].addEventListener('mouseout',function(e){
-    //         e.target.style.animationPlayState='running';
-    //         }
+</script>
+<script>
+    //let blank = [63, 72, 74];
+    //let style = ' style="width: 240px;display: inline-block;font-size: 2em;text-align: center;"'
+    //for (let j = 0; j < 60; j++) {
+    //    if (blank.includes(j + 61)) {
+    //        continue;//跳过空白
+    //    }
+    //    let id_1 = 'image_n' + j;
+    //    let id_2 = 'image_y' + j;
+    //    let x = j + 61;
+    //    let data = '<p' + style + '> ' + x + '</p> ' + '<div class="image-container"> ' + '<img id="' + id_1 + '" src="pictures/icons8-close-30.png"> ' + '<img id="' + id_2 + '" src="pictures/icons8-done-48.png" style="display: none;"> ' + '</div>';
+    //    document.getElementById('std_text').innerHTML += data;
     //
+    //}
+    //let newline = '<br>';
+    //// let new_line = [18, 37, 56];
+    //let class_ = 'std';
+    //for (let r = 0; r < 60; r++) {
+    //    // let h_t=[0,56];
+    //    let id = 'div' + r;
+    //    let data_ = '<div class="' + class_ + '"' + ' id="' + id + '"><h2>' + (r + 61) + '</h2></div>';
+    //    let data_t = '<div class="' + class_ + '"' + ' id="' + id + '"><h2>' + (r + 61) + '</h2></div>' + newline;
+    //    if (blank.includes(r + 61)) {
+    //        continue;
+    //        // } else if (r === 0) {
+    //        //     document.getElementById('std_info').innerHTML += head;
+    //        // } else if (r === 56) {
+    //        //     document.getElementById('std_info').innerHTML += tail;
+    //    }
+    //    if ((r + 1) % 20 === 0) {
+    //        document.getElementById('std_info').innerHTML += data_t;
+    //    } else {
+    //        document.getElementById('std_info').innerHTML += data_;
+    //    }
+    //    // else if(new_line.includes(r)) {
+    //    //     console.log(new_line);
+    //    //     document.getElementById('std_info').innerHTML += data_t;
+    //    // } else {
+    //    //     document.getElementById('std_info').innerHTML += data_;
+    //    // }
+    //    // // if(r in blank) {
+    //    //     continue;
+    //    // }else{
+    //    //     document.getElementById('std_info').innerHTML+=data_;
+    //    //     }
+    //
+    //
+    //}
+    //var total_s = <?php //echo json_encode($total_s); ?>//;
+    //var var_ = <?php //echo json_encode($var_); ?>//;
+    //var total_s_num = <?php //echo json_encode($total_s_num); ?>//;
+    //var var_num = <?php //echo json_encode($var_num); ?>//;
+    //// 然后我们遍历数组A
+    //for (let i = 0; i < total_s.length; i++) {
+    //    // 我们获取第i个div元素
+    //    let div = document.getElementById('div' + i);
+    //    let image_n = document.getElementById('image_n' + i);
+    //    let image_y = document.getElementById('image_y' + i);
+    //    // 判断A中的第i个元素是否存在于B中
+    //    if (var_.includes(total_s[i])) {
+    //        // 如果存在，我们将div的颜色设置为绿色
+    //        div.style.backgroundColor = "43FA09";
+    //        image_n.style.display = 'none';
+    //        image_y.style.display = 'inline-block';
+    //    } else {
+    //        // 如果不存在，我们将div的颜色设置为灰色
+    //        div.style.backgroundColor = "grey";
+    //        image_n.style.display = 'inline-block';
+    //        image_y.style.display = 'none';
+    //    }
+    //}
+    //alert("共有" + total_s_num + "名学生，已提交" + var_num + "份作业");
+    //// var students = document.getElementsByClassName('std');
+    ////     for(var i=0;i<students.length;i++){
+    ////         students[i].addEventListener('mouseover',function(e){
+    ////         e.target.style.animationPlayState='paused';
+    ////         });
+    ////         students[i].addEventListener('mouseout',function(e){
+    ////         e.target.style.animationPlayState='running';
+    ////         }
+    ////
     // }
 </script>
 </body>
