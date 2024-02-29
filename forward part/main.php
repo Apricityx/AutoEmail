@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    <script src="mainpage.js"></script>-->
+    <script src="mainpage.js"></script>
     <link rel="stylesheet" href="mainpage.css">
     <!--    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <style>
@@ -41,140 +41,140 @@
         <input type="text" name="search" placeholder="搜索学号">
         <div id="search_">SEARCH</div>
     </div>
-    <div class="std_text">
-        <p>061</p>
-        <div class="image-container">
-            <img id="image_n0" src="pictures/icons8-close-30.png">
-            <img id="image_y0" src="pictures/icons8-done-48.png" style="display: none;">
-        </div> <!-- 动态背景、动态字体，可滑动页面-->
-        <p>062</p>
-        <div class="image-container">
-            <img id="image_n1" src="pictures/icons8-close-30.png">
-            <img id="image_y1" src="pictures/icons8-done-48.png" style="display: none;">
-        </div>
-        <p>064</p>
-        <div class="image-container">
-            <img id="image_n2" src="pictures/icons8-close-30.png">
-            <img id="image_y2" src="pictures/icons8-done-48.png" style="display: none;">
-        </div>
-        <p>065</p>
-        <p>066</p>
-        <p>067</p>
-        <p>068</p>
-        <p>069</p>
-        <p>070</p>
-        <p>071</p>
-        <p>073</p>
-        <p>075</p>
-        <p>076</p>
-        <p>077</p>
-        <p>078</p>
-        <p>079</p>
-        <p>080</p>
-        <p>081</p>
-        <p>082</p>
-        <p>083</p>
-        <p>084</p>
-        <p>085</p>
-        <p>086</p>
-        <p>087</p>
-        <p>088</p>
-        <p>089</p>
-        <p>090</p>
-        <p>091</p>
-        <p>092</p>
-        <p>093</p>
-        <p>094</p>
-        <p>095</p>
-        <p>096</p>
-        <p>097</p>
-        <p>098</p>
-        <p>099</p>
-        <p>100</p>
-        <p>101</p>
-        <p>102</p>
-        <p>103</p>
-        <p>104</p>
-        <p>105</p>
-        <p>106</p>
-        <p>107</p>
-        <p>108</p>
-        <p>109</p>
-        <p>110</p>
-        <p>111</p>
-        <p>112</p>
-        <p>113</p>
-        <p>114</p>
-        <p>115</p>
-        <p>116</p>
-        <p>117</p>
-        <p>118</p>
-        <p>119</p>
-        <p>120</p>
+    <div id="std_text">
+        <!--        <p>061</p>-->
+        <!--        <div class="image-container">-->
+        <!--            <img id="image_n0" src="pictures/icons8-close-30.png">-->
+        <!--            <img id="image_y0" src="pictures/icons8-done-48.png" style="display: none;">-->
+        <!--        </div> 动态背景、动态字体，可滑动页面-->
+        <!--        <p>062</p>-->
+        <!--        <div class="image-container">-->
+        <!--            <img id="image_n1" src="pictures/icons8-close-30.png">-->
+        <!--            <img id="image_y1" src="pictures/icons8-done-48.png" style="display: none;">-->
+        <!--        </div>-->
+        <!--        <p>064</p>-->
+        <!--        <div class="image-container">-->
+        <!--            <img id="image_n2" src="pictures/icons8-close-30.png">-->
+        <!--            <img id="image_y2" src="pictures/icons8-done-48.png" style="display: none;">-->
+        <!--        </div>-->
+        <!--        <p>065</p>-->
+        <!--        <p>066</p>-->
+        <!--        <p>067</p>-->
+        <!--        <p>068</p>-->
+        <!--        <p>069</p>-->
+        <!--        <p>070</p>-->
+        <!--        <p>071</p>-->
+        <!--        <p>073</p>-->
+        <!--        <p>075</p>-->
+        <!--        <p>076</p>-->
+        <!--        <p>077</p>-->
+        <!--        <p>078</p>-->
+        <!--        <p>079</p>-->
+        <!--        <p>080</p>-->
+        <!--        <p>081</p>-->
+        <!--        <p>082</p>-->
+        <!--        <p>083</p>-->
+        <!--        <p>084</p>-->
+        <!--        <p>085</p>-->
+        <!--        <p>086</p>-->
+        <!--        <p>087</p>-->
+        <!--        <p>088</p>-->
+        <!--        <p>089</p>-->
+        <!--        <p>090</p>-->
+        <!--        <p>091</p>-->
+        <!--        <p>092</p>-->
+        <!--        <p>093</p>-->
+        <!--        <p>094</p>-->
+        <!--        <p>095</p>-->
+        <!--        <p>096</p>-->
+        <!--        <p>097</p>-->
+        <!--        <p>098</p>-->
+        <!--        <p>099</p>-->
+        <!--        <p>100</p>-->
+        <!--        <p>101</p>-->
+        <!--        <p>102</p>-->
+        <!--        <p>103</p>-->
+        <!--        <p>104</p>-->
+        <!--        <p>105</p>-->
+        <!--        <p>106</p>-->
+        <!--        <p>107</p>-->
+        <!--        <p>108</p>-->
+        <!--        <p>109</p>-->
+        <!--        <p>110</p>-->
+        <!--        <p>111</p>-->
+        <!--        <p>112</p>-->
+        <!--        <p>113</p>-->
+        <!--        <p>114</p>-->
+        <!--        <p>115</p>-->
+        <!--        <p>116</p>-->
+        <!--        <p>117</p>-->
+        <!--        <p>118</p>-->
+        <!--        <p>119</p>-->
+        <!--        <p>120</p>-->
     </div>
 </div>
 <div id="std_info">
-    <marquee behavior="scroll" direction="left">
-        <div class="std" id="div0"><h2>061</h2></div>
-        <div class="std" id="div1"><h2>062</h2></div>
-        <div class="std" id="div2"><h2>064</h2></div>
-        <div class="std" id="div3"><h2>065</h2></div>
-        <div class="std" id="div4"><h2>066</h2></div>
-        <div class="std" id="div5"><h2>067</h2></div>
-        <div class="std" id="div6"><h2>068</h2></div>
-        <div class="std" id="div7"><h2>069</h2></div>
-        <div class="std" id="div8"><h2>070</h2></div>
-        <div class="std" id="div9"><h2>071</h2></div>
-        <div class="std" id="div10"><h2>073</h2></div>
-        <div class="std" id="div11"><h2>075</h2></div>
-        <div class="std" id="div12"><h2>076</h2></div>
-        <div class="std" id="div13"><h2>077</h2></div>
-        <div class="std" id="div14"><h2>078</h2></div>
-        <div class="std" id="div15"><h2>079</h2></div>
-        <div class="std" id="div16"><h2>080</h2></div>
-        <div class="std" id="div17"><h2>081</h2></div>
-        <div class="std" id="div18"><h2>082</h2></div>
-        </br>
-        <div class="std" id="div19"><h2>083</h2></div>
-        <div class="std" id="div20"><h2>084</h2></div>
-        <div class="std" id="div21"><h2>085</h2></div>
-        <div class="std" id="div22"><h2>086</h2></div>
-        <div class="std" id="div23"><h2>087</h2></div>
-        <div class="std" id="div24"><h2>088</h2></div>
-        <div class="std" id="div25"><h2>089</h2></div>
-        <div class="std" id="div26"><h2>090</h2></div>
-        <div class="std" id="div27"><h2>091</h2></div>
-        <div class="std" id="div28"><h2>092</h2></div>
-        <div class="std" id="div29"><h2>093</h2></div>
-        <div class="std" id="div30"><h2>094</h2></div>
-        <div class="std" id="div31"><h2>095</h2></div>
-        <div class="std" id="div32"><h2>096</h2></div>
-        <div class="std" id="div33"><h2>097</h2></div>
-        <div class="std" id="div34"><h2>098</h2></div>
-        <div class="std" id="div35"><h2>099</h2></div>
-        <div class="std" id="div36"><h2>100</h2></div>
-        <div class="std" id="div37"><h2>101</h2></div>
-        </br>
-        <div class="std" id="div38"><h2>102</h2></div>
-        <div class="std" id="div39"><h2>103</h2></div>
-        <div class="std" id="div40"><h2>104</h2></div>
-        <div class="std" id="div41"><h2>105</h2></div>
-        <div class="std" id="div42"><h2>106</h2></div>
-        <div class="std" id="div43"><h2>107</h2></div>
-        <div class="std" id="div44"><h2>108</h2></div>
-        <div class="std" id="div45"><h2>109</h2></div>
-        <div class="std" id="div46"><h2>110</h2></div>
-        <div class="std" id="div47"><h2>111</h2></div>
-        <div class="std" id="div48"><h2>112</h2></div>
-        <div class="std" id="div49"><h2>113</h2></div>
-        <div class="std" id="div50"><h2>114</h2></div>
-        <div class="std" id="div51"><h2>115</h2></div>
-        <div class="std" id="div52"><h2>116</h2></div>
-        <div class="std" id="div53"><h2>117</h2></div>
-        <div class="std" id="div54"><h2>118</h2></div>
-        <div class="std" id="div55"><h2>119</h2></div>
-        <div class="std" id="div56"><h2>120</h2></div>
-    </marquee>
+    <!--    <marquee behavior="scroll" direction="left">-->
+    <!--        <div class="std" id="div0"><h2>061</h2></div>-->
+    <!--        <div class="std" id="div1"><h2>062</h2></div>-->
+    <!--        <div class="std" id="div2"><h2>064</h2></div>-->
+    <!--        <div class="std" id="div3"><h2>065</h2></div>-->
+    <!--        <div class="std" id="div4"><h2>066</h2></div>-->
+    <!--        <div class="std" id="div5"><h2>067</h2></div>-->
+    <!--        <div class="std" id="div6"><h2>068</h2></div>-->
+    <!--        <div class="std" id="div7"><h2>069</h2></div>-->
+    <!--        <div class="std" id="div8"><h2>070</h2></div>-->
+    <!--        <div class="std" id="div9"><h2>071</h2></div>-->
+    <!--        <div class="std" id="div10"><h2>073</h2></div>-->
+    <!--        <div class="std" id="div11"><h2>075</h2></div>-->
+    <!--        <div class="std" id="div12"><h2>076</h2></div>-->
+    <!--        <div class="std" id="div13"><h2>077</h2></div>-->
+    <!--        <div class="std" id="div14"><h2>078</h2></div>-->
+    <!--        <div class="std" id="div15"><h2>079</h2></div>-->
+    <!--        <div class="std" id="div16"><h2>080</h2></div>-->
+    <!--        <div class="std" id="div17"><h2>081</h2></div>-->
+    <!--        <div class="std" id="div18"><h2>082</h2></div>-->
+    <!--        </br>-->
+    <!--        <div class="std" id="div19"><h2>083</h2></div>-->
+    <!--        <div class="std" id="div20"><h2>084</h2></div>-->
+    <!--        <div class="std" id="div21"><h2>085</h2></div>-->
+    <!--        <div class="std" id="div22"><h2>086</h2></div>-->
+    <!--        <div class="std" id="div23"><h2>087</h2></div>-->
+    <!--        <div class="std" id="div24"><h2>088</h2></div>-->
+    <!--        <div class="std" id="div25"><h2>089</h2></div>-->
+    <!--        <div class="std" id="div26"><h2>090</h2></div>-->
+    <!--        <div class="std" id="div27"><h2>091</h2></div>-->
+    <!--        <div class="std" id="div28"><h2>092</h2></div>-->
+    <!--        <div class="std" id="div29"><h2>093</h2></div>-->
+    <!--        <div class="std" id="div30"><h2>094</h2></div>-->
+    <!--        <div class="std" id="div31"><h2>095</h2></div>-->
+    <!--        <div class="std" id="div32"><h2>096</h2></div>-->
+    <!--        <div class="std" id="div33"><h2>097</h2></div>-->
+    <!--        <div class="std" id="div34"><h2>098</h2></div>-->
+    <!--        <div class="std" id="div35"><h2>099</h2></div>-->
+    <!--        <div class="std" id="div36"><h2>100</h2></div>-->
+    <!--        <div class="std" id="div37"><h2>101</h2></div>-->
+    <!--        </br>-->
+    <!--        <div class="std" id="div38"><h2>102</h2></div>-->
+    <!--        <div class="std" id="div39"><h2>103</h2></div>-->
+    <!--        <div class="std" id="div40"><h2>104</h2></div>-->
+    <!--        <div class="std" id="div41"><h2>105</h2></div>-->
+    <!--        <div class="std" id="div42"><h2>106</h2></div>-->
+    <!--        <div class="std" id="div43"><h2>107</h2></div>-->
+    <!--        <div class="std" id="div44"><h2>108</h2></div>-->
+    <!--        <div class="std" id="div45"><h2>109</h2></div>-->
+    <!--        <div class="std" id="div46"><h2>110</h2></div>-->
+    <!--        <div class="std" id="div47"><h2>111</h2></div>-->
+    <!--        <div class="std" id="div48"><h2>112</h2></div>-->
+    <!--        <div class="std" id="div49"><h2>113</h2></div>-->
+    <!--        <div class="std" id="div50"><h2>114</h2></div>-->
+    <!--        <div class="std" id="div51"><h2>115</h2></div>-->
+    <!--        <div class="std" id="div52"><h2>116</h2></div>-->
+    <!--        <div class="std" id="div53"><h2>117</h2></div>-->
+    <!--        <div class="std" id="div54"><h2>118</h2></div>-->
+    <!--        <div class="std" id="div55"><h2>119</h2></div>-->
+    <!--        <div class="std" id="div56"><h2>120</h2></div>-->
+    <!--    </marquee>-->
 </div>
 <?php
 function get_str_array_list($obj)
@@ -215,6 +215,48 @@ $var_ = get_file_array_list($path);
 $var_num = count($var_);
 ?>
 <script>
+    let blank = [63, 72, 75];
+    for (let j = 0; j < 57; j++) {
+        let style = ' style="width: 240px;display: inline-block;font-size: 2em;text-align: center;"'
+        let id_1 = 'image_n' + j;
+        let id_2 = 'image_y' + j;
+        let x = j + 61;
+        let data = '<p' + style + '> ' + x + '</p> ' + '<div class="image-container"> ' + '<img id="' + id_1 + '" src="pictures/icons8-close-30.png"> ' + '<img id="' + id_2 + '" src="pictures/icons8-done-48.png" style="display: none;"> ' + '</div>';
+        if (x in blank) {
+            continue;//跳过空白
+        } else {
+            document.getElementById('std_text').innerHTML += data;
+        }
+    }
+    for (let r = 0; r < 57; r++) {
+        let newline = '<br>';
+        let new_line = [19, 37, 56];
+        // let h_t=[0,56];
+        let class_ = 'std';
+        let id = 'div' + r;
+        let bullet_screen = '<marquee behavior="scroll" direction="left">';
+        let bullet_screen_end = '</marquee>';
+        let head = bullet_screen + '<div class="' + class_ + '"'+' id="' + id + '<h2>' + (r + 61) + '</h2></div>';
+        let tail = '<div class="' + class_ + '"' + ' id="' + id + '"><h2>' + (r + 61) + '</h2></div>' + bullet_screen_end;
+        let data_ = '<div class="' + class_ + '"'+' id="' + id + '"><h2>' + (r + 61) + '</h2></div>';
+        let data_t = '<div class="' + class_ + '"'+' id="' + id + '"><h2>' + (r + 61) + '</h2></div>' + newline;
+        if (r in new_line) {
+            document.getElementById('std_info').innerHTML += data_t;
+        } else if (r === 0) {
+            document.getElementById('std_info').innerHTML += head;
+        } else if (r === 56) {
+            document.getElementById('std_info').innerHTML += tail;
+        } else {
+            document.getElementById('std_info').innerHTML += data_;
+        }
+        // if(r in blank) {
+        //     continue;
+        // }else{
+        //     document.getElementById('std_info').innerHTML+=data_;
+        //     }
+
+
+    }
     var total_s = <?php echo json_encode($total_s); ?>;
     var var_ = <?php echo json_encode($var_); ?>;
     var total_s_num = <?php echo json_encode($total_s_num); ?>;

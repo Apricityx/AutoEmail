@@ -82,7 +82,7 @@ input{
 
 
 
-.std_text {
+#std_text {
     height:650px;
     width: 350px;
     overflow: scroll;
