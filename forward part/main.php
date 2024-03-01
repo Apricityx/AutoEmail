@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="mainpage.js"></script>
     <link rel="stylesheet" href="mainpage.css">
     <!--    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <style>
@@ -35,6 +34,8 @@
     </style>
 </head>
 <body>
+<!--<div id="background">-->
+<!--    <canvas id="canvas">-->
 <div id="title"><h1>软工3、4班邮件服务平台</h1></div>
 <div id="left">
     <div id="search_box">
@@ -53,7 +54,8 @@
 
     </marquee>
 </div>
-
+<!--    </canvas>-->
+<!--</div>-->
 <?php
 function get_str_array_list($obj)
 { //将文本转化为list
@@ -80,20 +82,20 @@ function get_file_array_list($obj_)
 }
 
 //读取文本
-$file = 'D:\PHP\file\AutoEmail\forward part\text\totalsudents.txt';
+$file = './text/totalsudents.txt';
 $content = file_get_contents($file);
 //调用文本转化为list（字符串）函数
 $total_s = get_str_array_list($content);
 $total_s_num = count($total_s);
 //读取文件夹
-$path = 'D:\workfile\FileRecv\homeworksubmit';
+$path = './homeworksubmit';
 //调用文件夹转化为list（字符串）函数
 get_file_array_list($path);
 $var_ = get_file_array_list($path);
 $var_num = count($var_);
 ?>
 <!--左侧-->
-<script>
+<script type="text/javascript">
     std_example = `<div class="student">
         <div class="std_left">
         {num}
@@ -125,7 +127,7 @@ $var_num = count($var_);
             counter++;
         } else {
             if (name_submitted.includes(name_total[i - 61 - counter])) {
-                document.getElementById('std_info').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '43FA09');
+                document.getElementById('std_info').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '8dc26f');
                 document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
             } else {
                 document.getElementById('std_info').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');

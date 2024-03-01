@@ -6,15 +6,41 @@
 
 body {
     font-family: 'font_style01';
-    /*background-color: powderblue;*/
+    /*background-color: #000000;*/
+    background: #F0F2F0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #e2e2e2;
+    /*background: #FFA17F;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to bottom, #00223E, #FFA17F);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #00223E, #FFA17F); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+    /*background: #D3959B;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to bottom, #BFE6BA, #D3959B);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #BFE6BA, #D3959B); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+    /*background: #ee9ca7;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #ffdde1, #ee9ca7); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
 }
-
-
-.text {
+#background{
     position: absolute;
+    /*z-index: -1;*/
+}
+
+#canvas{
+    position: absolute;
+    z-index: -1;
+}
+.text {
+    /*position: absolute;*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -22,6 +48,7 @@ body {
 
 div {
     display: inline-block;
+    /*position: relative;*/
     /*background-color: antiquewhite;*/
     border: black 1px solid;
     margin: 0 0 0 0;
@@ -36,10 +63,12 @@ div {
 }
 
 h1 {
+    position: relative;
     text-align: center;
 }
 
 #left {
+    position: relative;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -88,7 +117,14 @@ input {
 #std_text {
     height: 650px;
     width: 350px;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+#std_text ::-webkit-scrollbar{
+    display: none;
+}
+#std_text{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 p {
@@ -118,17 +154,19 @@ p {
 }
 
 .std {
+
     width: 200px;
     height: 200px;
     border-radius: 50%;
     text-align: center;
     margin: 10px 10px 10px 10px;
-    border: 10px solid #90a9cb;
+    border: 1px solid black;
     user-select: none;
 }
 
 .std:hover {
-    background-color: #90a9cb !important;
+    background-color: cyan !important;
+    box-shadow: #000C40 5px 5px 10px !important;
 }
 h2 {
     font-size: 4em;
