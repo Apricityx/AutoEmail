@@ -27,9 +27,44 @@
             font-family: 'font_style04';
             src: url('font/font_style04.otf');
         }
-
-        body {
+        @font-face {
+            font-family: 'font_style05';
+            src: url('font/font_style05.otf');
+        }
+        @font-face {
+            font-family: 'font_style06';
+            src: url('font/font_style06.otf');
+        }
+        @font-face {
+            font-family: 'font_style07';
+            src: url('font/font_style07.otf');
+        }
+        @font-face {
+            font-family: 'font_style08';
+            src: url('font/font_style08.otf');
+        }
+        @font-face {
+            font-family: 'font_style10';
+            src: url('font/font_style10.otf');
+        }
+        @font-face {
+            font-family: 'font_style13';
+            src: url('font/font_style13.otf');
+        }
+        @font-face {
+            font-family: 'font_style14';
+            src: url('font/font_style14.otf');
+        }
+        h1 {
             font-family: 'font_style01';
+            letter-spacing: 16px;
+        }
+        #std_text {
+            font-family: 'font_style04';
+            color: #2d2c2c;
+        }
+        .std{
+         font-family:sans-serif;
         }
     </style>
 </head>
@@ -38,7 +73,7 @@
 <div id="title"><h1>软工3、4班邮件服务平台</h1></div>
 <div id="left">
     <div id="search_box">
-        <input type="text" name="search" placeholder="搜索学号">
+        <input type="text" name="search" placeholder="搜索学号" class="in_put">
         <div id="search_">SEARCH</div>
     </div>
     <div id="std_text">
@@ -133,10 +168,10 @@ $var_num = count($var_);
             counter++;
         } else {
             if (name_submitted.includes(name_total[i - 61 - counter])) {
-                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '8dc26f');
+                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '7F9F80');
                 document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
             } else {
-                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');
+                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '2f2f35');
                 document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-close-30.png');
             }
         }
@@ -156,6 +191,29 @@ $var_num = count($var_);
             box.scrollLeft+=speed;
         }
     },10);
+    // for(j=0;j<60;j++){
+        var scrollDiv = document.getElementsByClassName('std');
+        for (let i = 0; i < scrollDiv.length; i++) {
+            scrollDiv[i].addEventListener('click', function() {
+                speed = 0
+            })
+            scrollDiv[i].addEventListener('mouseout', function() {
+                speed = 2
+            }) }
+    //     scrollDiv.addEventListener('mouseover', function() {
+    //         //     // 鼠标移入时停止滚动
+    //             scrollDiv.style.overflow = 'hidden';
+    //         });
+    //     scrollDiv.addEventListener('mouseout', function() {
+    //             // 鼠标移出时恢复滚动
+    //             scrollDiv.style.overflow = 'auto';
+    //         });
+    // }
+    //
+    //
+    //
+    //
+    //
 </script>
 </body>
 </html>

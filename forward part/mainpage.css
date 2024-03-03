@@ -5,11 +5,11 @@
 /*}*/
 
 body {
-    font-family: 'font_style01';
-    /*background-color: #000000;*/
-    background: #F0F2F0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(182deg, #4f555b, #684b50, #7e4c4f, #a1757a);
+    /*background-color: #b2bbbe;*/
+    /*background: #F0F2F0;  !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to bottom, #000C40, #F0F2F0);  !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #000C40, #F0F2F0); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
     color: #e2e2e2;
     /*background: #FFA17F;  !* fallback for old browsers *!*/
@@ -25,10 +25,11 @@ body {
     /*background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  !* Chrome 10-25, Safari 5.1-6 *!*/
     /*background: linear-gradient(to bottom, #ffdde1, #ee9ca7); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
-    /*overflow: hidden;*/
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
+    user-select: none;
 }
 #background{
     position: absolute;
@@ -60,11 +61,13 @@ div {
     grid-row-start: 1;
     grid-row-end: 2;
     font-size: 2em;
+    border: none;
 }
 
 h1 {
     position: relative;
     text-align: center;
+    text-shadow: #333333 5px 5px 10px;
 }
 
 #left {
@@ -73,6 +76,7 @@ h1 {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    border: none;
 }
 
 
@@ -87,8 +91,8 @@ h1 {
 input {
     width: 250px;
     border: 1px solid #e2e2e2;
-    height: 40px;
-    margin: 0 0 0 0;
+    height: 39px;
+    margin: 5px 5px 5px 5px;
     /*float: left;*/
     background-image: url(images/search.jpg);
     background-repeat: no-repeat;
@@ -100,19 +104,19 @@ input {
 #search_ {
     display: inline-block;
     width: 70px;
-    height: 32px;
+    height: 36px;
     float: right;
     margin: 5px 5px 5px 5px;
-    background: black;
+    background: #332e2e;
     color: white;
     font-size: 19px;
     text-align: center;
     /*line-height: 32px;*/
     cursor: pointer;
-    box-shadow: #999999 5px 5px 10px;
+    box-shadow: #999999 1px 1px 1px;
     user-select: none;
 }
-
+.in_put {filter:Alpha(opacity=30); opacity: .3;}
 
 #std_text {
     height: 650px;
@@ -153,6 +157,7 @@ p {
 #box{
     white-space: nowrap;
     overflow: hidden;
+    border: none;
 }
 
 #std_info1 {
@@ -160,6 +165,7 @@ p {
     width:4430px;
     height: 800px;
     padding: 10px;
+    border:none;
 }
 #std_info2{
     display: inline-block;
@@ -168,33 +174,41 @@ p {
     top: 0;
     left: 0;
     padding: 10px;
+    border:none;
 }
 .std {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     text-align: center;
-    margin: 10px 10px 10px 10px;
+    margin: 20px 20px 20px 20px;
     border: 1px solid black;
     user-select: none;
     transition: 0.5s;
 }
 
 .std:hover {
-    background-color: cyan !important;
+    font-family: 'font_style05' !important;
+    background-color: #bfefef !important;
     box-shadow: #000C40 5px 5px 10px !important;
-    color: black;
+    color: black !important;
     transition: 0.5s;
+    text-shadow: black 5px 5px 10px !important;
 }
 h2 {
-    font-size: 4em;
+    font-size: 3.5em;
     letter-spacing: 15px;
+    font-weight: 4500;
     text-align: center;
     vert-align: middle;
-    font-family: "font_style02", sans-serif;
+    font-family: "font_style13", sans-serif;
+    color: #311616;
 }
-
+h2:hover {
+    color: #020000;
+    transition: 0.5s;
+}
 .student {
 
     height: 85px;
