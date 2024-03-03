@@ -25,7 +25,7 @@ body {
     /*background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  !* Chrome 10-25, Safari 5.1-6 *!*/
     /*background: linear-gradient(to bottom, #ffdde1, #ee9ca7); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
-    overflow: hidden;
+    /*overflow: hidden;*/
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
@@ -127,6 +127,7 @@ input {
     scrollbar-width: none;
 }
 
+
 p {
     width: 240px;
     display: inline-block;
@@ -149,12 +150,27 @@ p {
     grid-row-end: 3;
 }
 
-#std_info {
-    padding: 10px;
+#box{
+    white-space: nowrap;
+    overflow: hidden;
 }
 
+#std_info1 {
+    display: inline-block;
+    width:4430px;
+    height: 800px;
+    padding: 10px;
+}
+#std_info2{
+    display: inline-block;
+    width:4430px;
+    height: 800px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
 .std {
-
+    display: inline-block;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -162,11 +178,14 @@ p {
     margin: 10px 10px 10px 10px;
     border: 1px solid black;
     user-select: none;
+    transition: 0.5s;
 }
 
 .std:hover {
     background-color: cyan !important;
     box-shadow: #000C40 5px 5px 10px !important;
+    color: black;
+    transition: 0.5s;
 }
 h2 {
     font-size: 4em;
