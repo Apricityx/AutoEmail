@@ -5,7 +5,7 @@ import poplib
 import os
 # base64解码
 import base64
-
+import time
 # 解码邮件信息
 from email.parser import Parser
 
@@ -16,14 +16,15 @@ from email.header import decode_header
 from email.utils import parseaddr
 
 server_address = 'mail.apricityx.top'
-server_port = 25
+server_port = 587
 user = 'mail@apricityx.top'
 user_password = '520520MCt'
+path = './'
 
 
 def send_mail(recipient_address, text, subject):
     msg = MIMEText(text, 'plain', 'utf-8')
-    blacklist = ['gmail']
+    blacklist = ['mailer-daemon', 'postmaster', 'abuse']
     if 'mailer-daemon' in recipient_address:
         print("\033[0;31;1m不回复自动邮件\033[0m")
         return
@@ -34,8 +35,8 @@ def send_mail(recipient_address, text, subject):
     msg['From'] = formataddr(("软工中外3,4班邮件收发系统", user))  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
     msg['To'] = formataddr((recipient_address, recipient_address))  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
     msg['Subject'] = subject  # 邮件的主题，也可以说是标题
-    # 发送非加密邮件
-    server = smtplib.SMTP(server_address, server_port)  # 发件人邮箱中的SMTP服务器，端口是25
+    # 发送加密邮件
+    server = smtplib.SMTP(server_address, server_port)  # 发件人邮箱中的SMTP服务器
     server.login(user, user_password)  # 括号中对应的是发件人邮箱账号、邮箱密码
     server.sendmail(user, [recipient_address, ], msg.as_string())  # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
     print("\033[0;33;1m邮件发送成功！\033[0m")
@@ -191,9 +192,10 @@ def get_attachments(msg):  # 实现一个功能：获取邮件附件并返回是
             print('找到附件,文件名为:', filename)
             ifOK = True
         # 若不存在目录则创建
-        if not os.path.exists("./files"):
-            os.mkdir("./files")
-        attachment_dir = "./files"
+        global path
+        if not os.path.exists(path):
+            os.mkdir(path)
+        attachment_dir = path
         if bool(filename):
             filepath = os.path.join(attachment_dir, filename)
             with open(filepath, 'wb') as f:
@@ -201,4 +203,6 @@ def get_attachments(msg):  # 实现一个功能：获取邮件附件并返回是
     return [ifOK, filename]
 
 
-receive_mail()
+while 1:
+    receive_mail()
+    time.sleep(20)
