@@ -19,9 +19,10 @@ server_address = 'mail.apricityx.top'
 server_port = 587
 user = 'mail@apricityx.top'
 user_password = '520520MCt'
-path = './'
+path = '/var/www/html/homeworksubmit'
 
 
+# 如果是import进来的，不执行以下代码
 def send_mail(recipient_address, text, subject):
     msg = MIMEText(text, 'plain', 'utf-8')
     blacklist = ['mailer-daemon', 'postmaster', 'abuse']
@@ -74,7 +75,7 @@ def receive_mail():  # 此函数读取的最新一封邮件的元信息
     server = poplib.POP3(pop3_server)
 
     # 打开或者关闭调试信息，为打开，会在控制台打印客户端与服务器的交互信息
-    server.set_debuglevel(1)
+    server.set_debuglevel(0)
 
     # 打印POP3服务器的欢迎文字，验证是否正确连接到了邮件服务器
     # print(server.getwelcome().decode('utf8'))
@@ -93,7 +94,7 @@ def receive_mail():  # 此函数读取的最新一封邮件的元信息
 
     print('邮件总数： {}'.format(len(msg_list)))
     total_mail_numbers = len(msg_list)
-    print('邮件列表：', msg_list)
+    # print('邮件列表：', msg_list)
     msgs = []
     # 将mail_list转向
     # 如果没有mail，则退出
@@ -108,6 +109,7 @@ def receive_mail():  # 此函数读取的最新一封邮件的元信息
         print('读取邮件{}'.format(mail))
         if str(mail) == last_read_mail:
             print("\033[0;33;1m已读邮件已找到，共找到{}封未读邮件\033[0m".format(index))
+            # 如果last_read_mail不存在，则新建文件
             with open('last_read_mail.txt', 'w') as f:
                 f.write(str(mail_list[0]))
             break
@@ -175,10 +177,10 @@ def get_attachments(msg):  # 实现一个功能：获取邮件附件并返回是
     filename = ''
     for part in msg.walk():
         if part.get_content_maintype() == 'multipart':  # 这里是为了跳过附件中的邮件内容
-            print('未找到附件')
+            # print('未找到附件')
             continue
         if part.get('Content-Disposition') is None:  # 这里是为了跳过没有附件的内容
-            print('未找到附件')
+            # print('未找到附件')
             continue
         filename = part.get_filename()
         # filename为=?gb18030?B?Myw0sODNrNGnLnR4dA==?=这种形式，需要解码
@@ -203,6 +205,9 @@ def get_attachments(msg):  # 实现一个功能：获取邮件附件并返回是
     return [ifOK, filename]
 
 
-while 1:
-    receive_mail()
-    time.sleep(20)
+if __name__ == '__main__':
+    while 1:
+        receive_mail()
+        time.sleep(20)
+else:
+    print('variables imported successfully!')
