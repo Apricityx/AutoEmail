@@ -68,7 +68,7 @@ def receive_mail():  # 此函数读取的最新一封邮件的元信息
     user_account = 'mail@apricityx.top'
     password = '520520MCt'
 
-    # 邮件服务器地址,以下为网易邮箱
+    # 邮件服务器地址
     pop3_server = 'mail.apricityx.top'
 
     # 开始连接到服务器

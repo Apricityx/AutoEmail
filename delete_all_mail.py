@@ -67,3 +67,4 @@ print('完全删除邮件！')
 with open('last_read_mail.txt', 'w') as f:
     f.write('')
 server.quit()
+
