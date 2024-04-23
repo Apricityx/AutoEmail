@@ -1,0 +1,42 @@
+[
+  {
+    "table_name": "物理论文",
+    "students": [
+      {
+        "name": "张三",
+        "student_id": "222023321062106",
+        "if_submit": "True"
+      },
+      {
+        "name": "李四",
+        "student_id": "222023321062107",
+        "if_submit": "False"
+      },
+      {
+        "name": "王五",
+        "student_id": "222023321062108",
+        "if_submit": "True"
+      }
+    ]
+  },
+    {
+        "table_name": "C++实验",
+        "students": [
+        {
+            "name": "张三",
+            "student_id": "222023321062106",
+            "if_submit": "True"
+        },
+        {
+            "name": "李四",
+            "student_id": "222023321062107",
+            "if_submit": "False"
+        },
+        {
+            "name": "王五",
+            "student_id": "222023321062108",
+            "if_submit": "True"
+        }
+        ]
+    }
+]

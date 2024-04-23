@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>作业管理平台 - 登录</title>
+</head>
+<body>
+<h1>作业管理平台 - 登录</h1>
+<form action="login.php" method="post"> <!-- 此处login.php连接后端，后端校验是否有这个人，如果有就向cookie中存储数据 -->
+    <label for="username">用户名：</label>
+    <input type="text" name="username" id="username" required>
+    <br>
+    <label for="password">密码：</label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    <input type="submit" value="登录">
+</form>
+</body>
+</html>
