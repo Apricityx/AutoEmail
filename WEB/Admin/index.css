@@ -23,10 +23,6 @@
     grid-template-rows: 1fr 6fr;
 }
 
-#{
-    overflow: hidden;
-}
-
 .single_std {
     border: 1px solid black;
     display: grid;

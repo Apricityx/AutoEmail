@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 //allow chinese characters
-header("Content-type: text/html; charset=utf-8");
+//header("Content-type: text/html; charset=utf-8");
 $file = file('../../database_passwd');
 $pass = $file[0];
 $servername = "pve.zwtsvx.xyz:1128";
