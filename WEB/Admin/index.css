@@ -20,6 +20,7 @@ body {
 
 #left {
     display: grid;
+    height: 100vh;
     grid-template-rows: 1fr 6fr;
     background: #002140;
     color:azure;
@@ -29,10 +30,6 @@ body {
     display: grid;
     grid-template-rows: 1fr 6fr;
     background-color:#f0f2f5;
-}
-
-#{
-    overflow: hidden;
 }
 
 .single_std {
@@ -83,4 +80,14 @@ body {
 
 .shadow{
     box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+}
+
+.list-group-item {
+    border: 0px !important;
+    color:#fff !important;
+    background-color: #002140 !important;
+}
+
+.list-group-item.active {
+    background-color: #1890ff !important;
 }

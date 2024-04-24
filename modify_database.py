@@ -1,7 +1,7 @@
 import pandas as pd
 import pymysql as mysql
 
-data = pd.read_csv(r'test_data.csv', sep=',', header='infer', usecols=[0, 1]).values.tolist()
+data = pd.read_csv(r'std_data.csv', sep=',', header='infer', usecols=[0, 1]).values.tolist()
 
 
 # print(data)

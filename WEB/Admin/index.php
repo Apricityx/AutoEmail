@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 //allow chinese characters
-header("Content-type: text/html; charset=utf-8");
+//header("Content-type: text/html; charset=utf-8");
 $file = file('../../database_passwd');
 $pass = $file[0];
 $servername = "pve.zwtsvx.xyz:1128";
@@ -43,7 +43,8 @@ $data = json_encode($tables);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>作业管理平台 - 管理员</title>
     <link rel="stylesheet" href="./index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 <div id="main">
@@ -69,16 +70,20 @@ $data = json_encode($tables);
                     </li>
                 </ul> -->
                 <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#chem" role="tab" aria-controls="list-home">Chem</a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#chinese" role="tab" aria-controls="list-profile">Chn</a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#math" role="tab" aria-controls="list-messages">Math</a>
-                  </div>
+<!--                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"-->
+<!--                       href="#chem" role="tab" aria-controls="list-home">Chem</a>-->
+<!--                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"-->
+<!--                       href="#chinese" role="tab" aria-controls="list-profile">Chn</a>-->
+<!--                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"-->
+<!--                       href="#math" role="tab" aria-controls="list-messages">Math</a>-->
+                </div>
                 <div id="table_information"></div>
             </div>
             <div id="right" class="col-10" style="padding: 32px 0 0 1em;background-color: #f0f2f5;">
-                <div id="control_table" class="gap-2 d-md-block" >
+                <div id="control_table" class="gap-2 d-md-block">
                     <button class="btn btn-danger" style="" onclick="">初始化数据库</button>
-                    <button class="btn btn-primary" onclick="">创建作业</button>
+                    <button class="btn btn-primary" onclick="new_table()">创建作业</button>
+                    <button class="btn btn-primary" onclick="del_table()">删除作业</button>
                     <button class="btn btn-primary">上传学生名单</button>
                 </div>
                 <div id="detailed_information">
@@ -93,13 +98,17 @@ $data = json_encode($tables);
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 <!--向服务端发送请求-->
 <!--服务端返回：表名（作业名） -> 名字（学生名） -> 作业内容（作业内容） -> 作业状态（是否提交） -> 提交时间（提交时间）-->
 </body>
 </html>
 
 <script>
+    var table_selected = null;
+
     function reset_color() {
         let tables = document.getElementsByClassName("table");
         for (let i = 0; i < tables.length; i++) {
@@ -112,10 +121,16 @@ $data = json_encode($tables);
     let table_container = document.getElementById("table_information");
     let detailed_information = document.getElementById("detailed_information");
     for (let table in data) {
-        let table_div = document.createElement("div");
-        table_div.className = "table";
+        console.log('开始加载')
+        let table_div = document.createElement("a");
+        table_div.className = "list-group-item list-group-item-action active";
+        table_div.id = "list-home-list";
+        table_div.setAttribute('data-bs-toggle', 'list');
+        table_div.role = 'tab';
+        table_div.setAttribute('aria-controls', 'list-home');
         table_div.innerHTML = table;
         table_div.onclick = function () {
+            table_selected = table;
             reset_color();
             table_div.style.backgroundColor = "lightblue";
             detailed_information.innerHTML = `
@@ -147,6 +162,43 @@ $data = json_encode($tables);
                 detailed_information.appendChild(single_std);
             }
         }
-        table_container.appendChild(table_div);
+        document.getElementById('list-tab').appendChild(table_div);
+    }
+</script>
+<script>
+    // 实现按钮的功能
+    function new_table() {
+        let table_name = prompt("请输入新建表名");
+        if (table_name === null) {
+            window.alert("请输入作业名！");
+            return;
+        }
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `../../api/create_table.php?table_name=${table_name}`);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                alert(xhr.responseText);
+                window.location.reload();
+            }
+        }
+    }
+
+    function del_table() {
+        if (table_selected === null) {
+            alert("请选择一个作业！");
+            return;
+        }
+        let table_name = table_selected;
+        console.log(table_selected);
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `../../api/del_table.php?table_name=${table_name}`);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                alert(xhr.responseText);
+                window.location.reload();
+            }
+        }
     }
 </script>
