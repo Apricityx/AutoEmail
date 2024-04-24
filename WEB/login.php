@@ -1,3 +1,10 @@
+<html>
+<head>
+
+</head>
+<body>
+
+</body>
 <?php
 $file = "./password_.txt";
 $pass=file_get_contents($file);
@@ -16,6 +23,8 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
     $sql="select * from students where student_id='$username' and passwd='$password'";
     $result=$conn->query($sql);
     if($result->num_rows>0){
+        setcookie("username",$username,time()+3600);
+        header("Location:User/index.html");
         echo "登录成功!WELCOME!";
     }else{
         echo "用户不存在，登录失败";
@@ -23,3 +32,9 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 }
 $conn->close();
 ?>
+<!--<script>-->
+<!--    setTimeout(() => {-->
+<!--        window.location.href = "User/login.php";-->
+<!--    }, 5000);-->
+<!--</script>-->
+</html>
