@@ -100,6 +100,8 @@ $data = json_encode($tables);
 </html>
 
 <script>
+    var table_selected = null;
+
     function reset_color() {
         let tables = document.getElementsByClassName("table");
         for (let i = 0; i < tables.length; i++) {
@@ -116,6 +118,7 @@ $data = json_encode($tables);
         table_div.className = "table";
         table_div.innerHTML = table;
         table_div.onclick = function () {
+            table_selected = table;
             reset_color();
             table_div.style.backgroundColor = "lightblue";
             detailed_information.innerHTML = `
@@ -148,5 +151,42 @@ $data = json_encode($tables);
             }
         }
         table_container.appendChild(table_div);
+    }
+</script>
+<script>
+    // 实现按钮的功能
+    function new_table() {
+        let table_name = prompt("请输入新建表名");
+        if (table_name === null) {
+            window.alert("请输入作业名！");
+            return;
+        }
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `../../api/create_table.php?table_name=${table_name}`);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                alert(xhr.responseText);
+                window.location.reload();
+            }
+        }
+    }
+
+    function del_table() {
+        if (table_selected === null) {
+            alert("请选择一个作业！");
+            return;
+        }
+        let table_name = table_selected;
+        console.log(table_selected);
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `../../api/del_table.php?table_name=${table_name}`);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                alert(xhr.responseText);
+                window.location.reload();
+            }
+        }
     }
 </script>
