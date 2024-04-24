@@ -105,6 +105,9 @@ form{
             }
         }
         select {
+            option{
+                color: gray;
+            }
             color: white;
             height: 100%;
             border-radius: 15px;
@@ -135,6 +138,7 @@ form{
         &:hover{
             background: rgba(255,255,255,0.3);
             transform: scale(1.1);
+            cursor: pointer;
         }
         box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
         border: 2px solid rgba(0, 0, 0, 0.2);
