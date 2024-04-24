@@ -7,8 +7,7 @@ body {
     /*overflow: hidden;*/
     margin: 0;
     padding: 0;
-    background: url("image/background1.jpg") no-repeat 0px 0px;
-    background-repeat: no-repeat;
+    background: url("image/background1.jpg") no-repeat 0 0;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     font-size: 25px;
@@ -39,7 +38,7 @@ body {
     grid-row-start: 2;
     grid-row-end: 3;
     background-color: rgba(75, 81, 95, 0.3);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 120px;
     box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
     width: 40%;  /* 调整宽度 */
@@ -50,45 +49,55 @@ body {
     justify-content: center;  /* 使内容水平居中 */
     align-items: center;  /* 使内容垂直居中 */
     /*backdrop-filter: blur(10px);*/
+    backdrop-filter: blur(20px);
 
+}
+form{
+    height: 100%;
+    width: 100%;
 }
 .login{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
-    padding: 2px;
+    height: 80%;
+    width: 100%;
 }
+.login label{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
 
+}
 .login input {
-    height: 25px;
     border-radius: 5px;
-    .login input {
-    width: 80%;  /* 调整宽度 */
-    height: 25px;  /* 调整高度 */
+    width: 100%;  /* 调整宽度 */
+    height: 100%;
 }
-}
-
 .login select {
     height: 30px;
     border-radius: 5px;
 }
-
 .login div {
     margin-bottom: 6px;  /* 调整为您需要的值 */
 }
-
 #button{
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
     text-align: center;
-    width: 10px;
     line-height: 60px;
     margin: auto;
+    width: 10px;
     color:rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
 }
 #button:hover {
     color: #fff;
     transform: scale(1.1);
+
 }

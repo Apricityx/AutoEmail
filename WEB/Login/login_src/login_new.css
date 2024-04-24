@@ -1,0 +1,147 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:1fr 4fr 1fr;
+    grid-template-rows:1fr 5fr 1fr;
+    /*overflow: hidden;*/
+    margin: 0;
+    padding: 0;
+    background: url("image/background1.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    font-size: 25px;
+    backdrop-filter: brightness(120%);
+}
+h1{
+    user-select: none;
+}
+label{
+    user-select: none;
+}
+@font-face {
+    font-family: 'MyCustomFont';  /* 自定义的字体名称 */
+    src: url('fonts/font_style04.otf'); /* 字体文件的路径和格式 */
+    /*url('path/to/your/font.woff') format('woff');*/
+}
+*{
+    font-family: 'MyCustomFont', sans-serif;
+}
+.bg{
+    color: aliceblue;
+}
+#head{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    font-size: 1.5em; /* 增大标题字体大小 */
+}
+
+#content{
+
+    background-color: rgba(75, 81, 95, 0.3);
+    border-radius: 20px;
+    box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
+    width: 80%;  /* 调整宽度 */
+    height: 80%;  /* 调整高度 */
+    margin: auto;  /* 居中 */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    /*backdrop-filter: blur(10px);*/
+    backdrop-filter: blur(20px);
+
+}
+form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    div.row{
+        margin-top: 5%;
+        width:60%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 20%;
+        label {
+
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+            justify-content: center;
+            height: 100%;
+            width: 30%;
+
+        }
+        input {
+            border-radius: 30px;
+            width: 70%;  /* 调整宽度 */
+            height: 100%;
+            font-size: 20px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            color: white;
+            padding-left: 20px;
+            &:hover{
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.02);
+            }
+            transition: all 0.5s;
+
+        }
+        select {
+            height: 100%;
+            border-radius: 15px;
+            width: 70%;
+            font-size: 20px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            padding-left: 20px;
+            &:hover{
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.02);
+            }
+            transition: all 0.5s;
+        }
+
+    }
+
+    input[type='submit']{
+        height: 100%;
+        width: 30%;
+        margin-top:5%;
+        margin-bottom: 5%;
+        transition: all 0.5s;
+        font-size: 20px;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(15px);
+        &:hover{
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+    };
+
+}
+
+#button{
+
+    text-align: center;
+    line-height: 60px;
+    width: 50%;
+    color:rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+#button:hover {
+    color: #fff;
+    transform: scale(1.1);
+
+}
