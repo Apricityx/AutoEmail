@@ -4,13 +4,24 @@ body {
     display: grid;
     grid-template-columns:1fr 4fr 1fr;
     grid-template-rows:1fr 5fr 1fr;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 0;
     padding: 0;
     background: url("image/background1.jpg") no-repeat 0px 0px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -moz-background-size: 100% 100%;
+    font-size: 25px;
+    backdrop-filter: brightness(120%);
+}
+
+@font-face {
+    font-family: 'MyCustomFont';  /* 自定义的字体名称 */
+    src: url('fonts/font_style04.otf'); /* 字体文件的路径和格式 */
+    /*url('path/to/your/font.woff') format('woff');*/
+}
+*{
+    font-family: 'MyCustomFont', sans-serif;
 }
 .bg{
     color: aliceblue;
@@ -19,10 +30,10 @@ body {
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
-    font-size: 1.5em; /* 增大标题字体大小 */
+    font-size: 1.1em; /* 增大标题字体大小 */
 }
 
-#body{
+#content{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -31,12 +42,14 @@ body {
     border-radius: 5px;
     padding: 120px;
     box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
-    width: 50%;  /* 调整宽度 */
-    height: 50%;  /* 调整高度 */
+    width: 40%;  /* 调整宽度 */
+    height: 40%;  /* 调整高度 */
+    line-height: 0.5;
     margin: auto;  /* 居中 */
     display: flex;  /* 使内容居中 */
     justify-content: center;  /* 使内容水平居中 */
     align-items: center;  /* 使内容垂直居中 */
+    /*backdrop-filter: blur(10px);*/
 
 }
 .login{
@@ -48,16 +61,24 @@ body {
 }
 
 .login input {
-    height: 20px;
+    height: 25px;
     border-radius: 5px;
+    .login input {
+    width: 80%;  /* 调整宽度 */
+    height: 25px;  /* 调整高度 */
+}
 }
 
 .login select {
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
 }
 
-#bottom{
+.login div {
+    margin-bottom: 6px;  /* 调整为您需要的值 */
+}
+
+#button{
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
@@ -67,7 +88,7 @@ body {
     color:rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease;
 }
-#bottom:hover {
+#button:hover {
     color: #fff;
     transform: scale(1.1);
 }

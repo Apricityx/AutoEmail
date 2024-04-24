@@ -11,7 +11,7 @@
 <h1>作业管理平台 - 登录</h1></div>
 <div class="bg"></div>
 
-
+<div id="content">
 <div class="bg">
 <form action="login.php" method="post"> <!-- 此处login.php连接后端，后端校验是否有这个人，如果有就向cookie中存储数据 -->
 
@@ -25,8 +25,8 @@
     <br>
 
     <div class="login">
-    <label for="username">学号:</label>
-    <input type="text" name="username" id="username" required>
+    <label for="username">账号:</label>
+    <input type="text" name="username" id="username" placeholder="管理员/学号" required>
     </div>
     <br>
 
@@ -35,14 +35,16 @@
     <input type="password" name="password" id="password" required>
     </div>
     <br>
-
+<div id="button">
     <div class="login">
-    <input type="submit" value="登录">
+    <input type="submit" value="登录" style="width: 50px;height: 25px">
     </div>
-
+</div>
 
 </form>
 </div>
+</div>
+
 <div class="bg"></div>
 <div class="bg"></div>
 <div class="bg"></div>
