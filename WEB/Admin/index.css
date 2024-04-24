@@ -1,0 +1,34 @@
+* {
+    border: 1px solid black;
+}
+
+#main {
+    height: 97vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+
+#bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#left {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+
+#right {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+
+#{
+    overflow: hidden;
+}
+
+.single_std {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
