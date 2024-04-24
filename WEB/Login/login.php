@@ -1,14 +1,13 @@
-
 <?php
-$file = "login_src/password_.txt";
-$pass=file_get_contents($file);
-$servername = "localhost";
+$file = file('../../database_passwd');
+$pass = $file[0];
+$servername = "pve.zwtsvx.xyz:1128";
 $username = "root";
 $password = $pass;
-$dbname ="autoemail";
-$conn = new mysqli($servername,$username,$password,$dbname);
-if($conn->connect_error){
-    die("Connection failed:".mysqli_connect_error());
+$dbname = "autoemail";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed:" . mysqli_connect_error());
 }
 if(isset($_POST['username'])&&isset($_POST['password'])){
     $username=$_POST['username'];
