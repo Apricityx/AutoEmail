@@ -8,10 +8,10 @@
     grid-template-rows: 1fr 6fr;
 }
 
-#bottom {
+/* #bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
+} */
 
 #left {
     display: grid;

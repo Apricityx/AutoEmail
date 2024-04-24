@@ -39,38 +39,43 @@ $data = json_encode($tables);
 ?>
 <html lang="zh_CN">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>作业管理平台 - 管理员</title>
     <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 <div id="main">
     <div id="top">
         <h1 style="text-align: center">作业管理平台 - 管理员</h1>
     </div>
-    <div id="bottom">
-        <div id="left">
-            <div id="search_container"></div>
-            <div id="table_information"></div>
-        </div>
-        <div id="right">
-            <div id="control_table">
-                <button style="color: red" onclick="">初始化数据库</button>
-                <button onclick="">创建作业</button>
-                <button>上传学生名单</button>
+    <div id="bottom" class="container-fluid">
+        <div class="row">
+            <div id="left" class="col-3">
+                <div id="search_container"></div>
+                placeholder test
+                <div id="table_information"></div>
             </div>
-            <div id="detailed_information">
-                <div class="single_std">
-                    <div class="std_num">学生学号</div>
-                    <div class="std_name">学生姓名</div>
-                    <div class="std_status">提交情况</div>
-                    <div class="std_time">提交时间</div>
+            <div id="right" class="col-9">
+                <div id="control_table">
+                    <button style="color: red" onclick="">初始化数据库</button>
+                    <button onclick="">创建作业</button>
+                    <button>上传学生名单</button>
+                </div>
+                <div id="detailed_information">
+                    <div class="single_std">
+                        <div class="std_num">学生学号</div>
+                        <div class="std_name">学生姓名</div>
+                        <div class="std_status">提交情况</div>
+                        <div class="std_time">提交时间</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!--向服务端发送请求-->
 <!--服务端返回：表名（作业名） -> 名字（学生名） -> 作业内容（作业内容） -> 作业状态（是否提交） -> 提交时间（提交时间）-->
 </body>
@@ -96,7 +101,7 @@ $data = json_encode($tables);
             reset_color();
             table_div.style.backgroundColor = "lightblue";
             detailed_information.innerHTML = `
-<div class="single_std">
+                <div class="single_std">
                     <div class="std_num">学生学号</div>
                     <div class="std_name">学生姓名</div>
                     <div class="std_status">提交情况</div>
