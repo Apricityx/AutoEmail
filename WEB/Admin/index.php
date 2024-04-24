@@ -47,24 +47,42 @@ $data = json_encode($tables);
 </head>
 <body>
 <div id="main">
-    <div id="top">
+    <!-- <div id="top">
         <h1 style="text-align: center">作业管理平台 - 管理员</h1>
-    </div>
+    </div> -->
     <div id="bottom" class="container-fluid">
         <div class="row">
-            <div id="left" class="col-3">
-                <div id="search_container"></div>
-                placeholder test
+            <div id="left" class="col-2">
+                <div class="logo">
+                    <p style="flex:">作业管理平台</p>
+                </div>
+                <!-- <div id="search_container"></div> -->
+                <!-- <ul class="menu menu-items shadow">
+                    <li class="menu-items" style="padding-left: 24px;">
+                        Chem
+                    </li>
+                    <li class="menu-items" style="padding-left: 24px;">
+                        Chn
+                    </li>
+                    <li class="menu-items" style="padding-left: 24px;">
+                        Math
+                    </li>
+                </ul> -->
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#chem" role="tab" aria-controls="list-home">Chem</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#chinese" role="tab" aria-controls="list-profile">Chn</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#math" role="tab" aria-controls="list-messages">Math</a>
+                  </div>
                 <div id="table_information"></div>
             </div>
-            <div id="right" class="col-9">
-                <div id="control_table">
-                    <button style="color: red" onclick="">初始化数据库</button>
-                    <button onclick="">创建作业</button>
-                    <button>上传学生名单</button>
+            <div id="right" class="col-10" style="padding: 32px 0 0 1em;background-color: #f0f2f5;">
+                <div id="control_table" class="gap-2 d-md-block" >
+                    <button class="btn btn-danger" style="" onclick="">初始化数据库</button>
+                    <button class="btn btn-primary" onclick="">创建作业</button>
+                    <button class="btn btn-primary">上传学生名单</button>
                 </div>
                 <div id="detailed_information">
-                    <div class="single_std">
+                    <div class="single_std" style="background-color: #fff;">
                         <div class="std_num">学生学号</div>
                         <div class="std_name">学生姓名</div>
                         <div class="std_status">提交情况</div>
