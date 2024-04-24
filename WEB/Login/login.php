@@ -25,11 +25,11 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
         setcookie("name",$name,time()+3600);
         setcookie("username",$num,time()+3600);
         if($type=='student'){
-            header("Location:User/index.html");
+            header("Location:../User/index.html");
             echo "登录成功!WELCOME!";
         }
         if($type=='admin'){
-            header("Location:Admin/index.html");
+            header("Location:../Admin/index.html");
         }
 
         echo "登录成功!WELCOME!";
