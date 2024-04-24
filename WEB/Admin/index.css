@@ -20,6 +20,7 @@ body {
 
 #left {
     display: grid;
+    height: 100vh;
     grid-template-rows: 1fr 6fr;
     background: #002140;
     color:azure;
