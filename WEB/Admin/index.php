@@ -86,7 +86,7 @@ $data = json_encode($tables);
                     <button class="btn btn-primary" onclick="del_table()">删除作业</button>
                     <button class="btn btn-primary">上传学生名单</button>
                 </div>
-                <div id="detailed_information">
+                <div id="detailed_information" class="sheetmodule">
                     <div class="single_std" style="background-color: #fff;">
                         <div class="std_num">学生学号</div>
                         <div class="std_name">学生姓名</div>
@@ -123,7 +123,7 @@ $data = json_encode($tables);
     for (let table in data) {
         console.log('开始加载')
         let table_div = document.createElement("a");
-        table_div.className = "list-group-item list-group-item-action active";
+        table_div.className = "list-group-item list-group-item-action";
         table_div.id = "list-home-list";
         table_div.setAttribute('data-bs-toggle', 'list');
         table_div.role = 'tab';
@@ -132,7 +132,15 @@ $data = json_encode($tables);
         table_div.onclick = function () {
             table_selected = table;
             reset_color();
-            table_div.style.backgroundColor = "lightblue";
+            // table_div.style.backgroundColor = "lightblue";
+            table_div.className = "list-group-item list-group-item-action active"
+            // idk whats going on with that lightblue
+            // active is a RULE
+            // but not picking a color
+
+            // but how to reverse?
+
+            //all in all codes arent examined
             detailed_information.innerHTML = `
                 <div class="single_std">
                     <div class="std_num">学生学号</div>
