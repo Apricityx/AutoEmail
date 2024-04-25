@@ -60,3 +60,24 @@
 </div>
 </body>
 </html>
+<script>
+    let std_name = document.cookie.split("name=")[1].split(";")[0];
+    console.log("welcome," + std_name)
+
+    function get_data() {
+        console.log('正在获取数据')
+        let xhr = new XMLHttpRequest();
+        console.log(document.cookie)
+        let std_name = document.cookie.split("num=")[1].split(";")[0];
+        console.log(std_name)
+        xhr.open("GET", `../../api/get_std_info.php?std_num=${std_name}`);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText)
+            }
+        }
+    }
+
+    get_data()
+</script>

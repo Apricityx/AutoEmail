@@ -46,11 +46,11 @@ if ($result->num_rows > 0) {
 $result = json_encode($tables);
 $conn->close();
 ?>
-<script>
-    // TEST
-    document.cookie = "name!Apricityx!name,num!22023321062106!num";
-    console.log(document.cookie)
-</script>
+<!--<script>-->
+<!--    // TEST-->
+<!--    document.cookie = "name!Apricityx!name,num!22023321062106!num";-->
+<!--    console.log(document.cookie)-->
+<!--</script>-->
 <script>
     let tables = <?php echo $result; ?>;
     console.log(tables);
@@ -68,10 +68,10 @@ $conn->close();
 </script>
 <script>
     // 读取cookies中被!name name!包裹的字段并填入std_name中
-    let std = document.cookie.split("name!")[1];
-    std = std.split("!name")[0];
-    let num = document.cookie.split("num!")[1];
-    num = num.split("!num")[0];
+    let std = document.cookie.split("name=")[1];
+    std = std.split(";")[0];
+    let num = document.cookie.split("num=")[1];
+    num = num.split(";")[0];
     document.getElementById("std_name").value = std;
     document.getElementById("std_num").value = num;
     console.log(document.getElementById("std_name").value);

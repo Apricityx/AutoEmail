@@ -1,37 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>密码修改</title>
-		<link rel="stylesheet" href="./style.css">
-	</head>
-	<body>
-		<div class="background_color">
-			<div class="content">
-				<h1>修改密码</h1>
-				<form>
-					<div class="row">
-						<label>用户名</label>
-						<input type="text"/>
-					</div>
-					<div class="row">
-						<label>原密码</label>
-						<input type="password">
-					</div>
-					<div class="row">
-						<label>新密码</label>
-						<input type="password">
-					</div>
-					<div class="row">
-						<label>新密码确认</label>
-						<input type="password">
-					</div>
-					<div class="row">
-						<input  type="submit" content="确认修改">
-					</div>
-					
-				</form>
-			</div>
-		</div>
-	</body>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>密码修改</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="background_color">
+    <div class="content">
+        <h1>修改密码</h1>
+        <form action="verify.php">
+            <div class="row">
+                <label>学号</label>
+                <input type="text" name="std_num"/>
+            </div>
+            <div class="row">
+                <label>原密码</label>
+                <input type="password" name="std_old_passwd" required>
+            </div>
+            <div class="row">
+                <label>新密码</label>
+                <input type="password" name="std_new_passwd" required>
+            </div>
+            <div class="row">
+                <label>重复新密码</label>
+                <input type="password" name="std_repeat_passwd" required>
+            </div>
+            <div class="row" id="submit">
+                <input type="submit" onsubmit="check_submit()">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
 </html>
+<script>
+    function check_submit(){
+        let std_new_passwd = document.getElementsByName("std_new_passwd")[0].value;
+        let std_repeat_passwd = document.getElementsByName("std_repeat_passwd")[0].value;
+        if(std_new_passwd !== std_repeat_passwd){
+            alert("两次输入的密码不一致");
+            return false;
+        }
+        return true;
+    }
+</script>
