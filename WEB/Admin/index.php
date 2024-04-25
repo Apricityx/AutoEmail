@@ -1,84 +1,88 @@
 <!DOCTYPE html>
 <?php
-//allow chinese characters
-header("Content-type: text/html; charset=utf-8");
-$file = file('../../database_passwd');
-$pass = $file[0];
-$servername = "pve.zwtsvx.xyz:1128";
-$username = "root";
-$password = $pass;
-$dbname = "autoemail";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("连接失败：" . $conn->connect_error);
-}
-//读取所有的表，将数据库中所有的表以及表中的内容转换为json格式
-$sql = "show tables";
-$result = $conn->query($sql);
-$tables = array();//存放表名和表中的内容
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $table = $row['Tables_in_autoemail'];//表名
-        if ($table == 'students') {
-            continue;//跳过student表
-        }
-        $sql = "select * from $table";
-        $result2 = $conn->query($sql);
-        $rows = array();
-        if ($result2->num_rows > 0) {
-            while ($row2 = $result2->fetch_assoc()) {
-                $rows[] = $row2;
-            }
-        }
-        $tables[$table] = $rows;
+    //allow chinese characters
+    header("Content-type: text/html; charset=utf-8");
+    $file = file('../../database_passwd');
+    $pass = $file[0];
+    $servername = "pve.zwtsvx.xyz:1128";
+    $username = "root";
+    $password = $pass;
+    $dbname = "autoemail";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("连接失败：" . $conn->connect_error);
     }
-
-}
-$conn->close();
-$data = json_encode($tables);
+    //读取所有的表，将数据库中所有的表以及表中的内容转换为json格式
+    $sql = "show tables";
+    $result = $conn->query($sql);
+    $tables = array();//存放表名和表中的内容
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $table = $row['Tables_in_autoemail'];//表名
+            if ($table == 'students') {
+                continue;//跳过student表
+            }
+            $sql = "select * from $table";
+            $result2 = $conn->query($sql);
+            $rows = array();
+            if ($result2->num_rows > 0) {
+                while ($row2 = $result2->fetch_assoc()) {
+                    $rows[] = $row2;
+                }
+            }
+            $tables[$table] = $rows;
+        }
+        
+    }
+    $conn->close();
+    $data = json_encode($tables);
 ?>
 <html lang="zh_CN">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>作业管理平台 - 管理员</title>
-    <link rel="stylesheet" href="./index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-<body>
-<div id="main">
-    <div id="top">
-        <h1 style="text-align: center">作业管理平台 - 管理员</h1>
-    </div>
-    <div id="bottom" class="container-fluid">
-        <div class="row">
-            <div id="left" class="col-3">
-                <div id="search_container"></div>
-                placeholder test
-                <div id="table_information"></div>
-            </div>
-            <div id="right" class="col-9">
-                <div id="control_table">
-                    <button style="color: red" onclick="">初始化数据库</button>
-                    <button onclick="">创建作业</button>
-                    <button>上传学生名单</button>
-                </div>
-                <div id="detailed_information">
-                    <div class="single_std">
-                        <div class="std_num">学生学号</div>
-                        <div class="std_name">学生姓名</div>
-                        <div class="std_status">提交情况</div>
-                        <div class="std_time">提交时间</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!--向服务端发送请求-->
-<!--服务端返回：表名（作业名） -> 名字（学生名） -> 作业内容（作业内容） -> 作业状态（是否提交） -> 提交时间（提交时间）-->
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>作业管理平台 - 管理员</title>
+		<link rel="stylesheet" href="./index.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+			  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			  crossorigin="anonymous">
+	</head>
+	<body>
+		<div id="main">
+			<div id="top">
+				<h1 style="text-align: center">作业管理平台 - 管理员</h1>
+			</div>
+			<div id="bottom" class="container-fluid">
+				<div class="row">
+					<div id="left" class="col-3">
+						<div id="search_container"></div>
+						placeholder test
+						<div id="table_information"></div>
+					</div>
+					<div id="right" class="col-9">
+						<div id="control_table">
+							<button style="color: red" onclick="">初始化数据库</button>
+							<button onclick="">创建作业</button>
+							<button>上传学生名单</button>
+						</div>
+						<div id="detailed_information">
+							<div class="single_std">
+								<div class="std_num">学生学号</div>
+								<div class="std_name">学生姓名</div>
+								<div class="std_status">提交情况</div>
+								<div class="std_time">提交时间</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+				crossorigin="anonymous"></script>
+		<!--向服务端发送请求-->
+		<!--服务端返回：表名（作业名） -> 名字（学生名） -> 作业内容（作业内容） -> 作业状态（是否提交） -> 提交时间（提交时间）-->
+	</body>
 </html>
 
 <script>
