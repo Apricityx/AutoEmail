@@ -24,7 +24,8 @@ div.background_color {
     justify-content: center;
     align-items: center;
 }
-div.content{
+
+div.content {
     border-radius: 30px;
     padding: 20px;
     height: 50vh;
@@ -43,88 +44,135 @@ div.content{
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
-    h1{
+
+    h1 {
         font-weight: 600;
         font-size: 40px;
         letter-spacing: 1px;
         color: white;
         text-align: center;
     }
-    form{
+
+    form {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        div.row{
-            margin-top: 4%;
+
+        a {
+            margin-top: 3%;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: end;
+            height: 30px;
+            width: 60%;
+            margin-left: 20%;
+            text-decoration-line: underline;
+            user-select: none;
+            transition: all 0.5s;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.9);
+                cursor: pointer;
+            }
+        }
+
+        div.row:nth-child(5) {
+            margin-top: 0;
+        }
+
+        div.row {
+            margin-top: 2.5%;
             width: 100%;
             display: flex;
             flex-direction: row;
             align-content: center;
             justify-content: center;
-            label{
+            min-height: 15%;
+
+            label.hint {
                 font-size: 24px;
                 width: 30%;
                 height: 100%;
                 letter-spacing: 1px;
                 font-weight: 600;
-                color:white;
+                color: white;
                 text-align: center;
+                vertical-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
-            input[type='password']{
-                font-size: 24px;
-                height: 100%;
-                border-radius: 50px;
-                background: rgba(255,255,255,0.3);
-                border: none;
-                transition: all 0.5s;
-                width: 45%;
-                color: white;
-                padding-left: 5%;
-                &:focus{
+
+            label.input {
+                width: 50%;
+                justify-content: center;
+                display: flex;
+
+                input[type='password'] {
+                    font-size: 24px;
+                    height: 100%;
+                    border-radius: 50px;
+                    background: rgba(255, 255, 255, 0.3);
                     border: none;
-                    background: rgba(255,255,255,0.5);
+                    transition: all 0.5s;
+                    width: 100%;
+                    color: white;
+                    padding-left: 5%;
+
+                    &:focus {
+                        border: none;
+                        background: rgba(255, 255, 255, 0.5);
+                    }
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.5);
+                        transform: scale(1.05);
+                    }
                 }
-                &:hover{
-                    background: rgba(255,255,255,0.5);
-                    transform: scale(1.05);
-                }
-            }
-            input[type='text']{
-                font-size: 24px;
-                height: 100%;
-                border-radius: 50px;
-                background: rgba(255,255,255,0.3);
-                border: none;
-                transition: all 0.5s;
-                width: 45%;
-                color: white;
-                padding-left: 5%;
-                &:focus{
+
+                input[type='text'] {
+                    font-size: 24px;
+                    height: 100%;
+                    border-radius: 50px;
+                    background: rgba(255, 255, 255, 0.3);
                     border: none;
-                    background: rgba(255,255,255,0.5);
+                    transition: all 0.5s;
+                    width: 100%;
+                    color: white;
+                    padding-left: 5%;
+
+                    &:focus {
+                        border: none;
+                        background: rgba(255, 255, 255, 0.5);
+                    }
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.5);
+                        transform: scale(1.05);
+                    }
                 }
-                &:hover{
-                    background: rgba(255,255,255,0.5);
-                    transform: scale(1.05);
-                }
-            }
-            input[type='submit']{
-                margin-top: 5%;
-                font-size: 20px;
-                height: 50%;
-                border-radius: 50px;
-                width: 30%;
-                background: rgba(255,255,255,0.3);
-                font-weight: 600;
-                color: white;
-                border: none;
-                transition: all 0.5s;
-                &:hover{
-                    background: rgba(255,255,255,0.5);
-                    transform: scale(1.05);
-                    cursor: pointer;
+
+                input[type='submit'] {
+
+                    font-size: 20px;
+                    height: 100%;
+                    border-radius: 50px;
+                    width: 50%;
+                    background: rgba(255, 255, 255, 0.3);
+                    font-weight: 600;
+                    color: white;
+                    border: none;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.5);
+                        transform: scale(1.05);
+                        cursor: pointer;
+                    }
                 }
             }
 
