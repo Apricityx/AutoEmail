@@ -13,7 +13,10 @@
     src: url('fonts/HANYI.ttf');
 }
 body{
+    margin: 0;
+    padding: 0;
 overflow: hidden;
+    background-color: #F7F3F3;
     /*background-image: linear-gradient(to bottom, #b5acf2, #a5befd, #9bcfff, #9cddff, #a7eaff, #a7eafd, #a6eafb, #a6eaf9, #94dff6, #83d3f3, #75c7ef, #69bbec);*/
 }
 h1{
@@ -57,7 +60,7 @@ p{
     display: grid;
     grid-template-rows: 1.5fr 1.2fr 7fr 0.6fr;
     grid-template-columns: 0.5fr 8fr 1fr;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 .main{
     /*height: 100%;*/
@@ -120,16 +123,19 @@ p{
 /*    height:50px;*/
 /*}*/
 #search_c{
-    border:none;
-    font-size: 20px;
+    border: none;
+    font-size: 25px;
     font-family:"楷体";
+    text-indent: 40px;
     /*//背景透明*/
+    border-radius: 25px 0 0 25px;
     background-color: rgba(255,255,255,0.5);
 }
 #search_b{
     width:100%;
     height:100%;
-    border: 1px solid #565454;
+    border-radius: 0 25px 25px 0;
+    border: 3px solid #565454;
     background-color: #38A3E5;
     color: #f8f8f8;
     font-size: 20px;
