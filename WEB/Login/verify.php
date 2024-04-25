@@ -36,7 +36,7 @@ if ($type == 'admin') {
                 setcookie("name", $name, time() + 3600, "/",256);
                 setcookie("num", $num, time() + 3600, "/");
                 echo "登录成功!WELCOME!";
-                header("Location:../User/index.html");
+                header("refresh:3;url=../User/index.html");
             }
         } else {
             $flag = 0;
