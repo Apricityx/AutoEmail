@@ -7,15 +7,56 @@
 </head>
 <body>
 <div id="main">
-<div id="title" class="layout"></div>
+    <div id="title" class="layout">
+        <h1> 作 业 提 交 情 况 查 询 平 台</h1>
+    </div>
+    <div id="login_out">
+        <button id="out_b">
+            退出登录
+            <!--                <a href="Login/login.html">退出登录</a>-->
+        </button>
+    </div>
 
-<div class="layout"></div>
-<div class="layout" id="search"></div>
-<div class="layout"></div>
+    <div class="layout"></div>
+    <div class="layout" id="s_box_">
+        <form autocomplete="on">
+            <div id="to_search">
+                <div class="search"></div>
+                <div class="search">
+                    <input id="search_c" class="search" placeholder="请输入作业名称">
+                </div>
+                <div class="search">
+                    <button id="search_b" class="search">搜索</button>
+                </div>
+                <div class="search"></div>
+            </div>
+        </form>
+    </div>
+    <div class="layout"></div>
 
-<div class="layout"></div>
-<div class="layout" id="content"></div>
-<div class="layout"></div>
+    <div class="layout"></div>
+    <div class="layout" id="content">
+        <div class="content" id="left">
+            <h2>未</h2>
+            <h2>提</h2>
+            <h2>交</h2>
+        </div>
+        <div class="content" id="not_sub">
+            <div id="num1" class="course">
+                <p>大学物理课程论文</p>
+            </div>
+            <div id="num2" class="course">
+                <p>大学物理课程论文</p>
+            </div>
+        </div>
+        <div class="content" id="sub"></div>
+        <div class="content" id="right">
+            <h2>已</h2>
+            <h2>提</h2>
+            <h2>交</h2>
+        </div>
+    </div>
+    <div class="layout"></div>
 </div>
 </body>
 </html>
