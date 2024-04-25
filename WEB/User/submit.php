@@ -68,7 +68,7 @@ $conn->close();
 </script>
 <script>
     // 读取cookies中被!name name!包裹的字段并填入std_name中
-    let std = document.cookie.split("name=")[1];
+    let std = decodeURIComponent(document.cookie.split("name=")[1]);
     std = std.split(";")[0];
     let num = document.cookie.split("num=")[1];
     num = num.split(";")[0];

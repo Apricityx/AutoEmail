@@ -27,9 +27,12 @@ for ($i = 0; $i < count($tables); $i++) {
 //    echo "SELECT * FROM $select_name WHERE student_id = $std_num";
     $result = $conn->query("SELECT * FROM $select_name WHERE student_id = $std_num");
     while ($row = $result->fetch_assoc()) {
-        $out_data[$select_name] = $row["if_finish"];
-//        echo $row["if_finish"];
+        $data_name = array();
+        $data_name["table_name"] = $select_name;
+        $data_name["is_finish"] = $row["if_finish"];
+        $out_data[] = $data_name;
+        //        echo $row["if_finish"];
     }
 }
-echo json_encode($out_data,256);
+echo json_encode($out_data, 256);
 //$sql = "SELECT * FROM $table_name WHERE student_id = $std_num";
