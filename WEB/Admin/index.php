@@ -79,22 +79,22 @@ $data = json_encode($tables);
                 </div>
                 <div id="table_information"></div>
             </div>
-            <div id="right" class="col-10" style="padding: 32px 0 0 1em;background-color: #f0f2f5;">
-                <div id="control_table" class="gap-2 d-md-block">
-                    <button class="btn btn-danger" style="" onclick="">初始化数据库</button>
-                    <button class="btn btn-primary" onclick="new_table()">创建作业</button>
-                    <button class="btn btn-primary" onclick="del_table()">删除作业</button>
-                    <button class="btn btn-primary">上传学生名单</button>
-                </div>
-                <div id="detailed_information" class="sheetmodule">
-                    <div class="single_std" style="background-color: #fff;">
-                        <div class="std_num">学生学号</div>
-                        <div class="std_name">学生姓名</div>
-                        <div class="std_status">提交情况</div>
-                        <div class="std_time">提交时间</div>
+                <div id="right" class="col-10" style="padding: 0 0 0 1em;background-color: #f0f2f5;">
+                    <div id="control_table" class="gap-2 d-md-block buttonmodule">
+                        <button class="btn btn-danger" style="" onclick="">初始化数据库</button>
+                        <button class="btn btn-primary" onclick="new_table()">创建作业</button>
+                        <button class="btn btn-primary" onclick="del_table()">删除作业</button>
+                        <button class="btn btn-primary">上传学生名单</button>
+                    </div>
+                    <div id="detailed_information" class="sheetmodule">
+                        <div class="single_std" style="background-color: #fff;">
+                            <div class="std_num">学生学号</div>
+                            <div class="std_name">学生姓名</div>
+                            <div class="std_status">提交情况</div>
+                            <div class="std_time">提交时间</div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
