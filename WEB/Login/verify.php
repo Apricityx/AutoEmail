@@ -36,12 +36,12 @@ if ($type == 'admin') {
             if ($type == 'student') {
                 setcookie("name", $name, time() + 3600, "/", 256);
                 setcookie("num", $num, time() + 3600, "/");
-                echo "登录成功!WELCOME!";
+//                echo "登录成功!WELCOME!";
                 header("refresh:3;url=../User/index.html");
             }
         } else {
             $flag = 0;
-            echo "用户名或密码错误，将在3秒后返回登录页面";
+//            echo "用户名或密码错误，将在3秒后返回登录页面";
             header("refresh:3;url=../Login/login.html");
         }
     }
