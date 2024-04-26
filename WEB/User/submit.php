@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>作业管理平台 - 提交作业</title>
-    <link rel="stylesheet" href="user_src/receive.css">
+    <link rel="stylesheet" href="user_src/submit.css">
 </head>
 <body>
 <div id="main">
@@ -11,22 +11,29 @@
         <h1>提交作业</h1>
     </div>
     <div id="content">
-<form  id="S_W" action="receive.php" method="post" enctype="multipart/form-data">
-    <label for="homework_name"></label><input name="homework_name" id="homework_name" required>
-    </input>
-    <br>
-    <label id="std_name_label">
-        <input name="std_name" type="text" id="std_name">
-    </label>
-    <br>
-    <label id="std_num_label">
-        <input name="std_num" type="text" id="std_num">
-    </label>
-    <br>
-    <input type="file" name="file">
-    <br>
-    <input type="submit" value="提交">
-</form>
+        <div id="submit_b">
+            <form id="S_W" action="receive.php" method="post" enctype="multipart/form-data">
+                <label for="homework_name">请选择要提交的作业:</label>
+                <input type="text" name="homework_name" id="homework_name" required>
+<!--                    <option value="1">暂无作业</option>-->
+                <br>
+                <label id="std_name_label">姓名:
+                    <input name="std_name" type="text" id="std_name">
+                </label>
+                <br>
+                <label id="std_num_label">学号:
+                    <input name="std_num" type="text" id="std_num">
+                </label>
+                <br>
+                <label>点击选择文件:
+                    <br>
+<!--                    <input type="file" name="file">-->
+                <input type="file" id="select_" name="file">
+                </label>
+                <br>
+                <input type="submit" id="submit" value="提交">
+            </form>
+        </div>
     </div>
 </div>
 <?php

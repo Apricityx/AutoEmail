@@ -61,11 +61,22 @@ h2{
     display:grid;
     grid-template-columns: 0.8fr 3fr 3fr 0.8fr;
     grid-auto-rows: 5fr 1fr;
-    background-image: linear-gradient(to top, #cfc3e9, #c4c1e8, #b9bfe7, #adbde4, #a1bbe1, #a5bde0, #aac0e0, #aec2df, #c1cbe2, #d0d4e4, #dedee6, #e9e9e9);
+    backdrop-filter: blur(10px);//背景模糊
+    background: rgba(255, 255, 255, 0.1);//背景透明
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);//阴影
+    border: 1px solid rgba(255, 255, 255, 0.5);//边框
+    border-right: 1px solid rgba(255, 255, 255, 0.2);//右边框
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);//下边框
+    /*z-index: 10;*/
+    position: absolute;
+    top: auto;
+    left: auto;
+    /*background-image: linear-gradient(to top, #cfc3e9, #c4c1e8, #b9bfe7, #adbde4, #a1bbe1, #a5bde0, #aac0e0, #aec2df, #c1cbe2, #d0d4e4, #dedee6, #e9e9e9);*/
 
 }
 .content{
-    border: 1px solid black;
+    border: 5px solid #f0f0f0;
+    border-style: outset;
     /*box-shadow: #bfefef 1px 1px 1px;*/
     width:100%;
     height:100%;
