@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+header("Content-type: text/html; charset=utf-8");
 // 验证是否登录
 //echo $_COOKIE["admin"];
 use JetBrains\PhpStorm\NoReturn;
@@ -57,7 +58,8 @@ $data = json_encode($tables);
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<form id="upload_container" style="display: none;" method="post" enctype="multipart/form-data" action="../../api/upload_std_list.php">
+<form id="upload_container" style="display: none;" method="post" enctype="multipart/form-data"
+      action="../../api/upload_std_list.php">
     <input type="file" id="upload" name="upload">
 </form>
 <div id="main">
@@ -104,7 +106,8 @@ $data = json_encode($tables);
                     <button class="btn btn-primary" onclick="new_table()"><i class="bi bi-plus-square"></i> 创建作业
                     </button>
                     <button class="btn btn-danger" onclick="del_table()"><i class="bi bi-trash3"></i> 删除作业</button>
-                    <button class="btn btn-primary" onclick="upload_std_list()"><i class="bi bi-cloud-upload"></i> 上传名单</button>
+                    <button class="btn btn-primary" onclick="upload_std_list()"><i class="bi bi-cloud-upload"></i> 上传名单
+                    </button>
                     <button class="btn btn-primary" onclick="download_files()"><i
                                 class="bi bi-cloud-download"></i> 下载该作业
                     </button>
@@ -309,6 +312,18 @@ $data = json_encode($tables);
     }
 
     function download_files() {
+        if (table_selected === null) {
+            alert("请选择一个作业！");
+            return;
+        }
+        let count = 0;
+        for (let i = 0; i < data[table_selected].length; i++) {
+            count += data[table_selected][i]["if_finish"] === '1' ? 1 : 0;
+        }
+        if (count === 0) {
+            alert("该作业还没有任何提交！");
+            return;
+        }
         // 构建http请求
         let xhr = new XMLHttpRequest();
         xhr.open("GET", `../../api/download.php?table_name=${table_selected}`);
@@ -320,7 +335,7 @@ $data = json_encode($tables);
         }
     }
 
-    function upload_std_list(){
+    function upload_std_list() {
         let select_container = document.getElementById("upload");
         select_container.click();
         select_container.onchange = function () {
