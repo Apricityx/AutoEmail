@@ -11,15 +11,16 @@ h1{
     /*padding: 0 0 0 120px;*/
     text-align: center;
     font-size: 70px;
-    color: #dadada;
-    text-shadow: #000000 2px 3px 4px;
+    color: #e7e7e7;
+    text-shadow: #000000 3px 3px 4px;
 }
 body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #F2F7F7;
+    background-color: #F7F7ED;
     user-select: none;
+    /*z-index: -999;*/
 
 }
 #main{
@@ -30,12 +31,13 @@ body{
     grid-template-columns: 0.5fr 5fr 0.5fr;
 }
 #title{
-    background-color: #00175C;
+    background-color: #071655;
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
     font-size: 1.5em;
     width:100%;
+    box-shadow: #4f555b 5px 5px 5px;
     /*border: 1px solid #051F51;*/
 }
 #content{
@@ -53,7 +55,9 @@ body{
     grid-row-end: 3;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.08);
+    border-radius: 45px;
+    background-color: rgba(16, 52, 198,0.1);
+    filter: blur(0);
     border: 5px dot-dot-dash #c2bfbf;
     /*border-style: dot-dot-dash;*/
     /*border: 1px solid #051F51;*/
@@ -75,13 +79,17 @@ input{
     border-radius: 25px;
     text-indent: 40px;
     margin: 10px 10px 40px 10px;
+    /*//背景颜色透明*/
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    /*background-color: rgba(255,255,255,0.5);*/
     border:none;
     /*border-color: #000C40;*/
 }
 
 /*//鼠标悬在input上，input突出*/
 input:hover{
-    box-shadow: 0 5px 20px #000000;
+    box-shadow: 10px 10px 10px #000000;
     transition: 0.8s;
     border-color: #000C40;
 }
@@ -94,6 +102,7 @@ label{
     font-family: "宋体";
     font-size: 25px;
     margin: 25px 50px 10px 200px;
+    background-color: rgb(16, 52, 198,0.01);
     border-radius: 0;
 }
 #select_:hover{

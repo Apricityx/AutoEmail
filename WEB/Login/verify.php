@@ -53,7 +53,7 @@ $conn->close();
 ?>
 <html>
 <head>
-    <title></title>
+    <title>加载中.....</title>
     <link rel="stylesheet" type="text/css" href="./login_src/verify_.css">
 </head>
 

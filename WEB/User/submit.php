@@ -8,7 +8,7 @@
 <body>
 <div id="main">
     <div id="title">
-        <h1>提交作业</h1>
+        <h1>提  交  作  业</h1>
     </div>
     <div id="content">
         <div id="submit_b">
