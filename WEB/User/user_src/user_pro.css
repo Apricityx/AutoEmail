@@ -12,11 +12,17 @@
     font-family:'myfont3';
     src: url('fonts/HANYI.ttf');
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
 overflow: hidden;
     background-color: #F7F3F3;
+    user-select: none;
+    scroll-behavior: smooth;
+
     /*background-image: linear-gradient(to bottom, #b5acf2, #a5befd, #9bcfff, #9cddff, #a7eaff, #a7eafd, #a6eafb, #a6eaf9, #94dff6, #83d3f3, #75c7ef, #69bbec);*/
 }
 h1{
@@ -89,10 +95,19 @@ p{
     background-color: rgba(255,255,255,0.5);
     /*background-color: #f0f0f0;*/
     border-radius: 5px;
-    border: 1px solid #051F51;
+    border: 1px solid #e9e9ea;
     font-size: 1.2em;
     color: #f8f8f8;
+    transition: 0.8s;
 }
+#out_b:hover{
+    border: 1px solid #e3e3e3;
+    background-color: #ffffff;
+    color: #1e3854;
+    box-shadow: #c4c4c4 3px 3px 3px;
+    transition: 0.8s;
+}
+
 #s_box_{
     grid-column-start: 2;
     grid-column-end: 4;
