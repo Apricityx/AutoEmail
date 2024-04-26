@@ -42,3 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     move_uploaded_file($file['tmp_name'], 'homework/' . $homework_name . '/' . $std_name . '_' . $std_num . '_' . $file['name']);
 }
+?>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="user_src/receive.css">
+</head>
+<body>
+</body>
+</html>

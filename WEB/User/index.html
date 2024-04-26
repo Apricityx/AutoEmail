@@ -2,7 +2,7 @@
 <html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>学生提交查询平台</title>
     <link rel="stylesheet" href="user_src/user_pro.css">
 </head>
 <body>
@@ -118,6 +118,8 @@
 
         let div5 = document.createElement("div");
         div5.className = "single_course";
+        div5.id="submit_work";
+        // div5.style = "text-align: center";
         let submit = document.createElement("a");
         submit.innerText = "提交作业";
         submit.href = `./submit.php?course=${subject}`;

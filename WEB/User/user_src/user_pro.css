@@ -105,6 +105,7 @@ p{
     background-color: #ffffff;
     color: #1e3854;
     box-shadow: #c4c4c4 3px 3px 3px;
+    cursor: pointer;
     transition: 0.8s;
 }
 
@@ -155,6 +156,13 @@ p{
     color: #f8f8f8;
     font-size: 20px;
     font-family: "宋体";
+    cursor: pointer;
+    transition: 0.8s;
+}
+#search_b:hover{
+    background-color: #1e3854;
+    color: #f8f8f8;
+    transition: 0.8s;
 }
 
 .rows{
@@ -221,4 +229,16 @@ p{
     background-color:#FD9191;
     border-right: none;
     border-top: none;
+}
+
+#submit_work{
+    margin:  0 0;
+    /*padding-top;*/
+    text-align: center;
+}
+a{
+    /*margin-top:5px;*/
+    /*text-decoration:;*/
+    color: #982626;
+    font-size: 20px;
 }

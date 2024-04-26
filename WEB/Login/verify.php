@@ -13,11 +13,11 @@ $type = $_POST['type'];
 if ($type == 'admin') {
     $admin_passwd = file('login_src/admin_passwd')[0];
     if ($_POST['username'] == 'admin' && $_POST['password'] == $admin_passwd) {
-        echo "登录成功!WELCOME!";
+//        echo "登录成功!WELCOME!";
         setcookie("login_type", "admin", time() + (86400 * 30), "/");
-        header("Location:../Admin/index.php");
+        header("refresh:3;Location:../Admin/index.php");
     } else {
-        echo "用户名或密码错误，将在3秒后返回登录页面";
+//        echo "用户名或密码错误，将在3秒后返回登录页面";
         header("refresh:3;url=../Login/login.html");
     }
 } else {
@@ -79,7 +79,6 @@ $conn->close();
             <div class="tran">
                 <h2>正在加载中...请耐心等待</h2>
             </div>
-
         </div>
     </div>
 
