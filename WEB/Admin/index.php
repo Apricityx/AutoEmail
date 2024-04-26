@@ -2,6 +2,8 @@
 <?php
 // 验证是否登录
 //echo $_COOKIE["admin"];
+use JetBrains\PhpStorm\NoReturn;
+
 if ($_COOKIE["login_type"] != "admin") {
     header("Location:../Login/login.html");
 }
@@ -55,6 +57,9 @@ $data = json_encode($tables);
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+<form id="upload_container" style="display: none;" method="post" enctype="multipart/form-data" action="../../api/upload_std_list.php">
+    <input type="file" id="upload" name="upload">
+</form>
 <div id="main">
     <!-- <div id="top">
         <h1 style="text-align: center">作业管理平台 - 管理员</h1>
@@ -99,7 +104,10 @@ $data = json_encode($tables);
                     <button class="btn btn-primary" onclick="new_table()"><i class="bi bi-plus-square"></i> 创建作业
                     </button>
                     <button class="btn btn-danger" onclick="del_table()"><i class="bi bi-trash3"></i> 删除作业</button>
-                    <button class="btn btn-primary"><i class="bi bi-cloud-upload"></i> 上传名单</button>
+                    <button class="btn btn-primary" onclick="upload_std_list()"><i class="bi bi-cloud-upload"></i> 上传名单</button>
+                    <button class="btn btn-primary" onclick="download_files()"><i
+                                class="bi bi-cloud-download"></i> 下载该作业
+                    </button>
                 </div>
                 <div id="detailed_information" class="sheetmodule">
                     <div class="single_std" style="background-color: #fff;">
@@ -285,7 +293,7 @@ $data = json_encode($tables);
     }
 
     function init() {
-        let is_confirm = confirm("确认初始化数据库?");
+        let is_confirm = confirm("确认初始化数据库? 此举动将会清空所有数据！");
         console.log(is_confirm);
         if (is_confirm) {
             let xhr = new XMLHttpRequest();
@@ -297,6 +305,26 @@ $data = json_encode($tables);
                     window.location.reload();
                 }
             }
+        }
+    }
+
+    function download_files() {
+        // 构建http请求
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `../../api/download.php?table_name=${table_selected}`);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                window.open("../User/homework/download.zip", "_blank");
+            }
+        }
+    }
+
+    function upload_std_list(){
+        let select_container = document.getElementById("upload");
+        select_container.click();
+        select_container.onchange = function () {
+            document.getElementById("upload_container").submit();
         }
     }
 </script>
