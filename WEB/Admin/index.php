@@ -19,7 +19,7 @@ $tables = array();//存放表名和表中的内容
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $table = $row['Tables_in_autoemail'];//表名
-        if ($table == 'students') {
+        if ($table == 'students' || $table == 'assignments'){
             continue;//跳过student表
         }
         $sql = "select * from $table";
@@ -70,31 +70,31 @@ $data = json_encode($tables);
                     </li>
                 </ul> -->
                 <div class="list-group" id="list-tab" role="tablist">
-<!--                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"-->
-<!--                       href="#chem" role="tab" aria-controls="list-home">Chem</a>-->
-<!--                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"-->
-<!--                       href="#chinese" role="tab" aria-controls="list-profile">Chn</a>-->
-<!--                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"-->
-<!--                       href="#math" role="tab" aria-controls="list-messages">Math</a>-->
+                    <!--                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"-->
+                    <!--                       href="#chem" role="tab" aria-controls="list-home">Chem</a>-->
+                    <!--                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"-->
+                    <!--                       href="#chinese" role="tab" aria-controls="list-profile">Chn</a>-->
+                    <!--                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"-->
+                    <!--                       href="#math" role="tab" aria-controls="list-messages">Math</a>-->
                 </div>
                 <div id="table_information"></div>
             </div>
-                <div id="right" class="col-10" style="padding: 0 0 0 1em;background-color: #f0f2f5;">
-                    <div id="control_table" class="gap-2 d-md-block buttonmodule">
-                        <button class="btn btn-danger" style="" onclick="">初始化数据库</button>
-                        <button class="btn btn-primary" onclick="new_table()">创建作业</button>
-                        <button class="btn btn-primary" onclick="del_table()">删除作业</button>
-                        <button class="btn btn-primary">上传学生名单</button>
-                    </div>
-                    <div id="detailed_information" class="sheetmodule">
-                        <div class="single_std" style="background-color: #fff;">
-                            <div class="std_num">学生学号</div>
-                            <div class="std_name">学生姓名</div>
-                            <div class="std_status">提交情况</div>
-                            <div class="std_time">提交时间</div>
-                        </div>
+            <div id="right" class="col-10" style="padding: 0 0 0 1em;background-color: #f0f2f5;">
+                <div id="control_table" class="gap-2 d-md-block buttonmodule">
+                    <button class="btn btn-danger" style="" onclick="">初始化数据库</button>
+                    <button class="btn btn-primary" onclick="new_table()">创建作业</button>
+                    <button class="btn btn-primary" onclick="del_table()">删除作业</button>
+                    <button class="btn btn-primary">上传学生名单</button>
+                </div>
+                <div id="detailed_information" class="sheetmodule">
+                    <div class="single_std" style="background-color: #fff;">
+                        <div class="std_num">学生学号</div>
+                        <div class="std_name">学生姓名</div>
+                        <div class="std_status">提交情况</div>
+                        <div class="std_time">提交时间</div>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>
@@ -181,8 +181,18 @@ $data = json_encode($tables);
             window.alert("请输入作业名！");
             return;
         }
+        if (table_name.match(/\d+/g) !== null) {
+            window.alert("作业名不能包含数字！");
+            return;
+        }
+        let year = prompt("请输入截止年份");
+        let month = prompt("请输入截止月份");
+        let day = prompt("请输入截止日期");
+        let hour = prompt("请输入截止小时");
+        let minute = prompt("请输入截止分钟");
+        let deadline = `${year}-${month}-${day} ${hour}:${minute}:00`;
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", `../../api/create_table.php?table_name=${table_name}`);
+        xhr.open("GET", `../../api/create_table.php?table_name=${table_name}&deadline=${deadline}`);
         xhr.send();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {

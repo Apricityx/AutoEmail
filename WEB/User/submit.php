@@ -44,7 +44,6 @@ if ($result->num_rows > 0) {
     echo "0 结果";
 }
 $result = json_encode($tables);
-$conn->close();
 ?>
 <!--<script>-->
 <!--    // TEST-->

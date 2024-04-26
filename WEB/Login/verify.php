@@ -17,7 +17,7 @@ if ($type == 'admin') {
         echo "登录成功!WELCOME!";
     } else {
         echo "用户名或密码错误，将在3秒后返回登录页面";
-        header("refresh:3;url=../Login/Login.html");
+        header("refresh:3;url=../Login/login.html");
     }
 } else {
     if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -27,10 +27,11 @@ if ($type == 'admin') {
         $result0 = $conn->query($sql0);//获取学生姓名
         $row0 = $result0->fetch_assoc();//获取学生姓名
         $sql = "select * from students where student_id='$username' and passwd='$password'";//查询用户是否存在
+        echo $sql;
         $result = $conn->query($sql);
         if ($result->num_rows > 0 && $row0['name'] != null) {
             $name = $row0['name'];
-            $num = $username;
+            $num = $username; 
             $flag = 1;
             if ($type == 'student') {
                 setcookie("name", $name, time() + 3600, "/",256);
@@ -41,7 +42,7 @@ if ($type == 'admin') {
         } else {
             $flag = 0;
             echo "用户名或密码错误，将在3秒后返回登录页面";
-            header("refresh:3;url=../Login/Login.html");
+            header("refresh:3;url=../Login/login.html");
         }
     }
 }

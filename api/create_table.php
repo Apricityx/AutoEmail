@@ -1,5 +1,6 @@
 <?php
 $table_name = $_GET["table_name"];
+$deadline = $_GET["deadline"];
 $passwd = file("../database_passwd")[0];
 $servername = "pve.zwtsvx.xyz:1128";
 $username = "root";
@@ -21,7 +22,8 @@ $sql = "CREATE TABLE IF NOT EXISTS $table_name (student_id LONG,student_name VAR
 if ($conn->query($sql) === FALSE) {
     echo "创建表时出现问题：" . $conn->error;
 }
-
+// 插入作业表
+$sql = "INSERT INTO assignments (assignment_name, deadline) VALUES ('$table_name', '$deadline')";
 //从第二行开始，读取文件内容
 $std = fopen("../std_data.csv", "r");
 $flag = 1;

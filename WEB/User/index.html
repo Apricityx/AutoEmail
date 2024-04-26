@@ -39,7 +39,7 @@
 <!--    <div class="main"></div>-->
     <div class="more" style="background-color: #F7F3F3"></div>
     <div class="main" id="content_" style="background-color: #EBEBE5">
-        <div id="table1"  class="rows" style="background-color:#FFFEF0">
+        <div id="table1" class="rows" style="background-color:#FFFEF0">
             <div class="single_course order"><h3></h3></div>
             <div class="single_course"><h3>发布日期</h3></div>
             <div class="single_course"><h3>学科作业</h3></div>
@@ -72,7 +72,7 @@
     <div class="more"  style="background-color:#EBEBE5"></div>
 </div>
 
-</div>
+
 </body>
 </html>
 <script>
@@ -85,7 +85,8 @@
         <div class="single_course wrong"><p>未提交</p></div>
     </div>
 `
-    function div_constructor(num,time,subject,deadline,submit_status){
+
+    function div_constructor(num, time, subject, deadline, submit_status) {
         let div = document.createElement("div");
         div.className = "rows";
         let div1 = document.createElement("div");
@@ -123,10 +124,10 @@
         let div6 = document.createElement("div");
         div6.className = "single_course";
         let p6 = document.createElement("p");
-        if (submit_status === "0"){
+        if (submit_status === "0") {
             div6.className = "single_course wrong";
             p6.innerHTML = "未提交";
-        }else{
+        } else {
             div6.className = "single_course right";
             p6.innerHTML = "已提交";
         }
@@ -151,13 +152,14 @@
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 let data = xhr.responseText
+                console.log(data)
                 data = JSON.parse(data)
                 let table = document.getElementById("content_");
                 // table.appendChild(div_constructor(1,"2023-10-22","大学物理课程论文","2024-02-24","已提交"));
                 // table.appendChild(div_constructor(2,"2023-10-22","大学物理课程论文","2024-02-24","未提交"));
-                for (let i = 0;i<data.length;i++){
+                for (let i = 0; i < data.length; i++) {
                     console.log(data[i])
-                    table.appendChild(div_constructor(i+1,data[i].time,data[i].table_name,data[i].deadline,data[i].is_finish))
+                    table.appendChild(div_constructor(i + 1, data[i].time, data[i].table_name, data[i].deadline, data[i].is_finish))
                 }
             }
         }
@@ -169,29 +171,24 @@
     let name = decodeURIComponent(document.cookie.split("name=")[1].split(";")[0]);
     let name_container = document.getElementById("HELLO");
     time = new Date().getHours();
-    if (time < 6){
+    if (time < 6) {
         name_container.innerText = "凌晨好，" + name;
-    }else if (time < 9){
+    } else if (time < 9) {
         name_container.innerText = "早上好，" + name;
-    }
-    else if (time < 12){
+    } else if (time < 12) {
         name_container.innerText = "上午好，" + name;
-    }
-    else if (time < 14){
+    } else if (time < 14) {
         name_container.innerText = "中午好，" + name;
-    }
-    else if (time < 18){
+    } else if (time < 18) {
         name_container.innerText = "下午好，" + name;
-    }
-    else if (time < 22){
+    } else if (time < 22) {
         name_container.innerText = "晚上好，" + name;
-    }
-    else{
+    } else {
         name_container.innerText = "夜深了，" + name;
     }
 </script>
 <script>
-    function logout(){
+    function logout() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "num=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         window.location.href = "../Login/login.html";

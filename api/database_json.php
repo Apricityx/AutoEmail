@@ -19,7 +19,7 @@ $tables = array();//存放表名和表中的内容
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $table = $row['Tables_in_autoemail'];//表名
-        if ($table == 'students') {
+        if ($table == 'students' || $table == 'assignments') {
             continue;//跳过student表
         }
         $sql = "select * from $table";

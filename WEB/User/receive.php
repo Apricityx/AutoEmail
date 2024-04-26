@@ -22,6 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "接收到的table: " . $homework_name . "<br>";
     echo "接收到的名字: " . $std_name . "<br>";
     echo "接收到的学号: " . $std_num;
+    $passwd = file("../../database_passwd")[0];
+    $servername = "pve.zwtsvx.xyz:1128";
+    $username = "root";
+    $password = $passwd;
+    $dbname = "autoemail";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        echo "连接失败";
+        die("连接失败: " . $conn->connect_error);
+    }
+    $conn->query("UPDATE $homework_name SET if_finish = 1 WHERE student_id = $std_num");
     // 将文件保存到./homework/$homework_name/目录下
     if (!file_exists('homework')) {
         mkdir('homework', 0777, true);

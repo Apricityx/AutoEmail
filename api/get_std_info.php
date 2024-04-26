@@ -15,7 +15,7 @@ $result = $conn->query("SHOW TABLES")->fetch_all();
 // 去掉students表
 $tables = array();
 foreach ($result as $key => $value) {
-    if (json_encode($value) != '["students"]') {
+    if (json_encode($value) != '["students"]' && json_encode($value) != '["assignments"]') {
         array_push($tables, $value);
     }
 }
@@ -24,12 +24,19 @@ foreach ($result as $key => $value) {
 $out_data = array();
 for ($i = 0; $i < count($tables); $i++) {
     $select_name = implode('', $tables[$i]);
-//    echo "SELECT * FROM $select_name WHERE student_id = $std_num";
-    $result = $conn->query("SELECT * FROM $select_name WHERE student_id = $std_num");
+    $sql = "SELECT * FROM $select_name WHERE student_id = $std_num";
+//    echo $sql;
+    $result = $conn->query($sql);
+    // 这里是从assignments表中获取截止时间
+    $sql = "SELECT * FROM assignments WHERE assignment_name = '$select_name'";
+    $result2 = $conn->query($sql);
+    $row2 = $result2->fetch_assoc();
     while ($row = $result->fetch_assoc()) {
         $data_name = array();
         $data_name["table_name"] = $select_name;
         $data_name["is_finish"] = $row["if_finish"];
+        $data_name["time"] = $row2["create_time"]; // 数据库表头从这里看
+        $data_name['deadline'] = $row2['deadline'];
         $out_data[] = $data_name;
         //        echo $row["if_finish"];
     }
