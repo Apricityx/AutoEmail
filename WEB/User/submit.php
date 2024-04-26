@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>作业管理平台 - 提交作业</title>
+    <link rel="stylesheet" href="user_src/receive.css">
 </head>
 <body>
-<form action="receive.php" method="post" enctype="multipart/form-data">
+<div id="main">
+    <div id="title">
+        <h1>提交作业</h1>
+    </div>
+    <div id="content">
+<form  id="S_W" action="receive.php" method="post" enctype="multipart/form-data">
     <label for="homework_name">请选择要提交的作业</label><select name="homework_name" id="homework_name" required>
         <option value="1">暂无作业</option>
     </select>
@@ -22,6 +28,8 @@
     <br>
     <input type="submit" value="提交">
 </form>
+    </div>
+</div>
 <?php
 $passwd = file("../../database_passwd")[0];
 $servername = "pve.zwtsvx.xyz:1128";
