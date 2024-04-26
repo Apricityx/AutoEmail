@@ -43,7 +43,7 @@ label{
     border-radius: 20px;
     box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
     width: 60%;  /* 调整宽度 */
-    height: 80%;  /* 调整高度 */
+    height: 85%;  /* 调整高度 */
     margin: auto;  /* 居中 */
     display: flex;
     flex-direction: column;
@@ -61,14 +61,14 @@ form{
     align-items: center;
     justify-content: space-evenly;
     div.row{
-        margin-top: 5%;
+        margin-top: 1%;
         width:60%;
         display: flex;
         flex-direction: row;
         align-content: center;
         align-items: center;
         justify-content: space-evenly;
-        height: 20%;
+        height: 10%;
         label {
 
             font-size: 26px;
@@ -82,7 +82,7 @@ form{
 
         }
         input {
-            border-radius: 30px;
+            border-radius: 10px;
             width: 70%;  /* 调整宽度 */
             height: 100%;
             font-size: 20px;
@@ -94,7 +94,7 @@ form{
                 background: rgba(255,255,255,0.3);
                 transform: scale(1.02);
             }
-            transition: all 0.2s;
+            transition: all 0.1s;
             box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
             border: 2px solid rgba(0, 0, 0, 0.2);
             border-right: 2px solid rgba(0, 0, 0, 0.3);
@@ -120,18 +120,18 @@ form{
                 background: rgba(255,255,255,0.3);
                 transform: scale(1.02);
             }
-            transition: all 0.2s;
+            transition: all 0.1s;
         }
     }
 
     input[type='submit']{
         height: 100%;
-        width: 30%;
-        margin-top:5%;
+        width: 20%;
+        margin-top:2%;
         margin-bottom: 5%;
         transition: all 0.1s;
         font-size: 25px;
-        border-radius: 20px;
+        border-radius: 10px;
         background: rgba(255,255,255,0.1);
         backdrop-filter: blur(15px);
         &:hover{
@@ -148,7 +148,38 @@ form{
 
 }
 
-#button{
+
+.login-tools__forget {
+    color: #a1a3bc;
+    cursor: pointer;
+    margin: -1em 0;
+    text-align: right;
+}
+
+.login-tools__save__checkbox, .login-tools__save__label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.login-tools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.75em;
+    line-height: 1;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+}
+/* #button{
 
     text-align: center;
     line-height: 60px;
@@ -161,4 +192,4 @@ form{
     color: #fff;
     transform: scale(1.1);
 
-}
+} */
