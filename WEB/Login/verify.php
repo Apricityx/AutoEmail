@@ -27,14 +27,14 @@ if ($type == 'admin') {
         $result0 = $conn->query($sql0);//获取学生姓名
         $row0 = $result0->fetch_assoc();//获取学生姓名
         $sql = "select * from students where student_id='$username' and passwd='$password'";//查询用户是否存在
-        echo $sql;
+//        echo $sql;
         $result = $conn->query($sql);
         if ($result->num_rows > 0 && $row0['name'] != null) {
             $name = $row0['name'];
-            $num = $username; 
+            $num = $username;
             $flag = 1;
             if ($type == 'student') {
-                setcookie("name", $name, time() + 3600, "/",256);
+                setcookie("name", $name, time() + 3600, "/", 256);
                 setcookie("num", $num, time() + 3600, "/");
                 echo "登录成功!WELCOME!";
                 header("refresh:3;url=../User/index.html");
@@ -49,6 +49,42 @@ if ($type == 'admin') {
 
 $conn->close();
 ?>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./login_src/verify_.css">
+</head>
+
+<body>
+<div id="main">
+
+    <div id="show">
+        <div id="content">
+            <div class="show">
+                <h1 class="typing">欢迎登录电子作业管理平台！</h1>
+            </div>
+            <div class="pacMan">
+                <div class="eye"></div>
+                <div class="mouth1"></div>
+                <div class="mouth2"></div>
+                <div class="beanOne"></div>
+                <div class="beanTwo"></div>
+                <div class="beanThree"></div>
+                <div class="beanFour"></div>
+                <div class="beanFive"></div>
+            </div>
+            <div class="tran">
+                <h2>正在加载中...请耐心等待</h2>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
 <script>
     let name = `<?php echo $name?>`;
     let num = `<?php echo $num?>`;
@@ -66,7 +102,18 @@ $conn->close();
         document.cookie = "num=" + num + "; path=/";
     } else {
         console.log("no")
-        // 登陆失败
+        document.getElementsByClassName("show")[0].innerHTML = "<div><h1 style='font-size: 34px'>用户名或密码错误，将在3秒后返回登录页面</h1><h2>温馨提示:请确保您选择的类型正确</div>";
+        // document.getElementsByClassName("show").innerHTML = "<div><h1>用户名或密码错误，将在3秒后返回登录页面</h1></div>";
+       //  function no_user(){
+       //      let div = document.createElement("div");
+       //      let h1 =document.createElement("h1");
+       //      h1.innerHTML= "用户名或密码错误，将在3秒后返回登录页面";
+       //      div.appendChild(h1);
+       //      div.style.gridRow = "3/3";
+       //      div.style.margin="10px 10px 10px 10px";
+       //      return div;
+       //  }
+       // document.getElementsByClassName("show")[0].appendChild(no_user());
     }
     console.log(document.cookie);
 </script>

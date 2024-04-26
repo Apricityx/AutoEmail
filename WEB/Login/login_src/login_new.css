@@ -15,13 +15,14 @@ body {
 }
 h1{
     user-select: none;
+    margin-top:100px;
 }
 label{
     user-select: none;
 }
 @font-face {
     font-family: 'MyCustomFont';  /* 自定义的字体名称 */
-    src: url('fonts/font_style04.otf'); /* 字体文件的路径和格式 */
+    src: url('fonts/SHT.ttf'); /* 字体文件的路径和格式 */
     /*url('path/to/your/font.woff') format('woff');*/
 }
 *{
