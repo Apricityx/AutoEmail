@@ -12,7 +12,7 @@
 		<div id="content">
 			<div class="bg">
 				<form action="verify.php" method="post"> <!-- 此处login.php连接后端，后端校验是否有这个人，如果有就向cookie中存储数据 -->
-					<div class="row">
+					<div class="row" style="margin-top: 1.5em;">
 						<label for="type">登录类型:</label>
 						<select name="type" id="type">
 							<option value="student">学生</option>
@@ -30,6 +30,13 @@
 						<input type="password" name="password" id="password" required>
 					</div>
 					<br>
+					<div class="login-tools">
+						<div class="login-tools__save">
+							<input type="checkbox" name="save" class="login-tools__save__checkbox" control-id="ControlID-3">
+							<label for="save" class="login-tools__save__label">记住账号</label>
+						</div>
+						<a href="#/forget" class="login-tools__forget">忘记密码？</a>
+					</div>
 					<input type="submit" value="登录" id="submitButton">
 				</form>
 			</div>

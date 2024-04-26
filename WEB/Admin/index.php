@@ -43,6 +43,7 @@ $data = json_encode($tables);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>作业管理平台 - 管理员</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -77,14 +78,16 @@ $data = json_encode($tables);
                     <!--                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"-->
                     <!--                       href="#math" role="tab" aria-controls="list-messages">Math</a>-->
                 </div>
+                <hr />
+                <button type="button" class="btn btn-secondary btn-sm" onclick=""><i class="bi bi-escape"></i>   退出账号</button>
                 <div id="table_information"></div>
             </div>
             <div id="right" class="col-10" style="padding: 0 0 0 1em;background-color: #f0f2f5;">
                 <div id="control_table" class="gap-2 d-md-block buttonmodule">
-                    <button class="btn btn-danger" style="" onclick="">初始化数据库</button>
-                    <button class="btn btn-primary" onclick="new_table()">创建作业</button>
-                    <button class="btn btn-primary" onclick="del_table()">删除作业</button>
-                    <button class="btn btn-primary">上传学生名单</button>
+                    <button class="btn btn-danger" style="" onclick=""><i class="bi bi-arrow-clockwise"></i>  初始化数据库</button>
+                    <button class="btn btn-primary" onclick="new_table()"><i class="bi bi-plus-square"></i>  创建作业</button>
+                    <button class="btn btn-danger" onclick="del_table()"><i class="bi bi-trash3"></i>  删除作业</button>
+                    <button class="btn btn-primary"><i class="bi bi-cloud-upload"></i>  上传名单</button>
                 </div>
                 <div id="detailed_information" class="sheetmodule">
                     <div class="single_std" style="background-color: #fff;">
