@@ -62,11 +62,11 @@ while (!feof($std)) {
     $std_id = str_replace(' ', '', $line[0]);
     $std_name = str_replace(' ', '', $line[1]);
 
-    echo $std_id . '<br>';
-    echo $std_name . '<br>';
-    echo $std_passwd . '<br>';
+//    echo $std_id . '<br>';
+//    echo $std_name . '<br>';
+//    echo $std_passwd . '<br>';
     $sql = "INSERT INTO students (student_id, name, passwd) VALUES ('$std_id', '$std_name','$std_passwd')";
-    echo $sql .'<br>';
+//    echo $sql .'<br>';
 
     if ($conn->query($sql) === FALSE) {
         echo "Error: " . $sql . $conn->error;

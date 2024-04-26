@@ -12,9 +12,8 @@
     </div>
     <div id="content">
 <form  id="S_W" action="receive.php" method="post" enctype="multipart/form-data">
-    <label for="homework_name">请选择要提交的作业</label><select name="homework_name" id="homework_name" required>
-        <option value="1">暂无作业</option>
-    </select>
+    <label for="homework_name"></label><input name="homework_name" id="homework_name" required>
+    </input>
     <br>
     <label id="std_name_label">
         <input name="std_name" type="text" id="std_name">
@@ -31,28 +30,10 @@
     </div>
 </div>
 <?php
-$passwd = file("../../database_passwd")[0];
-$servername = "pve.zwtsvx.xyz:1128";
-$username = "root";
-$password = $passwd;
-$dbname = "autoemail";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    echo "连接失败";
-    die("连接失败: " . $conn->connect_error);
-}
-$sql = "SHOW tables";
-$result = $conn->query($sql);
-$tables = [];
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $tables[] = $row["Tables_in_autoemail"];
-    }
-} else {
-    echo "0 结果";
-}
-$result = json_encode($tables);
+$course = $_GET["course"];
+$result = json_encode($course);
 ?>
+
 <!--<script>-->
 <!--    // TEST-->
 <!--    document.cookie = "name!Apricityx!name,num!22023321062106!num";-->
@@ -63,15 +44,18 @@ $result = json_encode($tables);
     console.log(tables);
     let homework_name = document.getElementById("homework_name");
     homework_name.innerHTML = "";
-    for (let i = 0; i < tables.length; i++) {
-        if (tables[i] === "students") {
-            continue;
-        }
-        let option = document.createElement("option");
-        option.value = tables[i];
-        option.innerText = tables[i];
-        homework_name.appendChild(option);
-    }
+    let course_input = document.getElementById("homework_name");
+    course_input.value = tables;
+
+    // for (let i = 0; i < tables.length; i++) {
+    //     if (tables[i] === "students") {
+    //         continue;
+    //     }
+    //     let option = document.createElement("option");
+    //     option.value = tables[i];
+    //     option.innerText = tables[i];
+    //     homework_name.appendChild(option);
+    // }
 </script>
 <script>
     // 读取cookies中被!name name!包裹的字段并填入std_name中

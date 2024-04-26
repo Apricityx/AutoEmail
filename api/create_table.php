@@ -24,6 +24,9 @@ if ($conn->query($sql) === FALSE) {
 }
 // 插入作业表
 $sql = "INSERT INTO assignments (assignment_name, deadline) VALUES ('$table_name', '$deadline')";
+if ($conn->query($sql) === FALSE) {
+    echo "Error: " . $sql . $conn->error;
+}
 //从第二行开始，读取文件内容
 $std = fopen("../std_data.csv", "r");
 $flag = 1;

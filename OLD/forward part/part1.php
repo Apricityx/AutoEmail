@@ -11,7 +11,7 @@ function get_file_array_list($obj_)
 {
     $initial=scandir($obj_);//读取文件夹下的文件及目录并存储在数组中
     $number=count($initial)-2;
-    echo $number;
+//    echo $number;
     $move=array_slice($initial,2);
     $pattern_='/[^\x{4e00}-\x{9fa5}]/u';
     foreach ($move as &$end){

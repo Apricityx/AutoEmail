@@ -1,6 +1,6 @@
 <?php
-$std_num = $_GET["std_num"];
-//$std_num = 222023321062106;
+//$std_num = $_GET["std_num"];
+$std_num = 222023321062106;
 $passwd = file("../database_passwd")[0];
 $servername = "pve.zwtsvx.xyz:1128";
 $username = "root";
@@ -40,6 +40,7 @@ for ($i = 0; $i < count($tables); $i++) {
         $out_data[] = $data_name;
         //        echo $row["if_finish"];
     }
+//    echo json_encode($out_data);
 }
 echo json_encode($out_data, 256);
 //$sql = "SELECT * FROM $table_name WHERE student_id = $std_num";

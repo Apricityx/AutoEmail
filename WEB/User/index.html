@@ -118,6 +118,10 @@
 
         let div5 = document.createElement("div");
         div5.className = "single_course";
+        let submit = document.createElement("a");
+        submit.innerText = "提交作业";
+        submit.href = `./submit.php?course=${subject}`;
+        div5.appendChild(submit);
         div.appendChild(div5);
 
         let div6 = document.createElement("div");
@@ -137,8 +141,17 @@
     }
 </script>
 <script>
-    let std_name = decodeURIComponent(document.cookie.split("name=")[1].split(";")[0]);
-    console.log("welcome," + std_name)
+    let std_name;
+    try{
+        std_name = decodeURIComponent(document.cookie.split("name=")[1].split(";")[0]);
+    }
+    catch (e) {
+        console.log(e)
+        console.log("未登录")
+        window.location.href = "../Login/login.html";
+    }
+    console.log(std_name)
+    // console.log("welcome," + std_name)
 
     function update_data() {
         console.log('正在获取数据')
@@ -194,6 +207,7 @@
     function logout(){
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "num=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "login_type=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         window.location.href = "../Login/login.html";
     }
 </script>

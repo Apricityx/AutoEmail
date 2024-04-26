@@ -7,4 +7,5 @@ $password = $passwd;
 $dbname = "autoemail";
 $conn = new mysqli($servername, $username, $password, $dbname);
 $conn->query("DROP TABLE {$table_name}");
+$conn->query("DELETE FROM assignments WHERE assignment_name = '$table_name'");
 echo "删除表成功！";
