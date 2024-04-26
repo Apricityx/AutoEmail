@@ -60,6 +60,7 @@ $conn->close();
 
     <div id="show">
         <div id="content">
+
             <div class="show">
                 <h1 class="typing">欢迎登录电子作业管理平台！</h1>
             </div>
