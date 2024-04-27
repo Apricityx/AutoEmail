@@ -11,7 +11,7 @@
         <h1>提  交  作  业</h1>
     </div>
     <div id="back">
-        <button>返回</button>
+        <button onclick="window.history.back()">返回</button>
     </div>
     <div id="content">
         <div id="submit_b">
