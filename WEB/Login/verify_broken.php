@@ -10,14 +10,16 @@ if ($conn->connect_error) {
     die("Connection failed:" . mysqli_connect_error());
 }
 $type = $_POST['type'];
+
 if ($type == 'admin') {
+
     $admin_passwd = file('login_src/admin_passwd')[0];
     if ($_POST['username'] == 'admin' && $_POST['password'] == $admin_passwd) {
-        $flag = 1;
 //        echo "登录成功!WELCOME!";
         setcookie("login_type", "admin", time() + (86400 * 30), "/");
         header("refresh:3;url=../Admin/index.php");
     } else {
+//        $flag = 0;
 //        echo "用户名或密码错误，将在3秒后返回登录页面";
         header("refresh:3;url=../Login/login.html");
     }
@@ -87,33 +89,31 @@ $conn->close();
 </div>
 
 </body>
-</html>
+
 <script>
     let name = `<?php echo $name?>`;
     let num = `<?php echo $num?>`;
-    // console.log(name);
+    console.log(name);
     let flag = `<?php echo $flag?>`;
-    let login_type = `<?php echo $type?>`;
-    console.log("login_type:" + login_type);
-    console.log("FLAG:" + flag);
-    if (flag === "1") {
-        if (login_type !== "admin"){
-            // 登陆成功
-            //清除cookie
-            // document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-            // document.cookie = "cookieName=; path=/;";
-            console.log("ok")
-            console.log("setting_cookies:" + "name=" + name + ";expires=Thu, 18 Dec 2077 12:00:00 GMT; path=/")
-            document.cookie = "name=" + name + "; path=/";
-            document.cookie = "login_type=" + "student" + "; path=/";
-            document.cookie = "num=" + num + "; path=/";
-        }
-    } else {
-        console.log("no")
+    console.log(flag);
+    if ((flag === "1") {
+        // 登陆成功
+        //清除cookie
+        // document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        // document.cookie = "cookieName=; path=/;";
+        console.log("ok")
+        console.log("setting_cookies:" + "name=" + name + ";expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/")
+        console.log("setting_cookies:" + "name=" + name + ";expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/")
+        document.cookie = "name=" + name + "; path=/";
+        document.cookie = "login_type=" + "student" + "; path=/";
+        document.cookie = "num=" + num + "; path=/";
+    }else{
+        console.log("no");
         document.getElementsByClassName("show")[0].innerHTML = "<div><h1 style='font-size: 34px'>用户名或密码错误，将在3秒后返回登录页面</h1><h2>温馨提示:请确保您选择的类型正确</div>";
         // 登陆失败
     }
 </script>
+
 <script>
     let if_remember = `<?php echo $if_remember?>`;
     console.log(if_remember);
@@ -129,3 +129,4 @@ $conn->close();
     }
     console.log(document.cookie);
 </script>
+</html>

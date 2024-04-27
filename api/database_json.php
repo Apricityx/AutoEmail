@@ -3,7 +3,7 @@
 header("Content-type: text/html; charset=utf-8");
 $file = file('../database_passwd');
 $pass = $file[0];
-echo $pass;
+//echo $pass;
 $servername = "pve.zwtsvx.xyz:1128";
 $username = "root";
 $password = $pass;
