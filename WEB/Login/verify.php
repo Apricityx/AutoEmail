@@ -104,7 +104,8 @@ $conn->close();
         document.cookie = "login_type=" + "student" + "; path=/";
         document.cookie = "num=" + num + "; path=/";
     } else {
-        console.log("no")
+        console.log("no");
+        document.getElementsByClassName("show")[0].innerHTML = "<div><h1 style='font-size: 34px'>用户名或密码错误，将在3秒后返回登录页面</h1><h2>温馨提示:请确保您选择的类型正确</div>";
         // 登陆失败
     }
 </script>

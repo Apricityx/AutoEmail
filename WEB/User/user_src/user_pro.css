@@ -19,14 +19,14 @@ body{
     margin: 0;
     padding: 0;
 overflow: hidden;
-    background-color: #F7F3F3;
+    background-color:   #F7F3F3;
     user-select: none;
     scroll-behavior: smooth;
 
     /*background-image: linear-gradient(to bottom, #b5acf2, #a5befd, #9bcfff, #9cddff, #a7eaff, #a7eafd, #a6eafb, #a6eaf9, #94dff6, #83d3f3, #75c7ef, #69bbec);*/
 }
 h1{
-    font-family: 'myfont1';
+    font-family:"华文楷体";
     padding: 0 0 0 120px;
     text-align: center;
     font-size: 70px;
@@ -61,29 +61,35 @@ p{
     /*padding: 1px;*/
 }
 #main{
-    width:99vw;
-    height:98vh;
+    width:100vw;
+    height:100vh;
     display: grid;
-    grid-template-rows: 1.5fr 1.2fr 7fr 0.6fr;
+    grid-template-rows: 1.7fr 1.5fr 7fr 0.6fr;
     grid-template-columns: 0.5fr 8fr 1fr;
     /*border: 1px solid black;*/
 }
 .main{
     /*height: 100%;*/
     /*width:100%;*/
-    border: 8px solid #888686;
+    border: 8px solid #f1f1f1;
     border-style:double;
 }
 #content_{
     width:90%;
     height: 90%;
     /*border: 1px solid #e53636;*/
-    box-shadow: 10px 10px 10px #383333;
+    margin-left: 50px;
+    box-shadow: 10px 10px 10px 5px #383333;
+    border-radius: 10px;
+    background-image: url("img/protocol (1).svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
     overflow: auto;
 }
 #title{
-    background-color: #051F51;
-    border: 1px solid #051F51;
+    background-color: #0B0B32;
+    border: 1px solid #0B0B32;
 }
 #login_out{
     border: #051F51 1px solid;
@@ -122,17 +128,17 @@ p{
     /*border: 1px solid black;*/
 }
 #search_{
-    width:80%;
-    height:60%;
-    margin: 20px 10px 10px 70px;
-    border: 1px solid #7a7979;
-    border-radius: 25px;
+    width:50%;
+    height:35%;
+    margin: 20px 10px 10px 180px;
+    /*border: 1px solid #7a7979;*/
+    /*border-radius: 25px;*/
     display:grid;
-    grid-template-columns: 4fr 1fr;
+    /*grid-template-columns: 4fr 1fr;*/
 }
 .search{
     width:100%;
-    height:97%;
+    height:100%;
     /*border: 1px solid black;*/
 }
 /*#search_c{*/
@@ -140,26 +146,31 @@ p{
 /*    height:50px;*/
 /*}*/
 #search_c{
+    margin-top: 20px;
     border: none;
-    font-size: 25px;
-    font-family:"楷体";
-    text-indent: 40px;
-    /*//背景透明*/
-    border-radius: 25px 0 0 25px;
-    background-color: rgba(255,255,255,0.5);
-}
-#search_b{
-    width:100%;
-    height:100%;
-    border-radius: 0 25px 25px 0;
-    border: 3px solid #565454;
-    background-color: #38A3E5;
-    color: #f8f8f8;
     font-size: 20px;
-    font-family: "宋体";
-    cursor: pointer;
-    transition: 0.8s;
+    font-family:"黑体";
+    text-indent: 80px;
+    /*//背景透明*/
+    background-image: url("img/search.svg");
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border-radius:25px;
+    /*background-color: rgba(255,255,255,0.5);*/
+    box-shadow: #999999 3px 3px 3px;
 }
+/*#search_b{*/
+/*    width:100%;*/
+/*    height:100%;*/
+/*    border-radius: 0 25px 25px 0;*/
+/*    border: 3px solid #565454;*/
+/*    background-color: #38A3E5;*/
+/*    color: #f8f8f8;*/
+/*    font-size: 20px;*/
+/*    font-family: "宋体";*/
+/*    cursor: pointer;*/
+/*    transition: 0.8s;*/
+/*}*/
 #search_b:hover{
     background-color: #1e3854;
     color: #f8f8f8;
@@ -182,14 +193,15 @@ p{
 
 
 #table_1{
-    background-color: #FFFEF0 ;!important
+    background-color:#E9D8E0;!important
 }
 
 .single_course{
-    border: 2px solid #413f3f;
+    border: 2px  #343030;
     height:30px;
     border-top:none;
     border-right: none;
+    /*border-color: #4f555b;*/
     width:100%;
     /*height:100%;*/
 }
@@ -212,7 +224,7 @@ p{
 .right{
        /*// 设置背景颜色，保留border*/
     background-color: #BCF0D8;
-    border: 2px solid #413f3f;
+    border: 2px #413f3f;
     border-right: none;
     border-top: none;
 }
@@ -226,7 +238,7 @@ p{
 /*}*/
 
 .wrong{
-    border:2px solid #413f3f;
+    border:2px  #413f3f;
     background-color:#FD9191;
     border-right: none;
     border-top: none;
@@ -241,7 +253,7 @@ a{
     /*margin-top:5px;*/
     /*text-decoration:;*/
     color: #982626;
-    font-size: 20px;
+    font-size: 18px;
 }
 #smile{
     margin-left:60px;

@@ -13,7 +13,7 @@
     <div id="content">
         <div id="submit_b">
             <form id="S_W" action="receive.php" method="post" enctype="multipart/form-data">
-                <label for="homework_name">请选择要提交的作业:</label>
+                <label for="homework_name">提交的作业名:</label>
                 <input type="text" name="homework_name" id="homework_name" required>
 <!--                    <option value="1">暂无作业</option>-->
                 <br>
@@ -73,6 +73,15 @@ $result = json_encode($course);
     document.getElementById("std_name").value = std;
     document.getElementById("std_num").value = num;
     console.log(document.getElementById("std_name").value);
+</script>
+<script>
+        let input0=document.getElementById("homework_name");
+        input0.readOnly=true;
+        var input = document.getElementById('std_name');
+        input.readOnly = true;
+        let input_num = document.getElementById('std_num');
+        input_num.readOnly = true;
+    // }
 </script>
 </body>
 </html>
