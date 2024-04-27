@@ -70,7 +70,7 @@ $data = json_encode($tables);
         <div class="row">
             <div id="left" class="col-2">
                 <div class="logo">
-                    <p style="flex:">作业管理平台</p>
+                    <p style="font-size: 30px">作业管理</p>
                 </div>
                 <!-- <div id="search_container"></div> -->
                 <!-- <ul class="menu menu-items shadow">

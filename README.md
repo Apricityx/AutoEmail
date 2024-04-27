@@ -22,6 +22,8 @@
 >可快速进行迭代与重构。
 
 >为实现良好的协同合作开发，本项目开发采用git进行管理，git仓库地址：[GITHUB](https://github.com/Apricityx/AutoEmail)
+
+>更多信息请移步至文档末尾的功能前瞻
 ## 项目开发进度
 - [x] 完成邮件收发
 - [x] 完成邮件服务器搭建
@@ -75,40 +77,40 @@
 #### PYTHON部分：
 
 >安装依赖
-    ```shell
-    pip install -r requirements.txt
-    ```
+>    ```shell
+>    pip install -r requirements.txt
+>    ```
 #### MySQL部分：
 >安装MYSQL
-    ```shell
-    sudo apt-get install mysql-server
-    ```
+>    ```shell
+>    sudo apt-get install mysql-server
+>    ```
 
 >安装MYSQL驱动
-    ```shell
-    pip install mysql-connector-python
-    ```
+>    ```shell
+>    pip install mysql-connector-python
+>    ```
 #### PHP部分：
 >安装PHP
-    ```shell
-    sudo apt-get install php
-    ```
+>    ```shell
+>    sudo apt-get install php
+>    ```
 
 > 安装PHP数据库操作扩展
-    ```shell
-    sudo apt-get install php-mysql
-    ```
+>    ```shell
+>    sudo apt-get install php-mysql
+>    ```
  
 > 安装PHP解压缩扩展
-    ```shell
-    sudo apt-get install php-zip
-    ```
+>    ```shell
+>    sudo apt-get install php-zip
+>    ```
 ### 环境配置
 > 启用PHP扩展
-    ```shell
-    sudo phpenmod mysqli
-    sudo phpenmod zip
-    ```
+>    ```shell
+>    sudo phpenmod mysqli
+>    sudo phpenmod zip
+>    ```
 
 > 启动MYSQL服务
 >    ```shell
@@ -156,4 +158,29 @@
 >
 > ### 恭喜，您已经成功部署了电子作业管理系统
 
+功能前瞻
+===
 
+登录页面
+---
+![image](./pic/demo_login.png)
+
+加载页面
+---
+![image](./pic/demo_loading.png)
+
+学生页面
+---
+![image](./pic/demo_std_page.png)
+
+提交作业页面
+---
+![image](./pic/demo_std_submit.png)
+
+管理员页面
+---
+![image](./pic/demo_admin_page.png)
+
+修改密码页面
+---
+![image](./pic/demo_change_passwd.png)
