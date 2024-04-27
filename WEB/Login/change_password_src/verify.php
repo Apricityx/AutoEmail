@@ -4,7 +4,7 @@ $conn = new mysqli("pve.zwtsvx.xyz:1128", "root", $passwd, "autoemail");
 if ($conn->connect_error) {
     die("连接失败：" . $conn->connect_error);
 }
-echo json_encode($_POST);
+//echo json_encode($_POST);
 $std_num = $_POST["std_num"];
 //$std_num = 'admin';
 $std_old_passwd = $_POST["std_old_passwd"];
@@ -41,5 +41,6 @@ if ($result->num_rows > 0) {
               window.location.href='../change_password_src/index.html';</script>";
     }
 } else {
-    echo "学号不存在！";
+    echo "<script>alert('学号不存在！')
+              window.location.href='../change_password_src/index.html';</script>";
 }

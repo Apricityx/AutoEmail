@@ -15,10 +15,16 @@ from email.header import decode_header
 # 解析发件人详情，名称及地址
 from email.utils import parseaddr
 
+# 此处为示例地址，可以填写为自己的邮件服务器地址
+# 邮件服务器地址
 server_address = 'mail.apricityx.top'
+# 邮件服务器端口
 server_port = 587
+# 发件人邮箱
 user = 'mail@apricityx.top'
+# 发件人邮箱密码
 user_password = '520520MCt'
+# 附件存储路径
 path = '/var/www/html/homeworksubmit'
 
 
@@ -33,7 +39,7 @@ def send_mail(recipient_address, text, subject):
         if obj in recipient_address:
             print("\033[0;31;1m不回复黑名单邮件\033[0m")
             return
-    msg['From'] = formataddr(("软工中外3,4班邮件收发系统", user))  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+    msg['From'] = formataddr(("邮件收发系统", user))  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
     msg['To'] = formataddr((recipient_address, recipient_address))  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
     msg['Subject'] = subject  # 邮件的主题，也可以说是标题
     # 发送加密邮件
