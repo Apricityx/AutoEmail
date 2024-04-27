@@ -15,7 +15,7 @@ if ($type == 'admin') {
     if ($_POST['username'] == 'admin' && $_POST['password'] == $admin_passwd) {
 //        echo "登录成功!WELCOME!";
         setcookie("login_type", "admin", time() + (86400 * 30), "/");
-        header("refresh:3;Location:../Admin/index.php");
+        header("refresh:3;url=../Admin/index.php");
     } else {
 //        echo "用户名或密码错误，将在3秒后返回登录页面";
         header("refresh:3;url=../Login/login.html");

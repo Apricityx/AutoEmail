@@ -1,6 +1,6 @@
 <?php
-//$table_name = $_GET['table_name'];
-$table_name = '大物';
+$table_name = $_GET['table_name'];
+//$table_name = '大物';
 $sourceDir = '../WEB/User/homework/' . $table_name;
 // 压缩后的 zip 文件名
 $zipFileName = '../WEB/User/homework/download.zip';

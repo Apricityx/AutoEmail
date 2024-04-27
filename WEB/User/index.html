@@ -28,18 +28,18 @@
         <div class="s_box">
             <div id="search_">
                 <div>
-                    <input id="search_c" class="search" placeholder="  请输入作业名称">
+                    <input id="search_c" class="search" placeholder="  请输入作业名称" oninput="search_course()">
                 </div>
-                <div >
+                <div>
                     <button id="search_b" class="search">搜索</button>
                 </div>
             </div>
         </div>
     </div>
-<!--    <div class="main"></div>-->
+    <!--    <div class="main"></div>-->
     <div class="more" style="background-color: #F7F3F3"></div>
     <div class="main" id="content_" style="background-color: #EBEBE5">
-        <div id="table1"  class="rows" style="background-color:#FFFEF0">
+        <div id="table1" class="rows" style="background-color:#FFFEF0">
             <div class="single_course order"><h3></h3></div>
             <div class="single_course"><h3>发布日期</h3></div>
             <div class="single_course"><h3>学科作业</h3></div>
@@ -48,29 +48,29 @@
             <div class="single_course"><h3>提交情况</h3></div>
         </div>
 
-<!--        <div class="rows">-->
-<!--            <div class="single_course order"><p>1</p></div>-->
-<!--            <div class="single_course"><p>2023-10-22</p></div>-->
-<!--            <div class="single_course"><p>大学物理课程论文</p></div>-->
-<!--            <div class="single_course"><p>2024-02-24</p></div>-->
-<!--            <div class="single_course"></div>-->
-<!--            <div class="single_course right"><p>已提交</p></div>-->
-<!--        </div>-->
+        <!--        <div class="rows">-->
+        <!--            <div class="single_course order"><p>1</p></div>-->
+        <!--            <div class="single_course"><p>2023-10-22</p></div>-->
+        <!--            <div class="single_course"><p>大学物理课程论文</p></div>-->
+        <!--            <div class="single_course"><p>2024-02-24</p></div>-->
+        <!--            <div class="single_course"></div>-->
+        <!--            <div class="single_course right"><p>已提交</p></div>-->
+        <!--        </div>-->
 
-<!--        <div class="rows">-->
-<!--            <div class="single_course order" ><p>2</p></div>-->
-<!--            <div class="single_course"><p>2023-10-22</p></div>-->
-<!--            <div class="single_course"><p>大学物理课程论文</p></div>-->
-<!--            <div class="single_course"><p>2024-02-24</p></div>-->
-<!--            <div class="single_course"></div>-->
-<!--            <div class="single_course wrong"><p>未提交</p></div>-->
-<!--        </div>-->
-<!--    </div>-->
-    <div class="more" style="background-color:#EBEBE5"></div>
-    <div class="more"  style="background-color:#EBEBE5"></div>
-    <div class="more"  style="background-color:#EBEBE5"> </div>
-    <div class="more"  style="background-color:#EBEBE5"></div>
-</div>
+        <!--        <div class="rows">-->
+        <!--            <div class="single_course order" ><p>2</p></div>-->
+        <!--            <div class="single_course"><p>2023-10-22</p></div>-->
+        <!--            <div class="single_course"><p>大学物理课程论文</p></div>-->
+        <!--            <div class="single_course"><p>2024-02-24</p></div>-->
+        <!--            <div class="single_course"></div>-->
+        <!--            <div class="single_course wrong"><p>未提交</p></div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <div class="more" style="background-color:#EBEBE5"></div>
+        <div class="more" style="background-color:#EBEBE5"></div>
+        <div class="more" style="background-color:#EBEBE5"></div>
+        <div class="more" style="background-color:#EBEBE5"></div>
+    </div>
 
 </div>
 </body>
@@ -85,7 +85,8 @@
         <div class="single_course wrong"><p>未提交</p></div>
     </div>
 `
-    function div_constructor(num,time,subject,deadline,submit_status){
+
+    function div_constructor(num, time, subject, deadline, submit_status) {
         let div = document.createElement("div");
         div.className = "rows";
         let div1 = document.createElement("div");
@@ -118,7 +119,7 @@
 
         let div5 = document.createElement("div");
         div5.className = "single_course";
-        div5.id="submit_work";
+        div5.id = "submit_work";
         // div5.style = "text-align: center";
         let submit = document.createElement("a");
         submit.innerText = "提交作业";
@@ -129,10 +130,10 @@
         let div6 = document.createElement("div");
         div6.className = "single_course";
         let p6 = document.createElement("p");
-        if (submit_status === "0"){
+        if (submit_status === "0") {
             div6.className = "single_course wrong";
             p6.innerHTML = "未提交";
-        }else{
+        } else {
             div6.className = "single_course right";
             p6.innerHTML = "已提交";
         }
@@ -143,15 +144,15 @@
 </script>
 <script>
     let std_name;
-    try{
+    try {
         std_name = decodeURIComponent(document.cookie.split("name=")[1].split(";")[0]);
-    }
-    catch (e) {
+    } catch (e) {
         console.log(e)
         console.log("未登录")
         window.location.href = "../Login/login.html";
     }
     console.log(std_name)
+
     // console.log("welcome," + std_name)
 
     function update_data() {
@@ -169,9 +170,9 @@
                 let table = document.getElementById("content_");
                 // table.appendChild(div_constructor(1,"2023-10-22","大学物理课程论文","2024-02-24","已提交"));
                 // table.appendChild(div_constructor(2,"2023-10-22","大学物理课程论文","2024-02-24","未提交"));
-                for (let i = 0;i<data.length;i++){
+                for (let i = 0; i < data.length; i++) {
                     console.log(data[i])
-                    table.appendChild(div_constructor(i+1,data[i].time,data[i].table_name,data[i].deadline,data[i].is_finish))
+                    table.appendChild(div_constructor(i + 1, data[i].time, data[i].table_name, data[i].deadline, data[i].is_finish))
                 }
             }
         }
@@ -183,32 +184,42 @@
     let name = decodeURIComponent(document.cookie.split("name=")[1].split(";")[0]);
     let name_container = document.getElementById("HELLO");
     time = new Date().getHours();
-    if (time < 6){
+    if (time < 6) {
         name_container.innerText = "凌晨好，" + name;
-    }else if (time < 9){
+    } else if (time < 9) {
         name_container.innerText = "早上好，" + name;
-    }
-    else if (time < 12){
+    } else if (time < 12) {
         name_container.innerText = "上午好，" + name;
-    }
-    else if (time < 14){
+    } else if (time < 14) {
         name_container.innerText = "中午好，" + name;
-    }
-    else if (time < 18){
+    } else if (time < 18) {
         name_container.innerText = "下午好，" + name;
-    }
-    else if (time < 22){
+    } else if (time < 22) {
         name_container.innerText = "晚上好，" + name;
-    }
-    else{
+    } else {
         name_container.innerText = "夜深了，" + name;
     }
 </script>
 <script>
-    function logout(){
+    function logout() {
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "num=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "login_type=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         window.location.href = "../Login/login.html";
+    }
+</script>
+<script>
+    console.log('search_content')
+    function search_course() {
+        let search_content = document.getElementById("search_c").value;
+        let contents = document.getElementsByClassName("rows");
+        for (let i = 1; i < contents.length; i++) {
+            let course_name = contents[i].children[2].children[0].innerText
+            if (course_name.includes(search_content)) {
+                contents[i].style.display = "grid";
+            } else {
+                contents[i].style.display = "none";
+            }
+        }
     }
 </script>
