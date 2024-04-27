@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //    echo "接收到的table: " . $homework_name . "<br>";
 //    echo "接收到的名字: " . $std_name . "<br>";
 //    echo "接收到的学号: " . $std_num;
-    $table = "接收到的作业名:  " . $homework_name;
-    $name = "接收到的名字:  " . $std_name;
-    $num = "接收到的学号:  " . $std_num;
+    $table = "作业名:  " . $homework_name;
+    $name = "学生姓名:  " . $std_name;
+    $num = "学生学号:  " . $std_num;
 
     $passwd = file("../../database_passwd")[0];
     $servername = "pve.zwtsvx.xyz:1128";
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  //如果未获取文件，显示重新提交
     if (<?php echo $file['size']; ?> == 0) {
      document.getElementById("title").innerHTML = "<h1>提交失败!</h1>";
-        document.getElementById("title").innerHTML += "<p>请检查网络是否良好，5秒后将自动返回上一页面，请重新提交</p>";
+        document.getElementById("title").innerHTML += "<p>请检查是否选择文件提交或当前网络是否良好，5秒后将自动返回上一页面，请重新提交</p>";
         document.getElementById("receive_box").innerHTML = "<h2 style='margin-left: 250px'>未获取数据，请重新提交</h2>";
         setTimeout(function () {
             window.history.back();

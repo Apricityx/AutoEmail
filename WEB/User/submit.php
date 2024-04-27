@@ -10,6 +10,9 @@
     <div id="title">
         <h1>提  交  作  业</h1>
     </div>
+    <div id="back">
+        <button>返回</button>
+    </div>
     <div id="content">
         <div id="submit_b">
             <form id="S_W" action="receive.php" method="post" enctype="multipart/form-data">
@@ -28,8 +31,11 @@
                 <label>点击选择文件:
                     <br>
 <!--                    <input type="file" name="file">-->
-                <input type="file" id="select_" name="file">
+                    <div id="select_" onclick="document.getElementById('select').click()">
+                        <p>选择文件</p>
+                    </div>
                 </label>
+                <input type="file" id="select" name="file" style="display: none">
                 <br>
                 <input type="submit" id="submit" value="提交">
             </form>
@@ -81,6 +87,13 @@ $result = json_encode($course);
         input.readOnly = true;
         let input_num = document.getElementById('std_num');
         input_num.readOnly = true;
+        //判断如果fileinput已选择文件，selecr_div中显示文件名
+        let file_input = document.getElementById('select');
+        let select_div = document.getElementById('select_');
+        file_input.onchange = function () {
+            select_div.innerHTML = "<p>已选择文件</p>";
+        }
+</script>
     // }
 </script>
 </body>

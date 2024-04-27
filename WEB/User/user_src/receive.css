@@ -36,7 +36,7 @@ button{
     background-color:#EBEAE6;
 }
 .left{
-    background-color:#4B624B;
+    background-color:#3d6842;
     user-select: none;
 }
 #title{
@@ -82,5 +82,29 @@ display:grid;
     border: 1px solid #000000;
     background-color:#F8F8E3;
     border-radius: 20px;
-    box-shadow: #999999 5px 5px 5px;
+    font-size: 25px;
+
+    box-shadow: #999999 1px 2px 2px;
+}
+.receive_text:hover{
+    background-color: #b0ceea;
+    transition: 0.5s;
+
+    box-shadow: #4f555b 5px 5px 5px;
+}
+button{
+    width: 150px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #F8F8E3;
+    color: #000000;
+    transition: 0.5s;
+    border: 2px inset #646464;
+    /*box-shadow: #999999 5px 5px 5px;*/
+}
+button:hover{
+    background-color: #61855e;
+    color: #ffffff;
+    transition: 0.5s;
 }
