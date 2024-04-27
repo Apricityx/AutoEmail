@@ -12,7 +12,7 @@ data = pd.read_csv(r'std_data.csv', sep=',', header='infer', usecols=[0, 1]).val
 class DB:
     f = open('database_passwd', 'r')
     passwd = f.readline()
-    db = mysql.connect(host='pve.zwtsvx.xyz', port=1128, user='root', password=passwd)
+    db = mysql.connect(host='localhost', port=1128, user='root', password=passwd)
     print("Database connected successfully.")
     cursor = db.cursor()
 

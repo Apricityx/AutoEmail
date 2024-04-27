@@ -1,6 +1,6 @@
 <?php
 $passwd = file("../../../database_passwd")[0];
-$conn = new mysqli("pve.zwtsvx.xyz:1128", "root", $passwd, "autoemail");
+$conn = new mysqli("localhost", "root", $passwd, "autoemail");
 if ($conn->connect_error) {
     die("连接失败：" . $conn->connect_error);
 }

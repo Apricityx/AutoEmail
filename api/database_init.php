@@ -1,6 +1,6 @@
 <?php
 $passwd = file("../database_passwd")[0];
-$servername = "pve.zwtsvx.xyz:1128";
+$servername = "localhost";
 $username = "root";
 $password = $passwd;
 $conn = new mysqli($servername, $username, $password);

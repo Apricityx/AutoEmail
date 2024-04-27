@@ -14,9 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //    echo "上传的文件名: " . $file['name'] . "<br>";
 //    echo "文件类型: " . $file['type'] . "<br>";
 //    echo "文件大小: " . $file['size'] . "<br>";
-    $file_name = "上传的文件名:  ".$file['name'];
-    $file_type = "文件类型:  ".$file['type'];
-    $file_size = "文件大小:  ".$file['size'];
+    $file_name = "上传的文件名:  " . $file['name'];
+    $file_type = "文件类型:  " . $file['type'];
+    $file_size = "文件大小:  " . $file['size'];
     // 处理其他数据（例如：保存到数据库或发送电子邮件）
     // ...
 
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num = "学生学号:  " . $std_num;
 
     $passwd = file("../../database_passwd")[0];
-    $servername = "pve.zwtsvx.xyz:1128";
+    $servername = "localhost";
     $username = "root";
     $password = $passwd;
     $dbname = "autoemail";
@@ -59,20 +59,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="left"></div>
     <div id="title" class="left">
         <div>
-        <h1>作业提交成功!</h1>
+            <h1>作业提交成功!</h1>
         </div>
         <div>
-        <p>请检查作业提交信息是否有误，如若有误，请重新提交，点击按钮返回上一页面</p>
+            <p>请检查作业提交信息是否有误，如若有误，请重新提交，点击按钮返回上一页面</p>
         </div>
         <div>
-            <button onclick="window.history.back()">返回</button>
+            <button onclick="location.href='index.html'">返回</button>
         </div>
     </div>
     <div id="content">
         <div id="receive_box">
             <div class="receive_text">
                 <p><?php echo $table; ?></p>
-            </div >
+            </div>
             <div class="receive_text">
                 <p><?php echo $name; ?></p>
             </div>
@@ -95,9 +95,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 <script>
 
- //如果未获取文件，显示重新提交
-    if (<?php echo $file['size']; ?> == 0) {
-     document.getElementById("title").innerHTML = "<h1>提交失败!</h1>";
+    //如果未获取文件，显示重新提交
+    if (<?php echo $file['size']; ?> == 0
+    )
+    {
+        document.getElementById("title").innerHTML = "<h1>提交失败!</h1>";
         document.getElementById("title").innerHTML += "<p>请检查是否选择文件提交或当前网络是否良好，5秒后将自动返回上一页面，请重新提交</p>";
         document.getElementById("receive_box").innerHTML = "<h2 style='margin-left: 250px'>未获取数据，请重新提交</h2>";
         setTimeout(function () {
@@ -106,5 +108,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 
-    
 </script>

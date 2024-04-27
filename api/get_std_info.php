@@ -1,8 +1,8 @@
 <?php
-//$std_num = $_GET["std_num"];
-$std_num = 222023321062106;
+$std_num = $_GET["std_num"];
+//$std_num = 222023321062106;
 $passwd = file("../database_passwd")[0];
-$servername = "pve.zwtsvx.xyz:1128";
+$servername = "localhost";
 $username = "root";
 $password = $passwd;
 $dbname = "autoemail";

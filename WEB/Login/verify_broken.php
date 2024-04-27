@@ -1,7 +1,7 @@
 <?php
 $file = file('../../database_passwd');
 $pass = $file[0];
-$servername = "pve.zwtsvx.xyz:1128";
+$servername = "localhost";
 $username = "root";
 $password = $pass;
 $dbname = "autoemail";
