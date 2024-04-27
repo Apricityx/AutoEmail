@@ -208,7 +208,7 @@ $data = json_encode($tables);
             let time = new Date();
             // console.log(time.getFullYear());
             year = parseInt(year);
-            if (year < time.getFullYear()) {
+            if (year < time.getFullYear() || year >2077) {
                 window.alert("年份输入有误！");
                 return;
             }
