@@ -9,18 +9,18 @@
 		<div class="background_color">
 			<div class="content">
 				<h1>修改密码</h1>
-				<form>
+				<form action="./verify.php" method="post">
 					<div class="row">
-						<label class="hint">用户名</label>
+						<label class="hint">学号/管理员账号</label>
 						<label class="input">
-							<input type="text"/>
+							<input type="text" name="std_num" id="std_num" required>
 						</label>
 
 					</div>
 					<div class="row">
 						<label class="hint">原密码</label>
 						<label class="input">
-							<input type="password">
+							<input type="password" name="std_old_passwd" id="std_old_passwd" required>
 						</label>
 
 					</div>
@@ -28,25 +28,24 @@
 
 						<label class="hint">新密码</label>
 						<label class="input">
-							<input type="password">
+							<input type="password" name="std_new_passwd" id="std_new_passwd" required>
 						</label>
 
 					</div>
 					<div class="row">
 						<label class="hint">新密码确认</label>
 						<label class="input">
-							<input type="password">
+							<input type="password" name="std_repeat_passwd" id="std_repeat_passwd" required>
 						</label>
 
 					</div>
-					<a onclick="">
-						忘记密码
+					<a onclick="window.location.href='../login.html'">
+						返回登录
 					</a>
 					<div class="row">
 						<label class="input">
-							<input type="submit" content="确认修改">
+							<input type="submit" content="确认修改" value="确认修改">
 						</label>
-
 					</div>
 
 				</form>
@@ -64,4 +63,7 @@
         }
         return true;
     }
+	// 接管提交事件
+
+    document.getElementsByTagName("form")[0].onsubmit = check_submit;
 </script>
