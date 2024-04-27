@@ -54,11 +54,6 @@ p{
     font-family: "新宋体";
     font-size: 18px;
     text-align: center;
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*position: relative;*/
-    /*margin-top:1px;*/
-    /*padding: 1px;*/
 }
 #main{
     width:100vw;
@@ -66,25 +61,19 @@ p{
     display: grid;
     grid-template-rows: 1.7fr 1.5fr 7fr 0.6fr;
     grid-template-columns: 0.5fr 8fr 1fr;
-    /*border: 1px solid black;*/
 }
 .main{
-    /*height: 100%;*/
-    /*width:100%;*/
-    border: 8px solid #f1f1f1;
-    border-style:double;
+    border: 8px double #f1f1f1;
 }
 #content_{
     width:90%;
     height: 90%;
-    /*border: 1px solid #e53636;*/
     margin-left: 50px;
     box-shadow: 10px 10px 10px 5px #383333;
     border-radius: 10px;
     background-image: url("img/protocol (1).svg");
     background-repeat: no-repeat;
     background-position: right bottom;
-
     overflow: auto;
 }
 #title{
@@ -92,7 +81,7 @@ p{
     border: 1px solid #0B0B32;
 }
 #login_out{
-    border: #051F51 1px solid;
+    border: #0B0B32 1px solid;
 }
 #out_b{
     width:65%;

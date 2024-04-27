@@ -11,12 +11,15 @@ if ($conn->connect_error) {
 }
 $type = $_POST['type'];
 if ($type == 'admin') {
+//    let flag = 0;
     $admin_passwd = file('login_src/admin_passwd')[0];
     if ($_POST['username'] == 'admin' && $_POST['password'] == $admin_passwd) {
+        $flag=1;
 //        echo "登录成功!WELCOME!";
         setcookie("login_type", "admin", time() + (86400 * 30), "/");
         header("refresh:3;url=../Admin/index.php");
     } else {
+        $flag=0;
 //        echo "用户名或密码错误，将在3秒后返回登录页面";
         header("refresh:3;url=../Login/login.html");
     }
