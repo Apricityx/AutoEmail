@@ -110,3 +110,9 @@
     border-radius: 5px; /* 弧角可以注释掉 */
     margin-right: 1em;
 }
+.list-group {
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}

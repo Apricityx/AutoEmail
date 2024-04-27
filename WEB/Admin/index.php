@@ -63,9 +63,6 @@ $data = json_encode($tables);
     <input type="file" id="upload" name="upload">
 </form>
 <div id="main">
-    <!-- <div id="top">
-        <h1 style="text-align: center">作业管理平台 - 管理员</h1>
-    </div> -->
     <div id="bottom" class="container-fluid">
         <div class="row">
             <div id="left" class="col-2">
@@ -73,27 +70,10 @@ $data = json_encode($tables);
                     <p style="font-size: 30px">作业管理</p>
                 </div>
                 <!-- <div id="search_container"></div> -->
-                <!-- <ul class="menu menu-items shadow">
-                    <li class="menu-items" style="padding-left: 24px;">
-                        Chem
-                    </li>
-                    <li class="menu-items" style="padding-left: 24px;">
-                        Chn
-                    </li>
-                    <li class="menu-items" style="padding-left: 24px;">
-                        Math
-                    </li>
-                </ul> -->
-                <div class="list-group" id="list-tab" role="tablist">
-                    <!--                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"-->
-                    <!--                       href="#chem" role="tab" aria-controls="list-home">Chem</a>-->
-                    <!--                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"-->
-                    <!--                       href="#chinese" role="tab" aria-controls="list-profile">Chn</a>-->
-                    <!--                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"-->
-                    <!--                       href="#math" role="tab" aria-controls="list-messages">Math</a>-->
-                </div>
+                    <div class="list-group" id="list-tab" role="tablist">
+                    </div>
                 <hr/>
-                <button type="button" class="btn btn-secondary btn-sm" onclick="logout()"><i class="bi bi-escape"></i>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="logout()" style="margin-bottom: 4em;"><i class="bi bi-escape"></i>
                     退出账号
                 </button>
                 <div id="table_information"></div>
