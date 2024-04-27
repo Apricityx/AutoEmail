@@ -23,7 +23,7 @@
     <div class="more" style="background-color: #F7F3F3"></div>
     <div class="more" id="s_box_" style="background-color: #F7F3F3">
         <div class="s_box">
-            <h2><i id="HELLO">HI! XXXX</i></h2>
+            <h2><i id="HELLO">HI! XXXX</i><img id="smile" src="user_src/img/smile%20(2).svg"></h2>
         </div>
         <div class="s_box">
             <div id="search_">
@@ -81,7 +81,7 @@
         <div class="single_course"><p>2023-10-22</p></div>
         <div class="single_course"><p>大学物理课程论文</p></div>
         <div class="single_course"><p>2024-02-24</p></div>
-        <div class="single_course"></div>
+        <div class="single_course sub_cond"></div>
         <div class="single_course wrong"><p>未提交</p></div>
     </div>
 `
@@ -118,7 +118,7 @@
         div.appendChild(div4);
 
         let div5 = document.createElement("div");
-        div5.className = "single_course";
+        div5.className = "single_course sub_cond";
         div5.id = "submit_work";
         // div5.style = "text-align: center";
         let submit = document.createElement("a");

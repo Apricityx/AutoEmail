@@ -1,24 +1,24 @@
 @font-face {
     font-family: 'myfont1';
-    src: url('fonts/XINWEI.ttf');
+    src: url('fonts/SHT.ttf');
 }
 @font-face {
     font-family: 'myfont2';
     src: url('fonts/SHT.ttf');
 }
 h1{
-    font-family: 'myfont1';
+    font-family: 爱奇艺黑体;
     /*padding: 0 0 0 120px;*/
     text-align: center;
-    font-size: 70px;
-    color: #e7e7e7;
-    text-shadow: #000000 3px 3px 4px;
+    font-size:75px;
+    color: #2f2f33;
+    /*text-shadow: #09011c 1px 1px 1px;*/
 }
 body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #F7F7ED;
+    background-color: #F2F2F2 ;
     user-select: none;
     /*z-index: -999;*/
 
@@ -31,12 +31,14 @@ body{
     grid-template-columns: 0.5fr 5fr 0.5fr;
 }
 #title{
-    background-color: #071655;
+    background-color:#DEDFDD;
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
     font-size: 1.5em;
     width:100%;
+    /*border-bottom: #999999 1px solid;*/
+    border-radius: 25px;
     box-shadow: #4f555b 5px 5px 5px;
     /*border: 1px solid #051F51;*/
 }
@@ -55,13 +57,14 @@ body{
     grid-row-end: 3;
     width: 100%;
     height: 100%;
-    border-radius: 45px;
-    background-color: rgba(16, 52, 198,0.1);
-    filter: blur(0);
+    border-radius: 25px;
+    background-color:#31365E;
+    backdrop-filter: blur(20px);
     border: 5px dot-dot-dash #c2bfbf;
+    color: #e2e2e2;
     /*border-style: dot-dot-dash;*/
     /*border: 1px solid #051F51;*/
-    box-shadow: #4f555b 5px 5px 5px;
+    box-shadow: #4f555b 15px 15px 15px;
 }
 #S_W{
     margin: 50px 10px 10px 100px;
@@ -80,7 +83,7 @@ input{
     text-indent: 40px;
     margin: 10px 10px 40px 10px;
     /*//背景颜色透明*/
-    background-color: rgba(255,255,255,0.5);
+    /*background-color: rgba(255,255,255,0.5);*/
     backdrop-filter: blur(10px);
     /*background-color: rgba(255,255,255,0.5);*/
     border:none;
@@ -102,6 +105,7 @@ label{
     font-family: "宋体";
     font-size: 25px;
     margin: 25px 50px 10px 200px;
+
     background-color: rgb(16, 52, 198,0.01);
     border-radius: 0;
 }
@@ -113,4 +117,38 @@ label{
     width: 300px;
     margin: 50px 10px 10px 180px;
     text-indent: 0;
+}
+#submit:hover{
+    background-color: #518d51;
+    /*color: #f8f8f8;*/
+    /*box-shadow: 10px 10px 10px #000000;*/
+    transition: 0.8s;
+    /*border-color: #000C40;*/
+    /*box-shadow: #999999 5px 5px 5px;*/
+    /*animation: sub_trans 0.8s;*/
+}
+@keyframes sub_trans {
+    0%{
+       /*height:1px;*/
+        border-radius: 0;
+        background-color: #e3e4ec;
+        /*color: #f8f8f8;*/
+    }
+    25%{
+        background-color: #c9e4ec;
+    }
+    50%{
+        /*width: 50%;*/
+        /*height: 50%;*/
+        /*border-radius: 0;*/
+        background-color: #b3c8e5;
+        /*color: #e2e2e2;*/
+    }
+    100%{
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*border-radius: 25px;*/
+        background-color: #9fa2da;
+        /*color: #e2e2e2;*/
+    }
 }
