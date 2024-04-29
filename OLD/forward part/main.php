@@ -27,44 +27,54 @@
             font-family: 'font_style04';
             src: url('font/font_style04.otf');
         }
+
         @font-face {
             font-family: 'font_style05';
             src: url('font/font_style05.otf');
         }
+
         @font-face {
             font-family: 'font_style06';
             src: url('font/font_style06.otf');
         }
+
         @font-face {
             font-family: 'font_style07';
             src: url('font/font_style07.otf');
         }
+
         @font-face {
             font-family: 'font_style08';
             src: url('font/font_style08.otf');
         }
+
         @font-face {
             font-family: 'font_style10';
             src: url('font/font_style10.otf');
         }
+
         @font-face {
             font-family: 'font_style13';
             src: url('font/font_style13.otf');
         }
+
         @font-face {
             font-family: 'font_style14';
             src: url('font/font_style14.otf');
         }
+
         h1 {
             font-family: 'font_style01';
             letter-spacing: 16px;
         }
+
         #std_text {
             font-family: 'font_style04';
             color: #2d2c2c;
         }
-        .std{
-         font-family:sans-serif;
+
+        .std {
+            font-family: sans-serif;
         }
     </style>
 </head>
@@ -88,11 +98,11 @@
 
     </div>
     <div id="std_info2"></div>
-        <!--        放横着的学生信息-->
-<!--    <marquee behavior="scroll" direction="left" id="std_info">-->
-        <!--        放横着的学生信息-->
+    <!--        放横着的学生信息-->
+    <!--    <marquee behavior="scroll" direction="left" id="std_info">-->
+    <!--        放横着的学生信息-->
 
-<!--    </marquee>-->
+    <!--    </marquee>-->
 
 </div>
 <?php
@@ -168,10 +178,10 @@ $var_num = count($var_);
             counter++;
         } else {
             if (name_submitted.includes(name_total[i - 61 - counter])) {
-                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '7F9F80');
+                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '#6DF291');
                 document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
             } else {
-                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '2f2f35');
+                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');
                 document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-close-30.png');
             }
         }
@@ -179,27 +189,28 @@ $var_num = count($var_);
 
 </script>
 <script>
-    let box1= document.getElementById('std_info1');
-    let box2= document.getElementById('std_info2');
-    let box= document.getElementById('box');
-    let speed=2;
-    box2.innerHTML=box1.innerHTML;
-    setInterval(function(){
-        if(box.scrollLeft>=box1.offsetWidth){
-            box.scrollLeft=0;
-        }else{
-            box.scrollLeft+=speed;
+    let box1 = document.getElementById('std_info1');
+    let box2 = document.getElementById('std_info2');
+    let box = document.getElementById('box');
+    let speed = 2;
+    box2.innerHTML = box1.innerHTML;
+    setInterval(function () {
+        if (box.scrollLeft >= box1.offsetWidth) {
+            box.scrollLeft = 0;
+        } else {
+            box.scrollLeft += speed;
         }
-    },10);
+    }, 10);
     // for(j=0;j<60;j++){
-        var scrollDiv = document.getElementsByClassName('std');
-        for (let i = 0; i < scrollDiv.length; i++) {
-            scrollDiv[i].addEventListener('click', function() {
-                speed = 0
-            })
-            scrollDiv[i].addEventListener('mouseout', function() {
-                speed = 2
-            }) }
+    var scrollDiv = document.getElementsByClassName('std');
+    for (let i = 0; i < scrollDiv.length; i++) {
+        scrollDiv[i].addEventListener('click', function () {
+            speed = 0
+        })
+        scrollDiv[i].addEventListener('mouseout', function () {
+            speed = 2
+        })
+    }
     //     scrollDiv.addEventListener('mouseover', function() {
     //         //     // 鼠标移入时停止滚动
     //             scrollDiv.style.overflow = 'hidden';

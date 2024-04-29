@@ -84,7 +84,7 @@
 <div id="left">
     <div id="search_box">
         <input type="text" name="search" placeholder="搜索学号" class="in_put" id="search">
-<!--        <div id="search_">SEARCH</div>-->
+        <!--        <div id="search_">SEARCH</div>-->
     </div>
     <div id="std_text">
         <!--        放竖着的学生信息-->
@@ -181,9 +181,8 @@ $var_num = count($var_);
             document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
             counter++;
         } else {
-
             if (name_submitted.includes(name_total[i - 61 - counter])) {
-                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '7F9F80');
+                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '#6DF291');
                 document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
             } else {
                 document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');
@@ -191,6 +190,12 @@ $var_num = count($var_);
             }
         }
     }
+    let none_ele = `<div style="border-top: solid 2px black;text-align: center;display: block;padding: 0">
+        <p>到底啦</p>
+    </div>`
+    // none_ele = none_ele.style.display = 'opacity: 0'
+    document.getElementById('std_text').innerHTML += (none_ele)
+    console.log(none_ele)
 </script>
 <script>
     let box1 = document.getElementById('std_info1');
@@ -217,17 +222,14 @@ $var_num = count($var_);
             speed = 5
         })
     }
-        scrollDiv.addEventListener('mouseover', function() {
-            //     // 鼠标移入时停止滚动
-                scrollDiv.style.overflow = 'hidden';
-            });
-        scrollDiv.addEventListener('mouseout', function() {
-                // 鼠标移出时恢复滚动
-                scrollDiv.style.overflow = 'auto';
-            });
-
-
-
+    scrollDiv.addEventListener('mouseover', function () {
+        //     // 鼠标移入时停止滚动
+        scrollDiv.style.overflow = 'hidden';
+    });
+    scrollDiv.addEventListener('mouseout', function () {
+        // 鼠标移出时恢复滚动
+        scrollDiv.style.overflow = 'auto';
+    });
 
 
 </script>

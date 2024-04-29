@@ -73,6 +73,8 @@ h1 {
 }
 
 #left {
+    overflow: clip;
+    /*overflow: hidden;*/
     position: relative;
     height: 75vh;
     grid-column-start: 1;
@@ -85,9 +87,14 @@ h1 {
 
 
 #search_box {
-    display: block;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    /*opacity: ;*/
+    /*display: block;*/
     width: 350px;
-    margin: 3px auto;
+    /*margin: 3px auto;*/
+    margin: 20px 0;
+    padding-bottom: 10px;
     font-family: 'font_style04';
     font-size: 14px;
 }
@@ -124,6 +131,7 @@ input {
 
 .in_put {
     /*//居中*/
+    backdrop-filter: blur(5px);
     display: block;
     margin: 0 auto;
     filter: Alpha(opacity=30);
@@ -131,14 +139,14 @@ input {
     width: 50%;
     /*margin: 0;*/
     border-radius: 25px;
-    transition: all 0.3s, width ease-in-out 0.5s;
+    transition: all 0.7s, width ease-in-out 0.5s;
 }
 
 .in_put:hover {
     width: 100%;
     filter: Alpha(opacity=100);
     opacity: 1;
-    transition: all 0.3s, width ease-in-out 0.5s;
+    transition: all 0.7s, width ease-in-out 0.5s;
     box-shadow: #FFFFFF 1px 1px 10px;
     height: 5vh;
 }
@@ -146,7 +154,7 @@ input {
 .in_put:focus {
     filter: Alpha(opacity=100);
     opacity: 1;
-    transition: all 0.3s, width ease-in-out 0.5s;
+    transition: all 0.7s, width ease-in-out 0.5s;
     box-shadow: #FFFFFF 1px 1px 10px;
 }
 
@@ -158,8 +166,9 @@ input {
 
 
 #std_text {
+    margin-top: -4.5vh;
     border-radius: 25px;
-    height: 69vh;
+    height: 73vh;
     /*height: 800px;*/
     width: 350px;
     overflow-y: scroll;
@@ -173,7 +182,7 @@ input {
 //居中*/
 
 #std_text {
-    -ms-overflow-style5none;
+    /*-ms-overflow-style5none;*/
     scrollbar-width: none;
 }
 
@@ -261,7 +270,7 @@ h2:hover {
 }
 
 .student {
-
+    transition: 0.5s;
     height: 85px;
     display: grid;
     grid-template-columns: 2fr 1fr;
