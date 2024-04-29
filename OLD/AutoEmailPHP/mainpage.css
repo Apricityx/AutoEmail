@@ -31,15 +31,17 @@ body {
     grid-template-rows: 1fr 4fr;
     user-select: none;
 }
-#background{
+
+#background {
     position: absolute;
     /*z-index: -1;*/
 }
 
-#canvas{
+#canvas {
     position: absolute;
     z-index: -1;
 }
+
 .text {
     /*position: absolute;*/
     top: 50%;
@@ -51,7 +53,7 @@ div {
     display: inline-block;
     /*position: relative;*/
     /*background-color: antiquewhite;*/
-    border: black 1px solid;
+    /*border: black 1px solid;*/
     margin: 0 0 0 0;
 }
 
@@ -72,20 +74,22 @@ h1 {
 
 #left {
     position: relative;
+    height: 75vh;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-    border: none;
+    border: solid 5px black;
+    border-radius: 25px;
 }
 
 
 #search_box {
+    display: block;
     width: 350px;
     margin: 3px auto;
     font-family: 'font_style04';
     font-size: 14px;
-
 }
 
 input {
@@ -104,7 +108,8 @@ input {
 #search_ {
     display: inline-block;
     width: 70px;
-    height: 36px;
+    height: 4vh;
+    /*height: 36px;*/
     float: right;
     margin: 5px 5px 5px 5px;
     background: #332e2e;
@@ -116,18 +121,59 @@ input {
     box-shadow: #999999 1px 1px 1px;
     user-select: none;
 }
-.in_put {filter:Alpha(opacity=30); opacity: .3;}
+
+.in_put {
+    /*//居中*/
+    display: block;
+    margin: 0 auto;
+    filter: Alpha(opacity=30);
+    opacity: 0.3;
+    width: 50%;
+    /*margin: 0;*/
+    border-radius: 25px;
+    transition: all 0.3s, width ease-in-out 0.5s;
+}
+
+.in_put:hover {
+    width: 100%;
+    filter: Alpha(opacity=100);
+    opacity: 1;
+    transition: all 0.3s, width ease-in-out 0.5s;
+    box-shadow: #FFFFFF 1px 1px 10px;
+    height: 5vh;
+}
+
+.in_put:focus {
+    filter: Alpha(opacity=100);
+    opacity: 1;
+    transition: all 0.3s, width ease-in-out 0.5s;
+    box-shadow: #FFFFFF 1px 1px 10px;
+}
+
+#search {
+    font-size: large;
+    text-align: center;
+    color: black;
+}
+
 
 #std_text {
-    height: 650px;
+    border-radius: 25px;
+    height: 69vh;
+    /*height: 800px;*/
     width: 350px;
     overflow-y: scroll;
 }
-#std_text ::-webkit-scrollbar{
+
+#std_text ::-webkit-scrollbar {
     display: none;
 }
-#std_text{
-    -ms-overflow-style: none;
+
+/*
+//居中*/
+
+#std_text {
+    -ms-overflow-style5none;
     scrollbar-width: none;
 }
 
@@ -154,7 +200,7 @@ p {
     grid-row-end: 3;
 }
 
-#box{
+#box {
     white-space: nowrap;
     overflow: hidden;
     border: none;
@@ -162,20 +208,22 @@ p {
 
 #std_info1 {
     display: inline-block;
-    width:4430px;
+    width: 4430px;
     height: 800px;
     padding: 10px;
-    border:none;
+    border: none;
 }
-#std_info2{
+
+#std_info2 {
     display: inline-block;
-    width:4430px;
+    width: 4430px;
     height: 800px;
     top: 0;
     left: 0;
     padding: 10px;
-    border:none;
+    border: none;
 }
+
 .std {
     display: inline-block;
     width: 180px;
@@ -196,6 +244,7 @@ p {
     transition: 0.5s;
     text-shadow: black 5px 5px 10px !important;
 }
+
 h2 {
     font-size: 3.5em;
     letter-spacing: 15px;
@@ -205,10 +254,12 @@ h2 {
     font-family: "font_style13", sans-serif;
     color: #311616;
 }
+
 h2:hover {
     color: #020000;
     transition: 0.5s;
 }
+
 .student {
 
     height: 85px;

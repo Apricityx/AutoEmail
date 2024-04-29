@@ -83,8 +83,8 @@
 <div id="title"><h1>软工3、4班邮件服务平台</h1></div>
 <div id="left">
     <div id="search_box">
-        <input type="text" name="search" placeholder="搜索学号" class="in_put">
-        <div id="search_">SEARCH</div>
+        <input type="text" name="search" placeholder="搜索学号" class="in_put" id="search">
+<!--        <div id="search_">SEARCH</div>-->
     </div>
     <div id="std_text">
         <!--        放竖着的学生信息-->
@@ -112,7 +112,7 @@ function get_str_array_list($obj)
     preg_match_all($pattern, $obj, $array);
     $chineseArray = $array[0];
     //$list=implode(', ',$chineseArray);
-    return $chineseArray;
+    return $chineseArray; //返回一个学生list
 }
 
 function get_file_array_list($obj_)
@@ -121,12 +121,14 @@ function get_file_array_list($obj_)
 //    $number=count($initial)-2;
 //    echo $number;
     $move = array_slice($initial, 2);
-    $pattern_ = '/[^\x{4e00}-\x{9fa5}]/u';
+    $pattern_ = '/(?<=_).*(?=_)/';
     foreach ($move as &$end) {
-        $end = preg_replace($pattern_, '', $end);
+        preg_match($pattern_, $end, $match);
+        $end = $match[0];
     }
 //    $list_end=implode(', ',$move);
 //    print_r($list_end);
+//    echo json_encode($move,256);
     return $move;
 }
 
@@ -146,7 +148,7 @@ $var_num = count($var_);
 <!--左侧-->
 
 <script type="text/javascript">
-    std_example = `<div class="student">
+    std_example = `<div class="student" id="{num}">
         <div class="std_left">
         {num}
         </div>
@@ -161,6 +163,8 @@ $var_num = count($var_);
 
     name_submitted = <?php echo json_encode($var_); ?>; //已提交的学生
     name_total = <?php echo json_encode($total_s); ?>;//总学生
+    console.log(name_total, "总共")
+    console.log(name_submitted, "已提交")
     let counter = 0;
     // let flag_ = 0
     for (let i = 61; i < 121; i++) {
@@ -173,16 +177,17 @@ $var_num = count($var_);
             document.getElementById('std_info2').innerHTML += '<br>';
         }
         if (skip_num.includes(i)) {
-            document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');
-            document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'WRONG.svg');
+            document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '#6DF291');
+            document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
             counter++;
         } else {
+
             if (name_submitted.includes(name_total[i - 61 - counter])) {
                 document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '7F9F80');
-                document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
+                document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{num}', i).replace('{pic}', 'icons8-done-48.png');
             } else {
-                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', '2f2f35');
-                document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{pic}', 'icons8-close-30.png');
+                document.getElementById('std_info1').innerHTML += std_right.replace('{order_num}', i - 61).replace('{std_num}', i).replace('{color}', 'grey');
+                document.getElementById('std_text').innerHTML += std_example.replace('{num}', i).replace('{num}', i).replace('{pic}', 'WRONG.svg');
             }
         }
     }
@@ -212,20 +217,35 @@ $var_num = count($var_);
             speed = 5
         })
     }
-    //     scrollDiv.addEventListener('mouseover', function() {
-    //         //     // 鼠标移入时停止滚动
-    //             scrollDiv.style.overflow = 'hidden';
-    //         });
-    //     scrollDiv.addEventListener('mouseout', function() {
-    //             // 鼠标移出时恢复滚动
-    //             scrollDiv.style.overflow = 'auto';
-    //         });
-    // }
-    //
-    //
-    //
-    //
-    //
+        scrollDiv.addEventListener('mouseover', function() {
+            //     // 鼠标移入时停止滚动
+                scrollDiv.style.overflow = 'hidden';
+            });
+        scrollDiv.addEventListener('mouseout', function() {
+                // 鼠标移出时恢复滚动
+                scrollDiv.style.overflow = 'auto';
+            });
+
+
+
+
+
+</script>
+<script>
+    // 监听输入框的输入
+    let search_ = document.getElementsByClassName('in_put')[0]
+    let std_lefts = document.getElementsByClassName('student')
+    search_.oninput = function () {
+        let search_value = search_.value
+        search_value = search_value.trim()
+        for (let i = 0; i < std_lefts.length; i++) {
+            if (std_lefts[i].id.includes(search_value)) {
+                std_lefts[i].style.display = 'grid'
+            } else {
+                std_lefts[i].style.display = 'none'
+            }
+        }
+    }
 </script>
 </body>
 </html>
