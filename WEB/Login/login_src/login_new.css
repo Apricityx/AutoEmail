@@ -10,11 +10,11 @@ body {
     /*overflow: hidden;*/
     margin: 0;
     padding: 0;
-    background: url("image/background1.jpg") no-repeat 0 0;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
+    /* background: url("image/background1.jpg") no-repeat 0 0; */
+    /* background-size: 100% 100%; */
+    /* -moz-background-size: 100% 100%; */
     font-size: 25px;
-    backdrop-filter: brightness(120%);
+    /* backdrop-filter: brightness(120%); */
     scroll-behavior: smooth;
 }
 h1{
@@ -24,17 +24,17 @@ h1{
 label{
     user-select: none;
 }
-@font-face {
-    font-family: 'MyCustomFont';  /* 自定义的字体名称 */
-    src: url('fonts/SHT.ttf'); /* 字体文件的路径和格式 */
-    /*url('path/to/your/font.woff') format('woff');*/
-}
-*{
+/* @font-face {
+    font-family: 'MyCustomFont';  
+    src: url('fonts/SHT.ttf'); 
+    url('path/to/your/font.woff') format('woff');
+} */
+/* *{
     font-family: 'MyCustomFont', sans-serif;
-}
-.bg{
+} */
+/* .bg{
     color: aliceblue;
-}
+} */
 #head{
     grid-column-start: 1;
     grid-column-end: 4;
@@ -44,7 +44,7 @@ label{
 
 #content{
 
-    background-color: rgba(75, 81, 95, 0.3);
+    /* background-color: rgba(75, 81, 95, 0.3); */
     border-radius: 20px;
     box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
     width: 60%;  /* 调整宽度 */
@@ -67,7 +67,7 @@ form{
     justify-content: space-evenly;
     div.row{
         margin-top: 1%;
-        width:60%;
+        width:70%;
         display: flex;
         flex-direction: row;
         align-content: center;
@@ -75,7 +75,6 @@ form{
         justify-content: space-evenly;
         height: 10%;
         label {
-
             font-size: 26px;
             display: flex;
             align-items: center;
@@ -84,48 +83,46 @@ form{
             justify-content: center;
             height: 100%;
             width: 30%;
-
         }
         input {
             border-radius: 10px;
             width: 70%;  /* 调整宽度 */
             height: 100%;
             font-size: 20px;
-            background: rgba(255,255,255,0.1);
+            /* background: rgba(255,255,255,0.1); */
             backdrop-filter: blur(15px);
-            color: white;
+            /* color: white; */
             padding-left: 20px;
-            &:hover{
+            /* &:hover{
                 background: rgba(255,255,255,0.3);
                 transform: scale(1.02);
-            }
-            transition: all 0.1s;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            } */
+            /* transition: all 0.1s; */
+            /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
             border: 2px solid rgba(0, 0, 0, 0.2);
             border-right: 2px solid rgba(0, 0, 0, 0.3);
             border-bottom: 2px solid rgba(0, 0, 0, 0.3);
             &::placeholder{
                 color: rgba(253, 252, 252, 0.4);
-
-            }
+            } */
         }
         select {
-            option{
+            /* option{
                 color: gray;
-            }
-            color: white;
+            } */
+            /* color: white; */
             height: 100%;
-            border-radius: 15px;
-            width: 70%;
+            border-radius: 10px;
+            width: 75%;
             font-size: 20px;
-            background: rgba(255,255,255,0.1);
+            /* background: rgba(255,255,255,0.1); */
             backdrop-filter: blur(15px);
             padding-left: 20px;
-            &:hover{
+            /* &:hover{
                 background: rgba(255,255,255,0.3);
                 transform: scale(1.02);
-            }
-            transition: all 0.1s;
+            } */
+            /* transition: all 0.1s; */
         }
     }
 
@@ -134,20 +131,20 @@ form{
         width: 20%;
         margin-top:2%;
         margin-bottom: 5%;
-        transition: all 0.1s;
+        /* transition: all 0.1s; */
         font-size: 25px;
         border-radius: 10px;
-        background: rgba(255,255,255,0.1);
+        /* background: rgba(255,255,255,0.1); */
         backdrop-filter: blur(15px);
-        &:hover{
+        /* &:hover{
             background: rgba(255,255,255,0.3);
             transform: scale(1.1);
             cursor: pointer;
-        }
-        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        } */
+        /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
         border: 2px solid rgba(0, 0, 0, 0.2);
         border-right: 2px solid rgba(0, 0, 0, 0.3);
-        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3); */
         font-weight: 600;
     };
 
