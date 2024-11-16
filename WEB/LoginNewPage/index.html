@@ -52,11 +52,15 @@
         }
         .login-box select,
         .login-box input {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
+        }
+        .login-box select{
+            margin-left: 2px;
+            width: 95%;
         }
         .login-box button {
             width: 100%;
@@ -75,7 +79,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
         .login-box .options a {
             color: #007bff;
@@ -84,6 +89,7 @@
         .login-box .options a:hover {
             text-decoration: underline;
         }
+        
     </style>
 </head>
 <body>
@@ -103,7 +109,7 @@
                 <input type="password" placeholder="Password" required>
                 <div class="options">
                     <label>
-                        <input type="checkbox">Remember Me
+                        <input type="checkbox" style="width: auto; margin-right: 5px;">Remember Me
                     </label>
                     <a href="#">Forgot Password?</a>
                 </div>
