@@ -28,7 +28,7 @@
             font-size: 24px;
             color: #333;
         }
-        input[type="email"] {
+        input {
             width: 90%;
             padding: 10px;
             margin-bottom: 20px;
@@ -53,9 +53,13 @@
 <body>
     <div class="container">
         <h1>Password Recovery</h1>
-        <form action="/recover-password" method="POST">
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <button type="submit">Send Recovery Email</button>
+        <form action="./verify.php" method="POST">
+            <!-- <input type="email" name="email" placeholder="Enter your email" required> -->
+            <input type="text" name="username" placeholder="Enter your username" required>
+            <input type="password" name="current-password" placeholder="Enter your current password" required>
+            <input type="password" name="new-password" placeholder="Enter your new password" required>
+            <input type="password" name="confirm-password" placeholder="Confirm your new password" required>
+            <button type="submit">Renew</button>
         </form>
     </div>
 </body>

@@ -100,22 +100,49 @@
         </div>
         <div class="right">
             <div class="login-box">
-                <h2>Login</h2>
-                <select>
-                    <option value="student">Student</option>
-                    <option value="admin">Administrator</option>
-                </select>
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-                <div class="options">
-                    <label>
-                        <input type="checkbox" style="width: auto; margin-right: 5px;">Remember Me
-                    </label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit">Login</button>
+                <form action="verify.php" method="post">
+                    <h2>Login</h2>
+                    <select name="type" id="type">
+                        <option value="student">Student</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                    <input type="text" placeholder="Username" name="username" id="username" required>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <div class="options">
+                        <label>
+                            <input type="checkbox" name="save" id="save" control-id="ControlID-3" style="width: auto; margin-right: 5px;">Remember Me
+                        </label>
+                        <a href="forgetpasswd.html">Forgot Password?</a>
+                    </div>
+                    <button type="submit" id="submitButton">Login</button>
+                </form>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<script>
+    let std_id = document.cookie.split("account=")[1].split(";")[0];
+    let if_remember = document.cookie.split("remember=")[1].split(";")[0];
+    parseInt(if_remember)
+    parseInt(std_id)
+    if (if_remember) {
+        document.getElementById("username").value = std_id;
+        console.log(std_id)
+        document.getElementById("save").checked = true;
+    }
+</script>
+<script>
+    // 检查是否登录成功
+    let login_type = document.cookie;
+    console.log(login_type)
+    if (login_type.includes("login_type=")) {
+        login_type = login_type.split("login_type=")[1].split(";")[0]
+        if (login_type === "student") {
+            window.location.href = "../User/index.html";
+        } else if (login_type === "admin") {
+            window.location.href = "../Admin/index.php";
+        }
+    }
+</script>
