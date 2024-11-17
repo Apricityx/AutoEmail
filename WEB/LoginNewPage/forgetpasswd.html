@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Recovery</title>
+    <title>Changing Passcode</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,14 +52,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Password Recovery</h1>
-        <form action="./verify.php" method="POST">
+        <h1>Changing Passcode</h1>
+        <form action="./changepasswd.php" method="POST">
             <!-- <input type="email" name="email" placeholder="Enter your email" required> -->
-            <input type="text" name="username" placeholder="Enter your username" required>
-            <input type="password" name="current-password" placeholder="Enter your current password" required>
-            <input type="password" name="new-password" placeholder="Enter your new password" required>
-            <input type="password" name="confirm-password" placeholder="Confirm your new password" required>
-            <button type="submit">Renew</button>
+            <input type="text" name="std_num" id="std_num" placeholder="Enter your username" required>
+            <input type="password" name="std_old_passwd" id="std_old_passwd" placeholder="Enter your current passcode" required>
+            <input type="password" name="std_new_passwd" id="std_new_passwd" placeholder="Enter your new passcode" required>
+            <input type="password" name="std_repeat_passwd" id="std_repeat_passwd" placeholder="Confirm your new passcode" required>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
