@@ -6,7 +6,7 @@ header("Content-type: text/html; charset=utf-8");
 use JetBrains\PhpStorm\NoReturn;
 
 if ($_COOKIE["login_type"] != "admin") {
-    header("Location:../Login/login.html");
+    header("Location:../LoginNewPage/index.html");
 }
 ?>
 <?php
@@ -272,7 +272,7 @@ $data = json_encode($tables);
         document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "num=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "login_type=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        window.location.href = "../Login/login.html";
+        window.location.href = "../LoginNewPage/index.html";
     }
 
     function init() {

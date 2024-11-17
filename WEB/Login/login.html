@@ -1,71 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>作业管理平台 - 登录</title>
-    <link rel="stylesheet" href="login_src/login_new.css">
+    <meta http-equiv="refresh" content="0; url=../LoginNewPage/index.html">
+    <title>Redirecting...</title>
 </head>
 <body>
-<div class="bg" id="head">
-    <h1>电子作业管理平台</h1></div>
-<div class="bg"></div>
-<div id="content">
-    <div class="bg">
-        <form action="verify.php" method="post"> <!-- 此处login.php连接后端，后端校验是否有这个人，如果有就向cookie中存储数据 -->
-            <div class="row" style="margin-top: 1.5em;">
-                <label for="type">通道:</label>
-                <select name="type" id="type">
-                    <option value="student">学生</option>
-                    <option value="admin">管理员</option>
-                </select>
-            </div>
-            <br>
-            <div class="row">
-                <label for="username">账号:</label>
-                <input type="text" name="username" id="username" placeholder="管理员/学号" required>
-            </div>
-            <br>
-            <div class="row">
-                <label for="password">密码:</label>
-                <input type="password" name="password" id="password" required>
-            </div>
-            <br>
-            <div class="login-tools">
-                <div class="login-tools__save">
-                    <label>
-                        <input type="checkbox" name="save" class="login-tools__save__checkbox" id="save"
-                               control-id="ControlID-3">
-                        记住账号</label>
-                </div>
-                <a href="change_password_src/index.html" class="login-tools__forget">更改密码</a>
-            </div>
-            <input type="submit" value="登录" id="submitButton">
-        </form>
-    </div>
-</div>
+    <p>If you are not redirected automatically, follow this <a href="../LoginNewPage/index.html">link</a>.</p>
 </body>
 </html>
-<script>
-    let std_id = document.cookie.split("account=")[1].split(";")[0];
-    let if_remember = document.cookie.split("remember=")[1].split(";")[0];
-    parseInt(if_remember)
-    parseInt(std_id)
-    if (if_remember) {
-        document.getElementById("username").value = std_id;
-        console.log(std_id)
-        document.getElementById("save").checked = true;
-    }
-</script>
-<script>
-    // 检查是否登录成功
-    let login_type = document.cookie;
-    console.log(login_type)
-    if (login_type.includes("login_type=")) {
-        login_type = login_type.split("login_type=")[1].split(";")[0]
-        if (login_type === "student") {
-            window.location.href = "../User/index.html";
-        } else if (login_type === "admin") {
-            window.location.href = "../Admin/index.php";
-        }
-    }
-</script>
+<!-- 后备页面，防止少改跳转错误的UI -->
