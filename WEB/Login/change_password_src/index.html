@@ -1,69 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
-	<head>
-		<meta charset="UTF-8">
-		<title>密码修改</title>
-		<link rel="stylesheet" href="./style.css">
-	</head>
-	<body>
-		<div class="background_color">
-			<div class="content">
-				<h1>修改密码</h1>
-				<form action="./verify.php" method="post">
-					<div class="row">
-						<label class="hint">学号/管理员账号</label>
-						<label class="input">
-							<input type="text" name="std_num" id="std_num" required>
-						</label>
-
-					</div>
-					<div class="row">
-						<label class="hint">原密码</label>
-						<label class="input">
-							<input type="password" name="std_old_passwd" id="std_old_passwd" required>
-						</label>
-
-					</div>
-					<div class="row">
-
-						<label class="hint">新密码</label>
-						<label class="input">
-							<input type="password" name="std_new_passwd" id="std_new_passwd" required>
-						</label>
-
-					</div>
-					<div class="row">
-						<label class="hint">确认密码</label>
-						<label class="input">
-							<input type="password" name="std_repeat_passwd" id="std_repeat_passwd" required>
-						</label>
-
-					</div>
-					<a onclick="window.location.href='../login.html'">
-						返回登录
-					</a>
-					<div class="row">
-						<label class="input">
-							<input type="submit" content="确认修改" value="确认修改">
-						</label>
-					</div>
-
-				</form>
-			</div>
-		</div>
-	</body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Change Password</title>
+	<meta http-equiv="refresh" content="0; url=../../LoginNewPage/forgetpasswd.html">
+</head>
+<body>
+	<p>If you are not redirected, <a href="../../LoginNewPage/forgetpasswd.html">click here</a>.</p>
+</body>
 </html>
-<script>
-    function check_submit(){
-        let std_new_passwd = document.getElementsByName("std_new_passwd")[0].value;
-        let std_repeat_passwd = document.getElementsByName("std_repeat_passwd")[0].value;
-        if(std_new_passwd !== std_repeat_passwd){
-            alert("两次输入的密码不一致");
-            return false;
-        }
-        return true;
-    }
-	// 接管提交事件
-
-    document.getElementsByTagName("form")[0].onsubmit = check_submit;
-</script>
