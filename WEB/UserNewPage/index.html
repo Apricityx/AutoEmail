@@ -1,78 +1,99 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>学生提交查询平台</title>
-    <link rel="stylesheet" href="user_src/user_pro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生提交作业查询平台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #00a7da;
+            color: white;
+            padding: 20px 10%;
+            /* text-align: center; */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logout {
+            float: right;
+            margin-top: -40px;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        .search-box {
+            width: 20%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .search-box input {
+            width: 20%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            display: flex;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-<!-- <script>
-    console.log(document.cookie)
-</script> -->
-<div id="main">
-    <div class="more" style="background-color: #0B0B32"></div>
-    <div id="title" class="main">
-        <h1>作业提交情况查询平台</h1>
-    </div>
-    <div id="login_out" class="main" style="background-color: #0B0B32">
-        <button id="out_b" onclick="logout()">
-            退出登录
-        </button>
-    </div>
+    <header>
+        <div style="font-size: 1.5em;">学生提交作业查询平台</div>
 
-    <div class="more" style="background-color: #F7F3F3"></div>
-    <div class="more" id="s_box_" style="background-color: #F7F3F3">
-        <div class="s_box">
-            <h2><b id="HELLO">HI! XXXX</b><img id="smile" src="user_src/img/smile%20(2).svg"></h2>
-        </div>
-        <div class="s_box">
-            <div id="search_">
-                <div>
-                    <input id="search_c" class="search" placeholder="  请输入作业名称" oninput="search_course()">
-                </div>
-                <div>
-<!--                    <button id="search_b" class="search">搜索</button>-->
-                </div>
-            </div>
-        </div>
+    </header>
+    <div class="container">
+        <h2 id="HELLO" style="display:flexbox; ">欢迎</h2>         
+            <input class="search-box" id="search_c" type="text" placeholder="搜索作业...">
+        <a href="#" class="logout">退出登录</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>发布日期</th>
+                    <th>学科作业</th>
+                    <th>截止日期</th>
+                    <th>提交作业</th>
+                    <th>提交情况</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>2023-10-01</td>
+                    <td>数学作业</td>
+                    <td>2023-10-10</td>
+                    <td><a href="#">提交</a></td>
+                    <td>未提交</td>
+                </tr>
+                <!-- 更多作业记录 -->
+            </tbody>
+        </table>
     </div>
-    <!--    <div class="main"></div>-->
-    <div class="more" style="background-color: #F7F3F3"></div>
-    <div class="main" id="content_" style="background-color: #FDF7FA;">
-        <div id="table1" class="rows" style="background-color:#E9D8E0; padding-bottom: 10px">
-            <div class="single_course order"><h3></h3></div>
-            <div class="single_course"><h3>发布日期</h3></div>
-            <div class="single_course"><h3>学科作业</h3></div>
-            <div class="single_course"><h3>截止日期</h3></div>
-            <div class="single_course"><h3>提交作业</h3></div>
-            <div class="single_course"><h3>提交情况</h3></div>
-        </div>
-
-        <!--        <div class="rows">-->
-        <!--            <div class="single_course order"><p>1</p></div>-->
-        <!--            <div class="single_course"><p>2023-10-22</p></div>-->
-        <!--            <div class="single_course"><p>大学物理课程论文</p></div>-->
-        <!--            <div class="single_course"><p>2024-02-24</p></div>-->
-        <!--            <div class="single_course"></div>-->
-        <!--            <div class="single_course right"><p>已提交</p></div>-->
-        <!--        </div>-->
-
-        <!--        <div class="rows">-->
-        <!--            <div class="single_course order" ><p>2</p></div>-->
-        <!--            <div class="single_course"><p>2023-10-22</p></div>-->
-        <!--            <div class="single_course"><p>大学物理课程论文</p></div>-->
-        <!--            <div class="single_course"><p>2024-02-24</p></div>-->
-        <!--            <div class="single_course"></div>-->
-        <!--            <div class="single_course wrong"><p>未提交</p></div>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <div class="more" style="background-color:#EBEBE5"></div>
-        <div class="more" style="background-color:#EBEBE5"></div>
-        <div class="more" style="background-color:#EBEBE5"></div>
-        <div class="more" style="background-color:#EBEBE5"></div>
-    </div>
-
-</div>
 </body>
 </html>
 <script>
